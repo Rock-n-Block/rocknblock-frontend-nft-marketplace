@@ -8,10 +8,6 @@
   position: relative;
   transition: 0.4s ease;
 
-  &:hover {
-    opacity: 0.8;
-  }
-
   &:active {
     transform: scale(0.95);
   }
@@ -31,21 +27,12 @@
     }
   }
 
-  &.icon {
-    justify-content: space-between;
-
-    &-reverse {
-      flex-direction: row-reverse;
-    }
-
-    &:before {
-      margin-left: 15px;
-      transition: 0.4s ease;
-    }
-  }
-
   &-circle {
     border-radius: 60px;
+  }
+
+  &-rounded {
+    border-radius: 46px;
   }
 
   &-center {
@@ -58,6 +45,10 @@
 
   &-fill {
     border-color: transparent;
+  }
+
+  &-hollow {
+    border: 1px solid #d23e10;
   }
 
   &-orange {

@@ -1,2 +1,11 @@
 footer
-    .container
+    .container.footer
+        nav.social-links
+            -var links=[{name:'tg',href:'https://t.me/joinchat/WG1xLuqY2uUgc_HH',fullName:'Telegram'},{name:'fb',href:'https://www.facebook.com/RocknBlockDev/?ref=br_rs',fullName:'Facebook'},{name:'in',href:'https://www.linkedin.com/authwall?trk=ripf&trkInfo=AQHvgveZGbs93QAAAXggz85o2_gQEyTCero1KbSW_FNCIX1sjFUjvezZQqiUuu2cVmo2lj4adoTCg0J8Rvb-V8pKjpQj8U3C5-qT4igU957ofdXB7BvLt6ctemMUWideBHjsZLg=&originalReferer=https://rocknblock.io/&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2F13060149',fullName:'LinkedIn'},{name:'mail',href:'#',fullName:'e-mail'}]
+                ul.social-links__list
+                    each link in links
+                        li.social-links__link
+                         a(href=`${link.href} ` rel="noreferrer" target="_blank")
+                            +webpImg('lazy',`img/logo-footer-${link.name}`,'png',`${link.fullName}`)
+
+        p.footer__copyrights © Copyright Rock’n’Block 2021

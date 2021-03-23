@@ -1,0 +1,109 @@
+$scheme-icons-mask: (("blockchain", "area-blockchain", 'svg'), ("bridge", "area-bridge", 'svg'), ("mobile", "area-mobile", 'svg'), ("wallet", "area-wallet", 'svg'), ("audit", "area-audit", 'svg'), ("documentation", "area-documentation", 'svg'));
+
+@include theme-mask($scheme-icons-mask);
+
+@import "../../mixins/text-gradient";
+
+.icon {
+  &::before {
+    background-color: #fff;
+  }
+
+  &-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 81px;
+    height: 81px;
+  }
+
+  &-blockchain {
+    @include before-img(block, 81px, 81px, r);
+  }
+
+  &-bridge {
+    @include before-img(block, 73px, 57px, r);
+  }
+
+  &-mobile {
+    @include before-img(block, 69px, 69px, r);
+  }
+
+  &-wallet {
+    @include before-img(block, 70px, 70px, r);
+  }
+
+  &-audit {
+    @include before-img(block, 70px, 69px, r);
+  }
+
+  &-documentation {
+    @include before-img(block, 71px, 70px, r);
+  }
+}
+
+.areas-of-expertise {
+  position: relative;
+  margin-top: 90px;
+
+  .background-img {
+    top: 756px;
+    left: -10px;
+    z-index: -1;
+  }
+
+  .block-header {
+    .secondary-header {
+      margin-top: 19px;
+    }
+  }
+
+  &__cards {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 320px 320px 320px;
+    grid-template-rows: 300px 300px;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+  }
+
+  &__card {
+    //display: flex;
+    //flex-direction: column;
+    //align-items: center;
+    padding: 20px 30px;
+    background: #2c2c33;
+    border-radius: 20px;
+    transition: 0.4s ease;
+
+    &-description {
+      font-family: "TT Commons", sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 21px;
+      color: #fff;
+      opacity: 0.4;
+    }
+
+    &:hover {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%), #d23e10;
+
+      .icon {
+        opacity: 0.8; //TODO: change to gradient
+      }
+
+      .areas-of-expertise__card-description {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__card-name {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 22px;
+    text-transform: uppercase;
+  }
+}

@@ -1,5 +1,46 @@
 @import "../mixins/media";
 
-footer {
-  .container {}
+.footer {
+  position: relative;
+  margin-top: 121px;
+
+  .social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__list {
+      display: flex;
+      flex-direction: row;
+    }
+
+    &__link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 12.5px;
+      margin-right: 12.5px;
+      cursor: pointer;
+      width: 44px;
+      height: 44px;
+      border: 1px solid #d23e10;
+      border-radius: 50%;
+
+      &:hover {
+        background-color: #d23e10;
+      }
+    }
+  }
+
+  &__copyrights {
+    margin: 35px auto;
+    font-family: 'TT Commons', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    color: #fff;
+    opacity: 0.5;
+  }
 }

@@ -1,5 +1,4 @@
 import $ from "../plugins/jquery/dist/jquery.min";
-import Swiper from "swiper";
 
 if (navigator.serviceWorker) {
   navigator.serviceWorker
@@ -18,6 +17,4 @@ if (navigator.serviceWorker) {
 $(document).ready(() => {
   // eslint-disable-next-line no-console
   console.log(`document ready`);
-
-  var swiper = new Swiper(".swiper-container");
 });

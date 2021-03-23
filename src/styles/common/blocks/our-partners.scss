@@ -1,0 +1,25 @@
+.our-partners {
+  position: relative;
+  margin-top: 150px;
+
+  .background-img {
+    bottom: -170px;
+    left: 900px;
+    width: 98px;
+  }
+
+  &__partners {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 100px);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+
+    .img-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
