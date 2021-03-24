@@ -185,7 +185,7 @@ ul {
   align-items: center;
   position: fixed;
   bottom: 71px;
-  right: 5vw;
+  left: calc(50% + 520px);
   width: 48px;
   height: 48px;
   background: #1d1b21;
@@ -195,6 +195,11 @@ ul {
 
   &:hover {
     border-color: #d23e10;
+  }
+
+  @include b('tablet') {
+    bottom: 30px;
+    right: 30px;
   }
 
   @include b('mobile') {
