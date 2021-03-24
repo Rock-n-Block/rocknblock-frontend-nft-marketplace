@@ -1,4 +1,4 @@
-@import "../../mixins/text-gradient";
+@import "../../mixins/text";
 
 .case-studies {
   margin-top: 120px;
@@ -13,6 +13,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
+    flex-wrap: wrap;
 
     .content-item {
       all: unset;
@@ -21,6 +22,7 @@
       font-weight: normal;
       font-size: 14px;
       line-height: 17px;
+      font-feature-settings: 'liga' off;
       transition: 0.4s ease;
 
       &:nth-last-child(-n+4) {
@@ -37,6 +39,19 @@
         width: 85px;
         text-align: center;
         opacity: 0.5;
+      }
+    }
+
+    @include b('mobile') {
+      display: flex;
+      justify-content: space-evenly;
+
+      .content-item {
+        &:nth-last-child(-n+4) {
+          margin-left: 0;
+        }
+
+        margin: 20px 10px 0 10px;
       }
     }
   }
@@ -83,21 +98,41 @@
   display: flex;
   flex-direction: column;
 
+  @include b('mobile') {
+    padding: 30px 10px 30px 10px;
+
+    &__img {
+      margin-top: 0;
+      flex-direction: column;
+      align-items: center;
+
+      picture {
+        margin-top: 30px;
+      }
+    }
+
+    &__insights {
+      flex-direction: column;
+    }
+  }
+
   &__title {
     margin: 0 auto;
   }
 
   &__img {
     margin-top: 30px;
-    width: 891px;
-    height: 588px;
+    width: 100%;
+    max-width: 891px;
+    min-height: 588px;
     display: flex;
     justify-content: space-between;
   }
 
   &__insights {
     margin-top: 50px;
-    width: 891px;
+    width: 100%;
+    max-width: 891px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -118,6 +153,15 @@
 
       .gray-list {
         margin-top: 12px;
+      }
+    }
+
+    @include b('mobile') {
+      margin-top: 0;
+      flex-direction: column;
+
+      &-insight {
+        margin-top: 50px;
       }
     }
   }

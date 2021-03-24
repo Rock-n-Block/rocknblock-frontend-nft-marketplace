@@ -1,13 +1,25 @@
 include ../utils/images
 
 header
-    .container
-        nav.main-nav
-            a(href="#").logo
-                +webpImg('lazy','img/logo','png',`Rock'n'Block`)
-            section.nav-pages
-                a(href="#services").nav-pages__link Services
-                a(href="#cases").nav-pages__link Cases
-                a(href="#team").nav-pages__link Team
-                a(href="#partners").nav-pages__link Partners
-                a(href="#contact-us").nav-pages__contact-button CONTACT US
+  .container
+    nav.main-nav
+      a(href="#").logo
+        +webpImg('lazy','img/logo','png',`Rock'n'Block`)
+      section#nav-pages.nav-pages
+        a(href="#services").nav-pages__link Services
+        a(href="#cases").nav-pages__link Cases
+        a(href="#team").nav-pages__link Team
+        a(href="#partners").nav-pages__link Partners
+        a(href="#contact-us").nav-pages__contact-button CONTACT US
+      .nav-pages__burger.burger(onclick="switchIcon(this)")
+        .burger_1
+        .burger_2
+        .burger_3
+      script.
+        function switchIcon(x) {
+          x.classList.toggle("burger-change");
+          if (x.classList !== "burger-change") {
+            const navPages = document.getElementById("nav-pages");
+            navPages.classList.toggle("topnav");
+          }
+        }

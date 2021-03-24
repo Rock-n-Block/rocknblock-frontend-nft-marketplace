@@ -5,7 +5,7 @@ footer
                 ul.social-links__list
                     each link in links
                         li.social-links__link
-                         a(href=`${link.href} ` rel="noreferrer" target="_blank")
-                            +webpImg('lazy',`img/logo-footer-${link.name}`,'png',`${link.fullName}`)
+                         a(href=`${link.href} ` rel="noreferrer" target="_blank" class=`icon-${link.name}`).icon
+                            //+webpImg('lazy',`img/logo-footer-${link.name}`,'png',`${link.fullName}`)
 
         p.footer__copyrights © Copyright Rock’n’Block 2021

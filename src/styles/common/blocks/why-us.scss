@@ -1,4 +1,4 @@
-@import "../../mixins/text-gradient";
+@import "../../mixins/text";
 
 @mixin left-border {
   border-left: 1px solid #2e2e35;
@@ -68,20 +68,21 @@
       font-feature-settings: 'liga' off;
       opacity: 0.5;
     }
+
     //рамки
-    &:nth-child(-n+3) {//первые 3
+    &:nth-child(-n+3) { //первые 3
       border-bottom: 1px solid #2e2e35;
     }
 
-    &:nth-last-child(-n+3) {//последние 3
+    &:nth-last-child(-n+3) { //последние 3
       border-top: 1px solid #2e2e35;
     }
 
-    &:nth-child(-n+2) {//первые 2
+    &:nth-child(-n+2) { //первые 2
       @include right-border;
     }
 
-    &:nth-last-child(-n+2) {//последние 2
+    &:nth-last-child(-n+2) { //последние 2
       @include left-border;
     }
 
@@ -99,6 +100,17 @@
 
     &:nth-child(5) {
       @include right-border;
+    }
+
+    @include b('mobile') {
+      &:nth-child(-n+5) {
+        border: none;
+        border-bottom: 1px solid #2e2e35;
+      }
+
+      &:last-child {
+        border: none;
+      }
     }
   }
 }

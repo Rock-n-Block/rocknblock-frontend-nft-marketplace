@@ -2,7 +2,7 @@ $scheme-icons-mask: (("blockchain", "area-blockchain", 'svg'), ("bridge", "area-
 
 @include theme-mask($scheme-icons-mask);
 
-@import "../../mixins/text-gradient";
+@import "../../mixins/text";
 
 .icon {
   &::before {
@@ -65,12 +65,17 @@ $scheme-icons-mask: (("blockchain", "area-blockchain", 'svg'), ("bridge", "area-
     grid-template-rows: 300px 300px;
     grid-column-gap: 20px;
     grid-row-gap: 20px;
+
+    @include b('mobile') {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__card {
-    //display: flex;
-    //flex-direction: column;
-    //align-items: center;
+    width: 100%;
+    max-width: 320px;
     padding: 20px 30px;
     background: #2c2c33;
     border-radius: 20px;

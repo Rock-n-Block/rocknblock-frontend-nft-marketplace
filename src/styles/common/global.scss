@@ -68,6 +68,10 @@ ul {
 
 .background-img {
   position: absolute;
+
+  @include b('mobile') {
+    display: none;
+  }
 }
 
 .block-header {
@@ -191,5 +195,10 @@ ul {
 
   &:hover {
     border-color: #d23e10;
+  }
+
+  @include b('mobile') {
+    bottom: 30px;
+    right: 30px;
   }
 }

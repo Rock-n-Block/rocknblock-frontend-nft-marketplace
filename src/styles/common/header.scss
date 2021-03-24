@@ -7,6 +7,10 @@ header {
   z-index: 3;
   background-color: #1d1b21;
   transition: 0.5s ease;
+
+  @include b('mobile') {
+    position: relative;
+  }
 }
 
 .main-nav {
@@ -17,6 +21,10 @@ header {
   align-items: center;
 
   //border-bottom: 1px solid rgb(52,50,55);
+  .logo {
+    width: 100%;
+    max-width: 220px;
+  }
 
   .nav-pages {
     margin-left: auto;
@@ -57,5 +65,54 @@ header {
         border-color: #d23e10;
       }
     }
+
+    @include b('mobile') {
+      display: none;
+    }
+  }
+
+  @include b('mobile') {
+    .topnav {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+
+  &_1,
+  &_2,
+  &_3 {
+    width: 35px;
+    height: 5px;
+    background-color: #fff;
+    margin: 5px 0;
+    transition: 0.4s;
+  }
+
+  &-change {
+    /* Rotate first bar */
+    .burger_1 {
+      -webkit-transform: rotate(-45deg) translate(1px, 15px);
+      transform: rotate(-45deg) translate(1px, 15px);
+    }
+
+    /* Fade out the second bar */
+    .burger_2 {
+      opacity: 0;
+    }
+
+    /* Rotate last bar */
+    .burger_3 {
+      -webkit-transform: rotate(45deg) translate(1px, -15px);
+      transform: rotate(45deg) translate(1px, -15px);
+    }
+  }
+
+  @include b('mobile') {
+    display: inline-block;
   }
 }

@@ -1,5 +1,6 @@
-@import "../../mixins/text-gradient";
+@import "../../mixins/text";
 @import "../../mixins/image";
+@import "../../mixins/media";
 
 $scheme-icons-mask: ((), ('arrow-right', 'arrow-right', 'svg'));
 
@@ -41,12 +42,22 @@ $scheme-icons-mask: ((), ('arrow-right', 'arrow-right', 'svg'));
     font-weight: 800;
     font-size: 85px;
     line-height: 85px;
+
+    @include b('mobile') {
+      font-size: 45px;
+      line-height: 45px;
+    }
   }
 
   &__content {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+
+    @include b('mobile') {
+      flex-direction: column;
+      justify-content: center;
+    }
   }
 
   &__description {
@@ -94,6 +105,10 @@ $scheme-icons-mask: ((), ('arrow-right', 'arrow-right', 'svg'));
     margin-top: 124px;
     width: 353px;
     height: 100%;
+
+    @include b('mobile') {
+      margin: 124px auto 0 auto;
+    }
   }
 }
 

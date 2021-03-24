@@ -1,4 +1,9 @@
 @import "../mixins/media";
+@import "../mixins/image";
+
+$scheme-icons-mask: (('tg', 'footer-tg', 'svg'), ('fb', 'footer-fb', 'svg'), ('in', 'footer-in', 'svg'), ('mail', 'footer-mail', 'svg'));
+
+@include theme-mask($scheme-icons-mask);
 
 .footer {
   position: relative;
@@ -28,6 +33,32 @@
 
       &:hover {
         background-color: #d23e10;
+      }
+
+      .icon {
+        &-tg {
+          @include before-img(block, 20px, 18px, r) {
+            background-size: cover;
+          }
+        }
+
+        &-fb {
+          @include before-img(block, 8px, 18px, r) {
+            background-size: cover;
+          }
+        }
+
+        &-in {
+          @include before-img(block, 16px, 16px, r) {
+            background-size: cover;
+          }
+        }
+
+        &-mail {
+          @include before-img(block, 24px, 18px, r) {
+            background-size: cover;
+          }
+        }
       }
     }
   }
