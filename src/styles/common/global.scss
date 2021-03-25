@@ -17,6 +17,7 @@ $scheme-icons-mask: ((), ('arrow-top', 'arrow-top', 'svg'));
 
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
