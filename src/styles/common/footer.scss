@@ -30,6 +30,7 @@ $scheme-icons-mask: (('tg', 'footer-tg', 'svg'), ('fb', 'footer-fb', 'svg'), ('i
       height: 44px;
       border: 1px solid #d23e10;
       border-radius: 50%;
+      transition: 0.4s ease;
 
       &:hover {
         background-color: #d23e10;

@@ -49,6 +49,7 @@ $scheme-icons-mask: ((), ('close', 'close', 'svg'));
       text-align: center;
       border: 3px solid #414147;
       border-radius: 20px;
+      transition: 0.4s ease;
 
       &:focus {
         border-color: #fff;

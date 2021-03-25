@@ -1,3 +1,3 @@
-### Rock'n'Block template
+### Rock'n'Block landing page
 
-> nodejs 14
+> Created using pug, nodejs 14
