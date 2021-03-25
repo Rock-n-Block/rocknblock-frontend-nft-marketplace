@@ -1,5 +1,9 @@
 @import "../mixins/media";
 
+$scheme-icons-mask: ((), ('burger', 'header-burger', 'svg'), ('burger-close', 'header-burger-close', 'svg'));
+
+@include theme-mask($scheme-icons-mask);
+
 header {
   position: sticky;
   top: 0;
@@ -20,7 +24,33 @@ header {
   justify-content: space-between;
   align-items: center;
 
-  //border-bottom: 1px solid rgb(52,50,55);
+  &__mobile {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    .icon {
+      background-color: var(--body-background-color);
+      transition: 0.4s ease;
+
+      &-burger {
+        @include before-img(block, 34px, 16px, r) {
+          background-size: cover;
+        }
+      }
+
+      &-burger-close {
+        @include before-img(block, 17px, 17px, r) {
+          background-size: cover;
+        }
+      }
+
+      &:focus {
+        outline: 0 none;
+      }
+    }
+  }
+
   .logo {
     width: 100%;
     max-width: 220px;
@@ -28,7 +58,8 @@ header {
 
   .nav-pages {
     margin-left: auto;
-    width: 561px;
+    width: 100%;
+    max-width: 561px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -46,6 +77,21 @@ header {
       &:hover {
         &:nth-child(-n+4) {
           color: #d4d2d2;
+
+          @include b('mobile') {
+            color: #d23e10;
+
+            &::before {
+              position: absolute;
+              top: 0;
+              left: -5px;
+              content: '';
+              display: inline-block;
+              width: 5px;
+              height: 48px;
+              background-color: #d23e10;
+            }
+          }
         }
       }
     }
@@ -72,9 +118,29 @@ header {
   }
 
   @include b('mobile') {
+    flex-direction: column;
+
     .topnav {
+      margin-top: 65px;
+      margin-left: 0;
+      align-self: flex-start;
       display: flex;
       flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .nav-pages {
+      &__link {
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding-left: 36px;
+        height: 48px;
+      }
+
+      &__contact-button {
+        display: none;
+      }
     }
   }
 }
@@ -82,35 +148,6 @@ header {
 .burger {
   display: none;
   cursor: pointer;
-
-  &_1,
-  &_2,
-  &_3 {
-    width: 35px;
-    height: 5px;
-    background-color: #fff;
-    margin: 5px 0;
-    transition: 0.4s;
-  }
-
-  &-change {
-    /* Rotate first bar */
-    .burger_1 {
-      -webkit-transform: rotate(-45deg) translate(1px, 15px);
-      transform: rotate(-45deg) translate(1px, 15px);
-    }
-
-    /* Fade out the second bar */
-    .burger_2 {
-      opacity: 0;
-    }
-
-    /* Rotate last bar */
-    .burger_3 {
-      -webkit-transform: rotate(45deg) translate(1px, -15px);
-      transform: rotate(45deg) translate(1px, -15px);
-    }
-  }
 
   @include b('mobile') {
     display: inline-block;
