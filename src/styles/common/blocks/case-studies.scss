@@ -15,21 +15,6 @@
     align-items: flex-start;
     flex-wrap: wrap;
 
-    .active {
-      .content-item__img {
-        transform: scale(1.42); //TODO:change scale
-        box-shadow: 0 21px 30px rgba(0, 0, 0, 0.25);
-        border-radius: 12px;
-      }
-
-      .content-item__name {
-        transform: translateY(10px);
-        font-size: 15px;
-        line-height: 18px;
-        opacity: 1;
-      }
-    }
-
     .content-item {
       all: unset;
       cursor: pointer;
@@ -39,7 +24,6 @@
       line-height: 17px;
       font-feature-settings: 'liga' off;
       transition: 0.4s ease;
-
 
       &:nth-last-child(-n+4) {
         margin-left: 40px;
@@ -57,6 +41,21 @@
         text-align: center;
         opacity: 0.5;
         transition: 0.4s ease;
+      }
+    }
+
+    .active {
+      .content-item__img {
+        transform: scale(1.42); //TODO:change scale
+        box-shadow: 0 21px 30px rgba(0, 0, 0, 0.25);
+        border-radius: 12px;
+      }
+
+      .content-item__name {
+        transform: translateY(10px);
+        font-size: 15px;
+        line-height: 18px;
+        opacity: 1;
       }
     }
 
@@ -87,7 +86,6 @@
       line-height: 18px;
       opacity: 1;
     }
-
   }
 
   &__dropdown {

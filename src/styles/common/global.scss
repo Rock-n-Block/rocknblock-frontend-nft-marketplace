@@ -10,6 +10,7 @@ $scheme-icons-mask: ((), ('arrow-top', 'arrow-top', 'svg'));
 *::before,
 *::after {
   box-sizing: inherit;
+  font-family: "TTNorms", sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -22,7 +23,6 @@ body {
   margin: 0;
   padding: 0;
   background-color: var(--body-background-color);
-  font-family: "TTNorms", sans-serif;
   cursor: default;
   color: white;
 }
