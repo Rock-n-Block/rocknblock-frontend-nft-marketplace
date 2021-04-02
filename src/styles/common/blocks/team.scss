@@ -67,6 +67,11 @@
         opacity: 0.5;
       }
     }
+
+    @include b('mobile') {
+      justify-content: space-evenly;
+
+    }
   }
 
   &__overview {
