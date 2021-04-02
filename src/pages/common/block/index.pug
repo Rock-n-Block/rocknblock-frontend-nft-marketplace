@@ -403,14 +403,15 @@ mixin contact-us
       input(type='textarea' onfocus="this.placeholder = ''" onblur="this.placeholder = 'Briefly describe your project or idea'" placeholder='Briefly describe your project or idea').contact-us__form__input
       label(for="").visually-hidden Briefly describe your project or idea
       button(type='submit' onclick='submitForm(event)').g-recaptcha.contact-us__form__submit-btn.btn.btn-orange.btn-rounded Submit request
-    #contact-us-popup.contact-us__popup.popup
-      h3.popup__title Thanks for your request!
-      button(onclick="togglePopUp()").btn.btn-orange.btn-rounded.popup__button-ok Close/ok
-      button(onclick="togglePopUp()").btn.popup__button-close.icon.icon-close
-      .background-img.background-img-left
-        +webpImg('lazy','img/background-popup-left','png','background-popup-left')
-      .background-img.background-img-right
-        +webpImg('lazy','img/background-popup-right','png','background-popup-right')
+    #contact-us-popup.contact-us__popup-container
+      .contact-us__popup.popup
+        h3.popup__title Thanks for your request!
+        button(onclick="togglePopUp()").btn.btn-orange.btn-rounded.popup__button-ok Close/ok
+        button(onclick="togglePopUp()").btn.popup__button-close.icon.icon-close
+        .background-img.background-img-left
+          +webpImg('lazy','img/background-popup-left','png','background-popup-left')
+        .background-img.background-img-right
+          +webpImg('lazy','img/background-popup-right','png','background-popup-right')
     script.
       'use strict'
       function submitForm(evt) {
