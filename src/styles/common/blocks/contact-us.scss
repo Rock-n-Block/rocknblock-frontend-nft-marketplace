@@ -38,7 +38,7 @@ $scheme-icons-mask: ((), ('close', 'close', 'svg'));
       padding-right: 24px;
       width: 100%;
       max-width: 546px;
-      min-height: 48px;
+      min-height: 68px;
       background: #1d1b21;
       color: #fff;
       font-style: normal;
@@ -58,6 +58,13 @@ $scheme-icons-mask: ((), ('close', 'close', 'svg'));
 
       &::placeholder {
         opacity: 0.5;
+      }
+
+      &-textarea {
+        resize: vertical;
+        padding-top: 24px;
+        padding-bottom: 23px;
+        overflow: hidden;
       }
     }
 
@@ -186,4 +193,8 @@ $scheme-icons-mask: ((), ('close', 'close', 'svg'));
       background-size: cover;
     }
   }
+}
+
+::-webkit-resizer {
+  display: none;
 }

@@ -400,7 +400,7 @@ mixin contact-us
       label(for="").visually-hidden Enter your name
       input(type='text' onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your contact (telegram, email, ...)'" placeholder='Your contact (telegram, email, ...)').contact-us__form__input
       label(for="").visually-hidden Enter how we can contact with you, like telegram, email, etc
-      input(type='textarea' onfocus="this.placeholder = ''" onblur="this.placeholder = 'Briefly describe your project or idea'" placeholder='Briefly describe your project or idea').contact-us__form__input
+      textarea( rows="1" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Briefly describe your project or idea'" placeholder='Briefly describe your project or idea').contact-us__form__input.contact-us__form__input-textarea
       label(for="").visually-hidden Briefly describe your project or idea
       button(type='submit' onclick='submitForm(event)').g-recaptcha.contact-us__form__submit-btn.btn.btn-orange.btn-rounded Submit request
     #contact-us-popup.contact-us__popup-container
@@ -442,6 +442,7 @@ mixin contact-us
         togglePopUp();
       }
       function togglePopUp() {
-        var popup = document.getElementById("contact-us-popup");
+        const popup = document.getElementById("contact-us-popup");
         popup.classList.toggle("show");
       }
+
