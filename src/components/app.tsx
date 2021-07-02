@@ -10,8 +10,7 @@ import Team from './team';
 import OurPartners from './our-partners';
 import ContactUs from './contact-us';
 import Footer from './footer';
-
-import style from '../style/index.scss';
+//import UpButton from './up-button';
 
 const App: FunctionalComponent = () => {
   return (
@@ -26,9 +25,7 @@ const App: FunctionalComponent = () => {
       <OurPartners />
       <ContactUs />
       <Footer />
-      <a href="#" className={`${style.icon} ${style['icon-arrow-top']} ${style['arrow-top']}`}>
-        <img src="../assets/img/icons/icon-arrow-top-mask.svg" alt="arrow top" />
-      </a>
+      {/*<UpButton />*/}
     </div>
   );
 };

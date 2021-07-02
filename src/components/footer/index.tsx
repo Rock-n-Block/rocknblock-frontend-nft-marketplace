@@ -44,7 +44,7 @@ const Footer: FunctionalComponent = () => {
                   rel="noreferrer"
                   target="_blank"
                 >
-                  <img src={`../../assets/img/icons/icon-footer-${link.name}-mask.svg`} alt="" />
+                  <img src={`../../assets/img/icons/icon-footer-${link.name}-mask.svg`} alt={link.name} />
                 </a>
               </li>
             ))}

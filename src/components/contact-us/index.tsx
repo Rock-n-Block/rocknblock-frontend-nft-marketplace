@@ -17,7 +17,8 @@ const ContactUs: FunctionalComponent = () => {
     console.log(formData);
 
     const headers = new Headers({
-      'Content-Type': 'application/json',
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'X-Custom-Header': 'ProcessThisImmediately'
     });
 
     fetch(`https://newlp.mywish.io/api/v1/send_unblocking_feedback/`, {
@@ -25,12 +26,14 @@ const ContactUs: FunctionalComponent = () => {
       headers: headers,
       mode: 'no-cors',
       body: formData
-    }).then(response => console.log('OK:', response.json())).catch(response => console.log('Error:', response));
+    }).then(response => {
+      console.log('OK:', response.json());
+      setIsSubmitted(true);
+    }).catch(response => console.log('Error:', response));
 
     setName('');
     setContact('');
     setIdea('');
-    setIsSubmitted(true);
   }
 
   const onSetName = (e: any) => {
