@@ -1,0 +1,198 @@
+@import "../../style/mixins/text";
+@import "../../style/mixins/media";
+@import "../../style/index";
+
+.team {
+  position: relative;
+  margin-top: 100px;
+
+  .background-img {
+    top: 184px;
+    left: 933px;
+    width: 186px;
+    z-index: -1;
+  }
+
+  .block-header {
+    .secondary-header {
+      margin-top: 7px;
+    }
+  }
+
+  &__tabs {
+    margin-top: 41px;
+  }
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .content__card {
+      margin-top: 56px;
+      width: 320px;
+      height: 718px;
+      padding: 30px 11px 20px 20px;
+      background: #17141c;
+      border: 2px solid #33333a;
+      box-sizing: border-box;
+      border-radius: 20px;
+
+      &__post {
+        @include text-gradient(linear-gradient(87.05deg, #FFFFFF 54.97%, #171628 152.38%));
+
+        font-style: normal;
+        font-weight: 800;
+        font-size: 25px;
+        line-height: 30px;
+        font-feature-settings: 'liga' off;
+      }
+
+      &__name {
+        margin-top: 5px;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 24px;
+        color: #d4491d;
+      }
+
+      &__description {
+        margin-top: 20px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        font-feature-settings: 'liga' off;
+        mix-blend-mode: normal;
+        opacity: 0.5;
+      }
+    }
+
+    @include b('mobile') {
+      justify-content: space-evenly;
+    }
+  }
+
+  &__overview {
+    margin-top: 79px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-style: normal;
+      font-weight: bold;
+      font-feature-settings: 'liga' off;
+
+      &__number {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 56px;
+        height: 56px;
+        font-size: 22px;
+        line-height: 26px;
+
+        /* identical to box height */
+
+        text-align: center;
+        color: #fff;
+        mix-blend-mode: normal;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%), #d23e10;
+        box-shadow: 0 4px 25px rgba(0, 0, 0, 0.25);
+        border-radius: 30px;
+      }
+
+      .text {
+        font-size: 18px;
+        line-height: 21px;
+        text-align: center;
+        font-feature-settings: 'liga' off;
+      }
+
+      &__primary-text {
+        margin-top: 15px;
+        text-align: center;
+      }
+
+      &__secondary-text {
+        opacity: 0.5;
+        text-align: center;
+      }
+    }
+
+    @include b('mobile') {
+      display: grid;
+      grid-template-columns: 150px 150px;
+      grid-template-rows: repeat(3, 150px);
+      grid-row-gap: 20px;
+    }
+  }
+}
+
+.content__card__exp {
+  margin-top: 20px;
+
+  &__title {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 19px;
+    font-feature-settings: 'liga' off;
+  }
+
+  &__list {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+
+    &__item {
+      position: relative;
+      margin-top: 10px;
+      padding-left: 17px;
+      color: #8b898d;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 19px;
+      font-feature-settings: 'liga' off;
+      mix-blend-mode: normal;
+
+      &::before {
+        position: absolute;
+        top: 6px;
+        left: 0;
+        content: '';
+        display: inline-block;
+        min-width: 10px;
+        min-height: 10px;
+        border: 1px solid #fff;
+        border-radius: 50%;
+        margin-right: 7px;
+      }
+    }
+  }
+
+  &__stacks {
+    .stacks__title {
+      margin-top: 20px;
+
+      @include text-gradient(linear-gradient(87.05deg, #FFFFFF 54.97%, #171628 152.38%));
+
+      font-style: normal;
+      font-weight: 800;
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    .gray-list {
+      margin-top: 7px;
+    }
+  }
+}

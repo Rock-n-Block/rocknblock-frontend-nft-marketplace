@@ -1,0 +1,92 @@
+@import "../../style/mixins/image";
+@import "../../style/mixins/media";
+@import "../../style/index";
+
+@import "../../style/mixins/text";
+
+.icon {
+  &::before {
+    background-color: #fff;
+  }
+
+  &-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 81px;
+    height: 81px;
+  }
+}
+
+.areas-of-expertise {
+  position: relative;
+  margin-top: 90px;
+
+  .background-img {
+    top: 756px;
+    left: -10px;
+    z-index: -1;
+  }
+
+  .block-header {
+    .secondary-header {
+      margin-top: 19px;
+    }
+  }
+
+  &__cards {
+    margin-top: 82px;
+    display: grid;
+    grid-template-columns: 320px 320px 320px;
+    grid-template-rows: 300px 300px;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+
+    @include b('mobile') {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__card {
+    width: 100%;
+    max-width: 320px;
+    padding: 20px 30px;
+    background: #2c2c33;
+    border-radius: 20px;
+    transition: 0.4s ease;
+
+    &-description {
+      margin-top: 16px;
+      font-family: "TT Commons", sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 21px;
+      color: #fff;
+      opacity: 0.4;
+    }
+
+    &:hover {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%), #d23e10;
+
+      .icon {
+        opacity: 0.8; //TODO: change to gradient
+      }
+
+      .areas-of-expertise__card-description {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__card-name {
+    margin-top: 16px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 22px;
+    text-transform: uppercase;
+  }
+}

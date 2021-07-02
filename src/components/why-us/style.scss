@@ -1,0 +1,118 @@
+@import "../../style/mixins/text";
+@import "../../style/mixins/media";
+@import "../../style/index";
+
+@mixin left-border {
+  border-left: 1px solid #2e2e35;
+}
+
+@mixin right-border {
+  border-right: 1px solid #2e2e35;
+}
+
+.why-us {
+  margin: 50px auto 0;
+
+  &__content {
+    min-height: 532px;
+    margin-top: 35px;
+    padding: 48px 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #2e2e35;
+    border-radius: 20px;
+  }
+
+  &__card {
+    width: 300px;
+    height: 215px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    &__primary {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+
+    &-numbers {
+      font-style: normal;
+      font-weight: 800;
+      font-size: 60px;
+      line-height: 75px;
+      letter-spacing: -3px;
+      font-feature-settings: 'liga' off;
+      color: #d23e10;
+    }
+
+    &-units {
+      margin-top: 12px;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 21px;
+      text-transform: uppercase;
+      font-feature-settings: 'liga' off;
+    }
+
+    &__secondary {
+      text-align: center;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 19px;
+      font-feature-settings: 'liga' off;
+      opacity: 0.5;
+    }
+
+    //рамки
+    &:nth-child(-n+3) { //первые 3
+      border-bottom: 1px solid #2e2e35;
+    }
+
+    &:nth-last-child(-n+3) { //последние 3
+      border-top: 1px solid #2e2e35;
+    }
+
+    &:nth-child(-n+2) { //первые 2
+      @include right-border;
+    }
+
+    &:nth-last-child(-n+2) { //последние 2
+      @include left-border;
+    }
+
+    &:nth-child(2) {
+      @include left-border;
+    }
+
+    &:nth-child(3) {
+      @include left-border;
+    }
+
+    &:nth-child(4) {
+      @include right-border;
+    }
+
+    &:nth-child(5) {
+      @include right-border;
+    }
+
+    @include b('mobile') {
+      &:nth-child(-n+5) {
+        border: none;
+        border-bottom: 1px solid #2e2e35;
+      }
+
+      &:last-child {
+        border: none;
+      }
+    }
+  }
+}

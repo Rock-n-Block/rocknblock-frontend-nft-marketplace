@@ -1,0 +1,209 @@
+@import "../plugins/normalize.css/normalize";
+@import "mixins/mixins";
+@import "theme/theme";
+
+//@include theme-mask('arrow-top', 'arrow-top', 'svg');
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  font-family: "TTNorms", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--body-background-color);
+  cursor: default;
+  color: white;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a,
+p,
+.button,
+span {
+  transition: 0.4s ease;
+  outline: none;
+}
+
+.section {
+  width: 100%;
+}
+
+.container {
+  max-width: $mediaWidthDesktop;
+  padding: 0 12px;
+  margin: 0 auto;
+}
+
+h1 {
+  color: #fff;
+}
+
+ul {
+  list-style: none;
+}
+
+.visually-hidden {
+  display: none;
+}
+
+.background-img {
+  position: absolute;
+
+  @include b('mobile') {
+    display: none;
+  }
+}
+
+.block-header {
+  .primary-header {
+    margin: 0;
+
+    @include text-gradient(linear-gradient(87.05deg, #FFFFFF 54.97%, #171628 152.38%));
+
+    font-style: normal;
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 75px;
+
+    /* identical to box height, or 150% */
+
+    text-align: center;
+    font-feature-settings: 'liga' off;
+  }
+
+  .secondary-header {
+    margin: 0;
+    font-family: "TT Commons", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    opacity: 0.4;
+  }
+}
+
+.tablinks {
+  display: flex;
+
+  &__link {
+    all: unset;
+    cursor: pointer;
+    width: 100%;
+    padding-bottom: 22px;
+    border-bottom: 2px solid #2e2e35;
+    font-family: "TT Norms", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    text-transform: uppercase;
+    font-feature-settings: 'liga' off;
+    opacity: 0.6;
+    transition: 0.4s ease;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:last-child {
+      margin-left: 2px;
+    }
+  }
+
+  .link-active {
+    color: #d23e10;
+    font-weight: 700;
+    border-bottom: 3px solid #d23e10;
+    opacity: 1;
+  }
+}
+
+.gray-list {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+
+  &__item {
+    margin-right: 6px;
+    margin-top: 6px;
+    padding: 3px 8px;
+    color: #fff;
+    font-family: "TT Norms", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 30px;
+    font-feature-settings: 'liga' off;
+    background: #34313b;
+    border-radius: 4px;
+  }
+}
+
+.icon {
+  &::before {
+    content: '';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  &-arrow-top {
+    @include before-img(block, 14px, 19px, r) {
+      background-size: cover;
+      background-color: black;
+    }
+  }
+}
+
+.arrow-top {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 71px;
+  left: calc(50% + 520px);
+  width: 48px;
+  height: 48px;
+  background: #1d1b21;
+  border: 3px solid #2e2e35;
+  border-radius: 50%;
+  z-index: 99;
+
+  &:hover {
+    border-color: #d23e10;
+  }
+
+  @include b('tablet') {
+    bottom: 30px;
+    right: 30px;
+  }
+
+  @include b('mobile') {
+    bottom: 30px;
+    right: 30px;
+  }
+}

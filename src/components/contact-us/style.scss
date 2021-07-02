@@ -1,0 +1,202 @@
+@import "../../style/mixins/text";
+@import "../../style/mixins/image";
+@import "../../style/index";
+@import "../../style/common/buttons";
+
+$scheme-icons-mask: ((), ('close', 'close', 'svg'));
+
+//@include theme-mask($scheme-icons-mask);
+
+.contact-us {
+  position: relative;
+  margin-top: 182px;
+
+  .background-img {
+    top: 383px;
+    left: 43px;
+  }
+
+  .block-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .secondary-header {
+      max-width: 600px;
+      margin-top: 34px;
+    }
+  }
+
+  &__form {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__input {
+      //all: unset;
+      margin-top: 17px;
+      padding-left: 24px;
+      padding-right: 24px;
+      width: 100%;
+      max-width: 546px;
+      min-height: 68px;
+      background: #1d1b21;
+      color: #fff;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 21px;
+      font-feature-settings: 'liga' off;
+      text-align: center;
+      border: 3px solid #414147;
+      border-radius: 20px;
+      transition: 0.4s ease;
+
+      &:focus {
+        border-color: #fff;
+        outline: 0 none;
+      }
+
+      &::placeholder {
+        opacity: 0.5;
+      }
+
+      &-textarea {
+        resize: vertical;
+        padding-top: 24px;
+        padding-bottom: 23px;
+        overflow: hidden;
+      }
+    }
+
+    &__submit-btn {
+      margin-top: 30px;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 28px;
+      text-align: center;
+      font-feature-settings: 'liga' off;
+      width: 242px;
+      height: 58px;
+      outline: 0 none;
+
+      &:hover {
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 100%), #d23e10;
+        box-shadow: 0 4px 25px rgba(0, 0, 0, 0.25);
+      }
+    }
+  }
+
+  &__popup-container {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    overflow: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    display: none;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+    padding: 30px 0;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .popup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 550px;
+    height: 322px;
+    overflow: hidden;
+    background-color: #1d1b21;
+    border-radius: 30px;
+
+    .background-img-left {
+      top: 216px;
+      left: 0;
+    }
+
+    .background-img-right {
+      top: 134px;
+      left: 429px;
+    }
+
+    &__title {
+      width: 100%;
+      max-width: 400px;
+      margin-top: 50px;
+
+      @include text-gradient(linear-gradient(87.05deg, #FFFFFF 54.97%, #171628 152.38%));
+
+      font-style: normal;
+      font-weight: 800;
+      font-size: 40px;
+      line-height: 47px;
+      text-align: center;
+      font-feature-settings: 'liga' off;
+    }
+
+    &__button {
+      &-ok {
+        outline: 0 none;
+        margin-top: 35px;
+        width: 183px;
+        height: 58px;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 28px;
+        text-align: center;
+
+        &:hover {
+          background: linear-gradient(180deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 100%), #d23e10;
+          box-shadow: 0 4px 25px rgba(0, 0, 0, 0.25);
+        }
+      }
+
+      &-close {
+        outline: 0 none;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 38px;
+        height: 38px;
+        border: 1px solid #2e2e35;
+        border-radius: 50%;
+        background: #1d1b21;
+
+        &:hover {
+          border-color: #d23e10;
+        }
+      }
+    }
+  }
+
+  .show {
+    display: flex;
+  }
+}
+
+.icon {
+  &-close {
+    @include before-img(block, 14px, 14px, r) {
+      background-size: cover;
+    }
+  }
+}
+
+::-webkit-resizer {
+  display: none;
+}
