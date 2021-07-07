@@ -22,40 +22,56 @@
   position: relative;
   margin-top: 90px;
 
+  @include b('mobile') {
+    margin-top: 60px;
+  }
+
   .background-img {
     top: 756px;
     left: -10px;
     z-index: -1;
-  }
 
-  .block-header {
-    .secondary-header {
-      margin-top: 19px;
+    @include b('mobile') {
+      display: none;
     }
   }
 
   &__cards {
     margin-top: 82px;
-    display: grid;
-    grid-template-columns: 320px 320px 320px;
-    grid-template-rows: 300px 300px;
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
 
     @include b('mobile') {
+      margin-top: 50px;
+      overflow-x: auto;
+    }
+    
+    &__scroll {
       display: flex;
-      flex-direction: column;
-      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+
+      @include b('mobile') {
+        display: inline-flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 10px;
+        overflow-x: scroll;
+      }
     }
   }
 
   &__card {
-    width: 100%;
-    max-width: 320px;
+    width: 320px;
+    height: 300px;
     padding: 20px 30px;
     background: #2c2c33;
     border-radius: 20px;
     transition: 0.4s ease;
+
+    @include b('mobile') {
+      width: 320px;
+      height: 282px;
+    }
 
     &-description {
       margin-top: 16px;
@@ -72,7 +88,7 @@
       background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%), #d23e10;
 
       .icon {
-        opacity: 0.8; //TODO: change to gradient
+        opacity: 0.8;
       }
 
       .areas-of-expertise__card-description {

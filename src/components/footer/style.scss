@@ -2,13 +2,13 @@
 @import "../../style/mixins/image";
 @import "../../style/index";
 
-$scheme-icons-mask: (('tg', 'footer-tg', 'svg'), ('fb', 'footer-fb', 'svg'), ('in', 'footer-in', 'svg'), ('mail', 'footer-mail', 'svg'));
-
-//@include theme-mask($scheme-icons-mask);
-
 .footer {
   position: relative;
   margin-top: 121px;
+
+  @include b('mobile') {
+    margin-top: 60px;
+  }
 
   .social-links {
     display: flex;

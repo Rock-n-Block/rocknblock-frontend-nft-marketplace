@@ -2,13 +2,9 @@
 @import "../../style/common/buttons";
 @import "../../style/index";
 
-$scheme-icons-mask: ((), ('arrow-right', 'arrow-right', 'svg'));
-
-@include theme-mask('arrow-right', 'arrow-right', 'svg');
-
 .about {
   position: relative;
-  margin: 120px auto;
+  margin: 30px auto 0;
   display: flex;
   flex-direction: column;
 
@@ -16,18 +12,40 @@ $scheme-icons-mask: ((), ('arrow-right', 'arrow-right', 'svg'));
     top: -20px;
     left: 576px;
     z-index: 1;
+
+    @include b('mobile') {
+      width: 246px;
+      left: 10px;
+      top: -70px;
+      z-index: -1;
+    }
   }
 
   .background-img-second {
     top: 19px;
     left: 709px;
     z-index: 0;
+
+    @include b('mobile') {
+      width: 192px;
+      left: 190px;
+      top: -20px;
+      z-index: -2;
+      transform: rotate(210deg);
+    }
   }
 
   .background-img-third {
     top: 143px;
     left: 499px;
     z-index: -1;
+
+    @include b('mobile') {
+      width: 192px;
+      left: 10px;
+      top: 45px;
+      z-index: -3;
+    }
   }
 
   &__header {
@@ -37,6 +55,7 @@ $scheme-icons-mask: ((), ('arrow-right', 'arrow-right', 'svg'));
     @include text-gradient(linear-gradient(86.23deg, #FFFFFF 54.52%, #171628 83.07%));
 
     text-transform: uppercase;
+    font-family: 'TT Norms', sans-serif;
     font-feature-settings: 'liga' off;
     font-style: normal;
     font-weight: 800;
@@ -44,8 +63,9 @@ $scheme-icons-mask: ((), ('arrow-right', 'arrow-right', 'svg'));
     line-height: 85px;
 
     @include b('mobile') {
-      font-size: 45px;
-      line-height: 45px;
+      margin-top: 90px;
+      font-size: 40px;
+      line-height: 40px;
     }
   }
 
@@ -69,21 +89,35 @@ $scheme-icons-mask: ((), ('arrow-right', 'arrow-right', 'svg'));
     font-size: 22px;
     line-height: 25px;
     opacity: 0.85;
+
+    @include b('mobile') {
+      margin-top: 17px;
+    }
   }
 
   &__buttons {
     margin: 30px 0 0 0;
     max-width: 360px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: 15px;
     font-size: 15px;
     line-height: 18px;
     font-weight: 700;
     font-feature-settings: 'kern' off, 'liga' off;
 
+    @include b('mobile') {
+      margin-top: 20px;
+    }
+
     &-call {
       width: 144px;
       height: 50px;
+
+      @include b('mobile') {
+        width: 137px;
+        height: 43px;
+      }
 
       &:hover {
         background-color: #2a2730;
@@ -96,6 +130,11 @@ $scheme-icons-mask: ((), ('arrow-right', 'arrow-right', 'svg'));
       display: flex;
       justify-content: space-evenly;
 
+      @include b('mobile') {
+        width: 177px;
+        height: 43px;
+      }
+
       &:hover {
         background: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%), #d23e10;
         box-shadow: 0 4px 25px rgba(0, 0, 0, 0.25);
@@ -104,12 +143,25 @@ $scheme-icons-mask: ((), ('arrow-right', 'arrow-right', 'svg'));
   }
 
   &__achievements {
-    margin-top: 124px;
+    margin-top: 120px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 33px;
     width: 353px;
-    height: 100%;
+
 
     @include b('mobile') {
-      margin: 124px auto 0 auto;
+      margin: 30px auto 0 auto;
+    }
+
+    &__top {
+      height: 137px;
+
+      @include b('mobile') {
+        display: none;
+      }
     }
   }
 }

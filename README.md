@@ -1,6 +1,8 @@
-# preact-typescript
+# Rock'n'Block Landing developed by [Kirill Gusev](https://github.com/KiryaFT) used Preact CLI
 
-## CLI Commands
+## This landing page contains information about blockchain company Rock'n'Block
+
+## Preact CLI Commands
 *   `npm install`: Installs dependencies
 
 *   `npm run dev`: Run a development, HMR server

@@ -35,24 +35,9 @@ const cards = [
     text: 'L2 implementation'
   },
   {
-    source: 'icon-do-best-goldbag',
-    alt: 'goldbag icon',
-    text: 'Crypto-processing'
-  },
-  {
-    source: 'icon-do-best-schedule',
-    alt: 'schedule icon',
-    text: 'Payment implementation (inc. fiat) dashbord'
-  },
-  {
-    source: 'icon-do-best-moon',
-    alt: 'moon icon',
-    text: 'Moon Pay integration'
-  },
-  {
     source: 'icon-do-best-tangem',
     alt: 'phone with card icon',
-    text: 'Tangem support'
+    text: 'NFT card support'
   },
   {
     source: 'icon-do-best-DAPPs',
@@ -60,9 +45,9 @@ const cards = [
     text: 'DAPPs development'
   },
   {
-    source: 'icon-do-best-anon',
-    alt: 'anon icon',
-    text: 'Anonymized exchange'
+    source: 'icon-do-best-moon',
+    alt: 'moon icon',
+    text: 'Fiat On-Ramp Integration'
   },
   {
     source: 'icon-do-best-OTC',
@@ -75,9 +60,9 @@ const cards = [
     text: 'Multiple wallets management tool'
   },
   {
-    source: 'icon-do-best-shield',
-    alt: 'shield icon',
-    text: 'Explorers for private blockchain'
+    source: 'icon-do-best-anon',
+    alt: 'anon icon',
+    text: 'Anonymized exchange'
   },
   {
     source: 'icon-do-best-contract',
@@ -87,12 +72,12 @@ const cards = [
   {
     source: 'icon-do-best-phone',
     alt: 'phone icon',
-    text: 'iOS / Android development'
+    text: 'iOS / Android App development'
   },
   {
-    source: 'icon-do-best-lightning',
-    alt: 'lightning icon',
-    text: 'etc.'
+    source: 'icon-do-best-shield',
+    alt: 'shield icon',
+    text: 'Explorers for private blockchain'
   },
 ]
 
@@ -104,13 +89,15 @@ const WhatWeDoBest: FunctionalComponent = () => {
         primary="What we do Best?"
         secondary="We are ready to take on a blockchain project of any complexity, from the stage of developing an idea to the final implementation. Here are the most popular requests we receive regularly:"
       />
-      <div className={style['what-we-do-best__cards']}>
-        {cards.map(card => (
-          <div className={style['what-we-do-best__card']} key={card.source}>
-            <img className={style.icon} src={`../../assets/img/${card.source}.png`} alt={card.alt} />
-            <p className={style['what-we-do-best__description']}>{card.text}</p>
-          </div>
-        ))}
+      <div className={style.scroll}>
+        <div className={style['what-we-do-best__cards']}>
+          {cards.map(card => (
+            <div className={style['what-we-do-best__card']} key={card.source}>
+              <img className={style.icon} src={`../../assets/img/${card.source}.png`} alt={card.alt} />
+              <p className={style['what-we-do-best__description']}>{card.text}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   )

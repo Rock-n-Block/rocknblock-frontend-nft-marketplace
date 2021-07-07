@@ -24,6 +24,13 @@
     align-items: center;
     border: 3px solid #2e2e35;
     border-radius: 20px;
+
+    @include b('mobile') {
+      margin-top: -50px;
+      margin-bottom: -50px;
+      border: none;
+      justify-content: space-between;
+    }
   }
 
   &__card {
@@ -34,11 +41,19 @@
     flex-direction: column;
     justify-content: space-evenly;
 
+    @include b('mobile') {
+      width: 170px;
+    }
+
     &__primary {
       display: flex;
       flex-direction: row;
       justify-content: space-evenly;
       align-items: center;
+
+      @include b('mobile') {
+        flex-direction: column;
+      }
     }
 
     &-numbers {
@@ -49,6 +64,11 @@
       letter-spacing: -3px;
       font-feature-settings: 'liga' off;
       color: #d23e10;
+
+      @include b('mobile') {
+        font-size: 40px;
+        line-height: 47px;
+      }
     }
 
     &-units {
@@ -112,6 +132,7 @@
 
       &:last-child {
         border: none;
+        border-bottom: 1px solid #2e2e35;
       }
     }
   }

@@ -20,9 +20,8 @@ const About: FunctionalComponent = () => {
       <div className={style['about__content']}>
         <div className={style['about__content-item']}>
           <p className={style['about__description']}>
-            Since 2017 Rock’n’block developed&nbsp;
-            <b>250+</b>
-            <br /> solutions of different complexity and we are ready to bring your idea to life
+            Since 2017 Rock’n’Block developed <b>250+</b> solutions of different complexity.
+            Ready to bring your idea to life.
           </p>
           <section className={style['about__buttons']}>
             <a
@@ -42,6 +41,10 @@ const About: FunctionalComponent = () => {
         </div>
         <div className={style['about__content-item']}>
           <div className={style.about__achievements}>
+            <img
+              className={style.about__achievements__top}
+              src="../../assets/img/achievement.png"
+              alt="achievement" />
             <img src="../../assets/img/achievements.png" alt="our achievements" />
           </div>
         </div>

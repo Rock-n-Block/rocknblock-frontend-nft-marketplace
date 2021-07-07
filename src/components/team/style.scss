@@ -6,11 +6,19 @@
   position: relative;
   margin-top: 100px;
 
+  @include b('mobile') {
+    margin-top: 50px;
+  }
+
   .background-img {
     top: 184px;
     left: 933px;
     width: 186px;
     z-index: -1;
+
+    @include b('mobile') {
+      display: none;
+    }
   }
 
   .block-header {
@@ -21,6 +29,16 @@
 
   &__tabs {
     margin-top: 41px;
+
+    @include b('mobile') {
+      margin-top: 30px;
+    }
+  }
+
+  .scroll {
+    @include b('mobile') {
+      overflow-x: auto;
+    }
   }
 
   &__content {
@@ -28,6 +46,13 @@
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
+
+    @include b('mobile') {
+      display: inline-flex;
+      flex-wrap: nowrap;
+      gap: 15px;
+      overflow-x: scroll;
+    }
 
     .content__card {
       margin-top: 56px;
@@ -38,6 +63,10 @@
       border: 2px solid #33333a;
       box-sizing: border-box;
       border-radius: 20px;
+
+      @include b('mobile') {
+        margin-top: 30px;
+      }
 
       &__post {
         @include text-gradient(linear-gradient(87.05deg, #FFFFFF 54.97%, #171628 152.38%));
@@ -68,6 +97,104 @@
         mix-blend-mode: normal;
         opacity: 0.5;
       }
+
+      &__exp {
+        margin-top: 30px;
+
+        &__title {
+          @include text-gradient(linear-gradient(87.05deg, #FFFFFF 54.97%, #171628 152.38%));
+
+          font-style: normal;
+          font-weight: 800;
+          font-size: 16px;
+          line-height: 19px;
+          font-feature-settings: 'liga' off;
+        }
+
+        &__list {
+          margin-top: 20px;
+          display: flex;
+          flex-direction: column;
+
+          &__item {
+            position: relative;
+            margin-top: 10px;
+            padding-left: 17px;
+            color: #8b898d;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 19px;
+            font-feature-settings: 'liga' off;
+            mix-blend-mode: normal;
+
+            &::before {
+              position: absolute;
+              top: 6px;
+              left: 0;
+              content: '';
+              display: inline-block;
+              min-width: 10px;
+              min-height: 10px;
+              border: 1px solid #fff;
+              border-radius: 50%;
+              margin-right: 7px;
+            }
+          }
+        }
+
+        &__stacks {
+          .stacks__title {
+            margin-top: 20px;
+
+            @include text-gradient(linear-gradient(87.05deg, #FFFFFF 54.97%, #171628 152.38%));
+
+            font-style: normal;
+            font-weight: 800;
+            font-size: 20px;
+            line-height: 24px;
+          }
+
+          .gray-list {
+            margin-top: 7px;
+          }
+        }
+      }
+
+      &__mng {
+        margin-top: 56px;
+        padding: 0;
+        width: 320px;
+        height: 396px;
+        background: #17141c;
+        border: 1px solid #33333a;
+        box-sizing: border-box;
+        border-radius: 20px;
+
+        img {
+          margin: 3px;
+        }
+
+        .description {
+          margin: 36px 20px;
+          display: flex;
+          flex-direction: column;
+          font-family: 'TT Norms', sans-serif;
+
+          &__name {
+            font-style: normal;
+            font-weight: 800;
+            color: #fff;
+          }
+
+          &__post {
+            margin-top: 10px;
+            font-style: normal;
+            font-weight: 400;
+            color: #d4491d;
+          }
+        }
+      }
     }
 
     @include b('mobile') {
@@ -82,6 +209,12 @@
     justify-content: space-between;
     flex-wrap: wrap;
 
+    @include b('mobile') {
+      margin: 30px auto;
+      justify-content: space-around;
+      gap: 15px;
+    }
+
     &__item {
       display: flex;
       flex-direction: column;
@@ -89,6 +222,10 @@
       font-style: normal;
       font-weight: bold;
       font-feature-settings: 'liga' off;
+
+      @include b('mobile') {
+        width: 133px;
+      }
 
       &__number {
         display: flex;
@@ -125,74 +262,6 @@
         opacity: 0.5;
         text-align: center;
       }
-    }
-
-    @include b('mobile') {
-      display: grid;
-      grid-template-columns: 150px 150px;
-      grid-template-rows: repeat(3, 150px);
-      grid-row-gap: 20px;
-    }
-  }
-}
-
-.content__card__exp {
-  margin-top: 20px;
-
-  &__title {
-    font-style: normal;
-    font-weight: 800;
-    font-size: 16px;
-    line-height: 19px;
-    font-feature-settings: 'liga' off;
-  }
-
-  &__list {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-
-    &__item {
-      position: relative;
-      margin-top: 10px;
-      padding-left: 17px;
-      color: #8b898d;
-      font-style: normal;
-      font-weight: 500;
-      font-size: 16px;
-      line-height: 19px;
-      font-feature-settings: 'liga' off;
-      mix-blend-mode: normal;
-
-      &::before {
-        position: absolute;
-        top: 6px;
-        left: 0;
-        content: '';
-        display: inline-block;
-        min-width: 10px;
-        min-height: 10px;
-        border: 1px solid #fff;
-        border-radius: 50%;
-        margin-right: 7px;
-      }
-    }
-  }
-
-  &__stacks {
-    .stacks__title {
-      margin-top: 20px;
-
-      @include text-gradient(linear-gradient(87.05deg, #FFFFFF 54.97%, #171628 152.38%));
-
-      font-style: normal;
-      font-weight: 800;
-      font-size: 20px;
-      line-height: 24px;
-    }
-
-    .gray-list {
-      margin-top: 7px;
     }
   }
 }

@@ -1,9 +1,6 @@
 @import "../../style/mixins/mixins";
 @import "../../style/index";
 
-@include theme-mask('burger', 'header-burger', 'svg');
-@include theme-mask('burger-close', 'header-burger-close', 'svg');
-
 header {
 	position: sticky;
 	top: 0;
@@ -12,7 +9,8 @@ header {
 	background-color: #1d1b21;
 	transition: 0.5s ease;
 
-	@include b('mobile') {
+	@include b('tablet') {
+		background-color: transparent;
 		position: relative;
 	}
 }
@@ -33,17 +31,7 @@ header {
 			background-color: var(--body-background-color);
 			transition: 0.4s ease;
 
-			&-burger {
-				@include before-img(block, 34px, 16px, r) {
-					background-size: cover;
-				}
-			}
-
-			&-burger-close {
-				@include before-img(block, 17px, 17px, r) {
-					background-size: cover;
-				}
-			}
+			&-burger-close {}
 
 			&:focus {
 				outline: 0 none;
@@ -78,7 +66,7 @@ header {
 				&:nth-child(-n+4) {
 					color: #d4d2d2;
 
-					@include b('mobile') {
+					@include b('tablet') {
 						color: #d23e10;
 
 						&::before {
@@ -112,12 +100,12 @@ header {
 			}
 		}
 
-		@include b('mobile') {
+		@include b('tablet') {
 			display: none;
 		}
 	}
 
-	@include b('mobile') {
+	@include b('tablet') {
 		flex-direction: column;
 
 		.topnav {
@@ -146,10 +134,12 @@ header {
 }
 
 .burger {
+	margin-right: 30px;
 	display: none;
 	cursor: pointer;
 
-	@include b('mobile') {
+	@include b('tablet') {
 		display: inline-block;
+		margin-right: 15px;
 	}
 }

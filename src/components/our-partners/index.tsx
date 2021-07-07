@@ -7,17 +7,14 @@ const partners = [
   'binance',
   'quras',
   'changelly',
-  'eos',
+  'polygon',
   'axion',
-  'rsk',
   'okex',
   'neo',
   'waves',
-  'tron',
   'ducatus',
   'enq',
-  'teambrella',
-  'lancor',
+  'tron',
   'bw'
 ];
 

@@ -1,4 +1,4 @@
-import { FunctionalComponent, h } from 'preact';
+import {FunctionalComponent, h} from 'preact';
 
 import style from './style.scss';
 import BlockHeader from "../block-header";
@@ -16,7 +16,7 @@ const cards = [
   },
   {
     source: 'mobile',
-    title: 'MOBILE AND WEB:',
+    title: 'MOBILE AND WEB',
     text: 'Android/iOS applications; Project management interfaces; Investors cabinets; top-notch UX/UI, etc.'
   },
   {
@@ -32,7 +32,7 @@ const cards = [
   {
     source: 'documentation',
     title: 'DOCUMENTATION',
-    text: 'Project architecture development. Technical specifications and decompositions of your ideas. Whitepapers, light papers etc.'
+    text: 'Project architecture development. Technical specifications and decompositions of your ideas. Whitepapers, lightpapers and etc.'
   },
 ]
 
@@ -44,17 +44,21 @@ const AreasOfExpertise: FunctionalComponent = () => {
       </div>
       <BlockHeader style={style} primary="Areas of Expertise" />
       <div className={style['areas-of-expertise__cards']}>
-        {cards.map(card => (
-          <div className={style['areas-of-expertise__card']} key={card.source}>
-            <div className={style['icon-container']}>
-              <div className={style.icon}>
-                <img src={`../../assets/img/icons/icon-area-${card.source}-mask.svg`} alt={card.source} />
+        <div className={style['areas-of-expertise__cards__scroll']}>
+          {cards.map(card => (
+            <div className={style['areas-of-expertise__card']} key={card.source}>
+              <div className={style['icon-container']}>
+                <img
+                  className={style.icon}
+                  src={`../../assets/img/icons/icon-area-${card.source}-mask.svg`}
+                  alt={card.source}
+                />
               </div>
+              <h3 className={style['areas-of-expertise__card-name']}>{card.title}</h3>
+              <p className={style['areas-of-expertise__card-description']}>{card.text}</p>
             </div>
-            <h3 className={style['areas-of-expertise__card-name']}>{card.title}</h3>
-            <p className={style['areas-of-expertise__card-description']}>{card.text}</p>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   )

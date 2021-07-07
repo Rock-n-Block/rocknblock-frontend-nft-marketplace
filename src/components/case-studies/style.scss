@@ -5,8 +5,22 @@
 .case-studies {
   margin-top: 120px;
 
+  @include b('mobile') {
+    margin-top: 60px;
+  }
+
   .tablinks {
     margin-top: 70px;
+
+    @include b('mobile') {
+      margin-top: 30px;
+    }
+  }
+
+  .scroll {
+    @include b('mobile') {
+      overflow-x: auto;
+    }
   }
 
   &__content {
@@ -17,6 +31,19 @@
     gap: 40px;
     align-items: flex-start;
     flex-wrap: wrap;
+
+    @include b('mobile') {
+      margin-top: 10px;
+      padding: 20px;
+      height: 175px;
+      display: inline-flex;
+      flex-direction: row;
+      justify-content: space-around;
+      flex-wrap: nowrap;
+      overflow-y: hidden;
+      overflow-x: scroll;
+      overflow-scrolling: initial;
+    }
 
     .content-item {
       all: unset;
@@ -58,19 +85,6 @@
         opacity: 1;
       }
     }
-
-    @include b('mobile') {
-      display: flex;
-      justify-content: space-evenly;
-
-      .content-item {
-        &:nth-last-child(-n+4) {
-          margin-left: 0;
-        }
-
-        margin: 20px 10px 0 10px;
-      }
-    }
   }
 
   &__content .content-item:hover {
@@ -92,6 +106,11 @@
   &__dropdown {
     background: #25232a;
     border-radius: 8px;
+
+    @include b('mobile') {
+      border: none;
+      background: transparent;
+    }
   }
 }
 
@@ -102,13 +121,14 @@
   flex-direction: column;
 
   @include b('mobile') {
-    padding: 30px 10px 30px 10px;
+    margin: 0;
+    padding: 0;
 
     &__img {
-      margin: 0 auto;
-      flex-direction: column;
+      padding: 0;
       justify-content: center;
       align-items: center;
+      overflow-x: auto;
     }
 
     &__insights {
@@ -122,6 +142,10 @@
     font-weight: 700;
     font-size: 24px;
     line-height: 28px;
+
+    @include b('mobile') {
+      display: none;
+    }
   }
 
   &__img {
@@ -131,20 +155,95 @@
     min-height: 588px;
     display: flex;
     justify-content: space-between;
+
+    @include b('mobile') {
+      margin: -80px 0;
+    }
+  }
+
+  .noscroll {
+    @include b('mobile') {
+      display: none;
+    }
+  }
+
+  .scroll {
+    display: none;
+
+    @include b('mobile') {
+      display: inline-flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      gap: 20px;
+      overflow-x: scroll;
+      max-height: 386px;
+
+      &__dev {
+        width: 179px;
+      }
+
+      &__contract {
+        width: 570px;
+        border-radius: 8px;
+      }
+    }
+  }
+
+  .switch {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    @include b('mobile') {
+      display: none;
+    }
+
+    &Image {
+      width: 80%;
+      height: 90%;
+      border-radius: 15px;
+
+      @include b('mobile') {
+        width: 70%;
+      }
+    }
+
+    &Icon {
+      cursor: pointer;
+      margin: 0 20px;
+      align-items: center;
+      width: 44px;
+      min-width: 20px;
+      background-color: transparent;
+      border: none;
+    }
   }
 
   &__insights {
-    margin-top: 50px;
+    margin-top: 20px;
     width: 100%;
     max-width: 891px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 
+    @include b('mobile') {
+      margin-top: -20px;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+
     &-insight {
       display: flex;
       flex-direction: column;
       flex: 1;
+
+      @include b('mobile') {
+        margin-top: 10px;
+        align-items: flex-start;
+        justify-content: flex-start;
+      }
 
       .insight__title {
         @include text-gradient(linear-gradient(87.05deg, #FFFFFF 54.97%, #171628 152.38%));
@@ -157,15 +256,10 @@
 
       .gray-list {
         margin-top: 12px;
-      }
-    }
 
-    @include b('mobile') {
-      margin-top: 0;
-      flex-direction: column;
-
-      &-insight {
-        margin-top: 50px;
+        @include b('mobile') {
+          margin-top: 5px;
+        }
       }
     }
   }
@@ -174,37 +268,29 @@
 .insight-stacks {
   align-items: flex-end;
 
+  @include b('mobile') {
+    align-items: flex-start;
+
+    .gray-list {
+      justify-content: flex-start;
+    }
+  }
+
   .gray-list {
     justify-content: flex-end;
+
+    @include b('mobile') {
+      justify-content: flex-start;
+    }
+
     &__item {
       margin-right: 0;
       margin-left: 6px;
+
+      @include b('mobile') {
+        margin-left: 0;
+        margin-right: 5px;
+      }
     }
-  }
-}
-
-.switch {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-
-  &Image {
-    width: 80%;
-    height: 90%;
-    border-radius: 15px;
-
-    @include b('mobile') {
-      width: 200px;
-    }
-  }
-
-  &Icon {
-    cursor: pointer;
-    margin: 0 20px;
-    align-items: center;
-    width: 44px;
-    min-width: 20px;
-    background-color: transparent;
-    border: none;
   }
 }

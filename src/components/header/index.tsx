@@ -5,16 +5,8 @@ import style from './style.scss';
 const Header: FunctionalComponent = () => {
   const [burger, setBurger] = useState('');
 
-  const switchIcon = (e: Event | undefined) => {
+  const switchIcon = (): void => {
     setBurger(burger === '' ? '-close' : '');
-    // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
-    // @ts-ignore
-    if (e.target.classList !== "burger-change") {
-      const navPages = document.getElementById("nav-pages");
-      // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
-      // @ts-ignore
-      navPages.classList.toggle("topnav");
-    }
   }
 
   return (
@@ -27,17 +19,37 @@ const Header: FunctionalComponent = () => {
             </a>
             <div
               class={`${style.burger} ${style.icon} ${style['icon-burger']}`}
-              onClick={() => switchIcon(event)}
+              onClick={(): void => switchIcon()}
             >
               <img src={`../../assets/img/icons/icon-header-burger${burger}-mask.svg`} alt={`burger ${burger}`} />
             </div>
           </section>
           <section id="nav-pages" class={`${style['nav-pages']} ${burger === '' ? null : style.topnav}`}>
-            <a href="#services" class={style['nav-pages__link']}>Services</a>
-            <a href="#cases" class={style['nav-pages__link']}>Cases</a>
-            <a href="#team" class={style['nav-pages__link']}>Team</a>
-            <a href="#partners" class={style['nav-pages__link']}>Partners</a>
-            <a href="#contact-us" class={style['nav-pages__contact-button']}>CONTACT US</a>
+            <a
+              href="#services"
+              class={style['nav-pages__link']}
+              onClick={(): void => switchIcon()}
+            >Services</a>
+            <a
+              href="#cases"
+              class={style['nav-pages__link']}
+              onClick={(): void => switchIcon()}
+            >Cases</a>
+            <a
+              href="#team"
+              class={style['nav-pages__link']}
+              onClick={(): void => switchIcon()}
+            >Team</a>
+            <a
+              href="#partners"
+              class={style['nav-pages__link']}
+              onClick={(): void => switchIcon()}
+            >Partners</a>
+            <a
+              href="#contact-us"
+              class={style['nav-pages__contact-button']}
+              onClick={(): void => switchIcon()}
+            >CONTACT US</a>
           </section>
         </nav>
       </div>

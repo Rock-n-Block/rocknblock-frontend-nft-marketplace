@@ -78,23 +78,45 @@ const dropdown = [
       key: 1,
       name: 'ducatus',
       title: 'DUCATUS Wallet',
-      images: 3,
-      features: ['Blockchain developement', 'Mobile wallet application development', 'Crowdfunding platform', 'Online stores with crypto support'],
+      images: [
+        '../../assets/img/case-ducatus-1.png',
+        '../../assets/img/case-ducatus-2.png',
+        '../../assets/img/case-ducatus-3.png'
+      ],
+      features: [
+        'Blockchain developement',
+        'Mobile wallet application development',
+        'Crowdfunding platform',
+        'Online stores with crypto support'
+      ],
       stacks: ['Web3js', 'Solidity', 'JavaScript', 'Openzeppelin', 'Truffle']
     },
     {
       key: 2,
       name: 'census',
       title: 'Census Wallet',
-      images: 3,
-      features: ['Tangem integration', 'Open Finance', 'Loans', 'Staking', 'Digital Assets Investments'],
+      images: [
+        '../../assets/img/case-census-1.png',
+        '../../assets/img/case-census-2.png',
+        '../../assets/img/case-census-3.png'
+      ],
+      features: ['Tangem integration',
+        'Open Finance',
+        'Loans',
+        'Staking',
+        'Digital Assets Investments'
+      ],
       stacks: ['Web3js', 'Solidity', 'JavaScript', 'Openzeppelin', 'Truffle']
     },
     {
       key: 3,
       name: 'quras',
       title: 'QURAS wallet',
-      images: 3,
+      images: [
+        '../../assets/img/case-quras-1.png',
+        '../../assets/img/case-quras-2.png',
+        '../../assets/img/case-quras-3.png'
+      ],
       features: ['Private blockchain integrations', 'Cross-blockchain swap'],
       stacks: ['Web3js', 'Solidity', 'JavaScript', 'Openzeppelin', 'Truffle']
     },
@@ -102,7 +124,11 @@ const dropdown = [
       key: 4,
       name: 'hex',
       title: 'HEX',
-      images: 3,
+      images: [
+        '../../assets/img/case-hex-1.png',
+        '../../assets/img/case-hex-2.png',
+        '../../assets/img/case-hex-3.png'
+      ],
       features: ['QR', 'Smart Contract Integration'],
       stacks: ['Web3js', 'Solidity', 'JavaScript', 'Openzeppelin', 'Truffle']
     },
@@ -112,54 +138,85 @@ const dropdown = [
       key: 1,
       name: 'axion',
       title: 'Axion Dashboard',
-      images: 2,
+      images: [
+        '../../assets/img/case-axion-1.png',
+        '../../assets/img/case-axion-2.png'
+      ],
       features: ['Staking', 'Auction', 'H2T token swap', 'Uniswap auto-buy', 'Dashboard'],
-      stacks: []
+      stacks: ['Solidity']
     },
     {
       key: 2,
       name: 'pion',
       title: 'Pion',
-      images: 2,
+      images: [
+        '../../assets/img/case-pion-1.png',
+        '../../assets/img/case-pion-2.png'
+      ],
       features: ['Multicomponent system', 'Stablecoin', 'Liquidity Pool Staking'],
-      stacks: []
+      stacks: ['Solidity']
     },
     {
       key: 3,
       name: 'inflat',
       title: 'Inflationary Staking',
-      images: 3,
+      images: [
+        '../../assets/img/case-inflat-1.png',
+        '../../assets/img/case-inflat-2.png',
+        '../../assets/img/case-inflat-3.png'
+      ],
       features: [],
-      stacks: []
+      stacks: ['Solidity']
     },
     {
       key: 4,
       name: 'bitgear',
       title: 'Bitgear',
-      images: 2,
-      features: [],
-      stacks: []
+      images: [
+        '../../assets/img/case-bitgear-1.png',
+        '../../assets/img/case-bitgear-2.png'
+      ],
+      features: [
+        '0x protocol integration',
+        'all DEXs trading',
+        'limit orders',
+        'multiple wallets support'
+      ],
+      stacks: ['React', 'Web3', '0x protocol', 'Solidity']
     },
     {
       key: 5,
       name: 'minto',
       title: 'Minto',
-      images: 2,
-      features: [],
-      stacks: []
+      images: [
+        '../../assets/img/case-minto-1.png',
+        '../../assets/img/case-minto-2.png'
+      ],
+      features: [
+        'HECO blockchain integration',
+        'staking',
+        'mining tokenization',
+      ],
+      stacks: ['React', 'Web3', 'Python', 'Solidity']
     },
     {
       key: 6,
       name: 'duc',
       title: 'Ducatus',
-      images: 2,
-      features: [],
-      stacks: []
+      images: [
+        '../../assets/img/case-duc-1.png',
+        '../../assets/img/case-duc-2.png'
+      ],
+      features: [
+        'custom blockchains development',
+        'explorer'
+      ],
+      stacks: ['Angular', 'React', 'Web3', 'Ionic', 'Cordova', 'Solidity']
     },
   ]
 ];
 
-const tabs = ['Smart contracts', 'web/mobile development'];
+const tabs = ['web/mobile development', 'Smart contracts'];
 
 const CaseStudies: FunctionalComponent = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -168,22 +225,22 @@ const CaseStudies: FunctionalComponent = () => {
 
   const activeDropdown = dropdown[activeTab][activeBtn - 1];
 
-  const handleClick = (index: number) => {
+  const handleClick = (index: number): void => {
     setActiveTab(index);
     setActiveBtn(1);
   };
 
-  const setBtn = (index: number) => {
+  const setBtn = (index: number): void => {
     setActiveBtn(index);
     setActiveImg(1);
   }
 
-  const switchLeft = () => {
-    activeImg === 1 ? setActiveImg(activeDropdown.images) : setActiveImg(activeImg - 1);
+  const switchLeft = (): void => {
+    activeImg === 1 ? setActiveImg(activeDropdown.images.length) : setActiveImg(activeImg - 1);
   }
 
-  const switchRight = () => {
-    activeImg === activeDropdown.images ? setActiveImg(1) : setActiveImg(activeImg + 1);
+  const switchRight = (): void => {
+    activeImg === activeDropdown.images.length ? setActiveImg(1) : setActiveImg(activeImg + 1);
   }
 
   return (
@@ -195,23 +252,25 @@ const CaseStudies: FunctionalComponent = () => {
             <button
               key={index}
               className={`${style['case-studies__tablinks__link']} ${style['tablinks__link']} ${index === activeTab ? style['link-active'] : null}`}
-              onClick={() => handleClick(index)}
+              onClick={(): void => handleClick(index)}
             >{tab}</button>
           ))}
         </div>
-        <div id="case-studies__firs-tab" className={style['case-studies__content']}>
-          {content[activeTab].map((item) => (
-            // eslint-disable-next-line react/jsx-key
-            <CaseStudiesContent
-              style={style}
-              source={item.source}
-              alt={item.alt}
-              name={item.name}
-              number={item.number}
-              activeBtn={activeBtn}
-              setBtn={setBtn}
-            />
-          ))}
+        <div className={style.scroll}>
+          <div id="case-studies__firs-tab" className={style['case-studies__content']}>
+            {content[activeTab].map((item) => (
+              // eslint-disable-next-line react/jsx-key
+              <CaseStudiesContent
+                style={style}
+                source={item.source}
+                alt={item.alt}
+                name={item.name}
+                number={item.number}
+                activeBtn={activeBtn}
+                setBtn={setBtn}
+              />
+            ))}
+          </div>
         </div>
       </div>
       <div
@@ -222,23 +281,52 @@ const CaseStudies: FunctionalComponent = () => {
         <div className={style['dropdown__img']}>
           {activeTab === 0 ? (
             <div>
-              <img src={`../../assets/img/case-${activeDropdown.name}-1.png`} alt={`case ${activeDropdown.name} 1`} />
-              <img src={`../../assets/img/case-${activeDropdown.name}-2.png`} alt={`case ${activeDropdown.name} 2`} />
-              <img src={`../../assets/img/case-${activeDropdown.name}-3.png`} alt={`case ${activeDropdown.name} 3`} />
+              <div className={style.scroll}>
+                {activeDropdown.images.map((img, i) => (
+                  <img
+                    key={i}
+                    className={style.scroll__dev}
+                    src={img}
+                    alt={`case ${activeDropdown.name} 1`}
+                  />
+                ))}
+              </div>
+              <div className={style.noscroll}>
+                {activeDropdown.images.map((img, i) => (
+                  <img
+                    key={i}
+                    className={style.scroll__dev}
+                    src={img}
+                    alt={`case ${activeDropdown.name} 1`}
+                  />
+                ))}
+              </div>
             </div>
           ) : (
-            <div className={style.switch}>
-              <button className={style.switchIcon} onClick={() => switchLeft()}>
-                <img src={'../../assets/img/icons/icon-switch-left.svg'} alt="switch left icon" />
-              </button>
-              <img
-                className={style.switchImage}
-                src={`../../assets/img/case-${activeDropdown.name}-${activeImg}.png`}
-                alt={`${activeDropdown.name} ${activeImg}`}
-              />
-              <button className={style.switchIcon} onClick={() => switchRight()}>
-                <img src={'../../assets/img/icons/icon-switch-right.svg'} alt="switch right icon" />
-              </button>
+            <div>
+              <div className={style.switch}>
+                <button className={style.switchIcon} onClick={(): void => switchLeft()}>
+                  <img src={'../../assets/img/icons/icon-switch-left.svg'} alt="switch left icon" />
+                </button>
+                <img
+                  className={style.switchImage}
+                  src={`../../assets/img/case-${activeDropdown.name}-${activeImg}.png`}
+                  alt={`${activeDropdown.name} ${activeImg}`}
+                />
+                <button className={style.switchIcon} onClick={(): void => switchRight()}>
+                  <img src={'../../assets/img/icons/icon-switch-right.svg'} alt="switch right icon" />
+                </button>
+              </div>
+              <div className={style.scroll}>
+                {activeDropdown.images.map((img, i) => (
+                  <img
+                    key={i}
+                    className={style.scroll__contract}
+                    src={img}
+                    alt={`${activeDropdown.name} ${i + 1}`}
+                  />
+                ))}
+              </div>
             </div>
           )}
         </div>

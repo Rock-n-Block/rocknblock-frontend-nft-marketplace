@@ -7,7 +7,7 @@ const cards = [
   {
     number: '250+',
     units: 'projects',
-    text: 'created on-a-turn-key basis'
+    text: 'created on a turn-key basis'
   },
   {
     number: '15000+',
@@ -21,8 +21,8 @@ const cards = [
   },
   {
     number: '1Bn+',
-    units: 'dollar',
-    text: 'capitalization of the  projects we have built'
+    units: 'dollars',
+    text: 'capitalization of built projects'
   },
   {
     number: '15+',
@@ -32,7 +32,7 @@ const cards = [
   {
     number: 'ANY',
     units: 'blockchain',
-    text: 'integration with and development'
+    text: 'integration and development'
   },
 ];
 

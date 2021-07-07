@@ -2,8 +2,6 @@
 @import "mixins/mixins";
 @import "theme/theme";
 
-//@include theme-mask('arrow-top', 'arrow-top', 'svg');
-
 *,
 *::before,
 *::after {
@@ -14,16 +12,32 @@
 }
 
 html {
+  margin: 0 auto;
   box-sizing: border-box;
   scroll-behavior: smooth;
+
+  @include b('mobile') {
+    max-width: $mediaWidthMobile;
+    width: 375px;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
 }
 
 body {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   background-color: var(--body-background-color);
   cursor: default;
   color: white;
+
+  @include b('mobile') {
+    max-width: $mediaWidthMobile;
+    width: 375px;
+    padding: 0 15px;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
 }
 
 img {
@@ -51,6 +65,12 @@ span {
   max-width: $mediaWidthDesktop;
   padding: 0 12px;
   margin: 0 auto;
+
+  @include b('mobile') {
+    max-width: $mediaWidthMobile;
+    width: 345px;
+    padding: 0;
+  }
 }
 
 h1 {
@@ -67,10 +87,6 @@ ul {
 
 .background-img {
   position: absolute;
-
-  @include b('mobile') {
-    display: none;
-  }
 }
 
 .block-header {
@@ -88,6 +104,11 @@ ul {
 
     text-align: center;
     font-feature-settings: 'liga' off;
+
+    @include b('mobile') {
+      font-size: 32px;
+      line-height: 37px;
+    }
   }
 
   .secondary-header {
@@ -172,38 +193,7 @@ ul {
   }
 
   &-arrow-top {
-    @include before-img(block, 14px, 19px, r) {
-      background-size: cover;
-      background-color: black;
-    }
   }
 }
 
-.arrow-top {
-  display: none;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  bottom: 71px;
-  left: calc(50% + 520px);
-  width: 48px;
-  height: 48px;
-  background: #1d1b21;
-  border: 3px solid #2e2e35;
-  border-radius: 50%;
-  z-index: 99;
 
-  &:hover {
-    border-color: #d23e10;
-  }
-
-  @include b('tablet') {
-    bottom: 30px;
-    right: 30px;
-  }
-
-  @include b('mobile') {
-    bottom: 30px;
-    right: 30px;
-  }
-}

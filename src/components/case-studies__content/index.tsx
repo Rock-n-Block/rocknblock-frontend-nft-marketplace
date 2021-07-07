@@ -1,5 +1,4 @@
 import {FunctionalComponent, h} from 'preact';
-import {useState} from 'preact/hooks';
 
 type CaseStudiesContentProps = {
   style: any;
@@ -22,14 +21,14 @@ const CaseStudiesContent:
     activeBtn,
     setBtn
   }) => {
-  const handleSwitch = () => {
+  const handleSwitch = (): void => {
     setBtn(number)
   }
 
   return (
     <button
       className={`${style['case-studies__content-item']} ${style['content-item']} ${activeBtn === number ? style.active : null}`}
-      onClick={() => handleSwitch()}
+      onClick={(): void => handleSwitch()}
     >
       <img className={style['content-item__img']} src={`../../assets/img/${source}.png`} alt={alt} />
       <h4 className={style['content-item__name']}>{name}</h4>

@@ -11,6 +11,10 @@ $scheme-icons-mask: ((), ('close', 'close', 'svg'));
   position: relative;
   margin-top: 182px;
 
+  @include b('mobile') {
+    margin-top: 60px;
+  }
+
   .background-img {
     top: 383px;
     left: 43px;
@@ -24,6 +28,10 @@ $scheme-icons-mask: ((), ('close', 'close', 'svg'));
     .secondary-header {
       max-width: 600px;
       margin-top: 34px;
+
+      @include b('mobile') {
+        margin-top: 10px;
+      }
     }
   }
 
@@ -33,9 +41,12 @@ $scheme-icons-mask: ((), ('close', 'close', 'svg'));
     flex-direction: column;
     align-items: center;
 
+    @include b('mobile') {
+      margin-top: 20px;
+    }
+
     &__input {
-      //all: unset;
-      margin-top: 17px;
+      margin-top: 18px;
       padding-left: 24px;
       padding-right: 24px;
       width: 100%;
@@ -71,7 +82,7 @@ $scheme-icons-mask: ((), ('close', 'close', 'svg'));
     }
 
     &__submit-btn {
-      margin-top: 30px;
+      margin: 30px 0;
       font-style: normal;
       font-weight: bold;
       font-size: 24px;

@@ -1,7 +1,5 @@
 import { FunctionalComponent, h } from 'preact';
 
-//import style from '../../style/index.scss';
-
 type BlockHeaderProps = {
   style: any;
   primary: string;

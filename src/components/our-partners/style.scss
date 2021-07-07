@@ -5,19 +5,31 @@
   position: relative;
   margin-top: 150px;
 
+  @include b('mobile') {
+    margin-top: 60px;
+  }
+
   .background-img {
     bottom: -170px;
     left: 900px;
     width: 98px;
+
+    @include b('mobile') {
+      display: none;
+    }
   }
 
   &__partners {
     margin-top: 50px;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 100px);
     grid-column-gap: 20px;
     grid-row-gap: 20px;
+
+    @include b('mobile') {
+      margin-top: 40px;
+    }
 
     .img-container {
       display: flex;
@@ -37,6 +49,7 @@
       flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
+      gap: 30px;
     }
   }
 }
