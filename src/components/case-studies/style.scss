@@ -102,7 +102,23 @@
       opacity: 1;
     }
   }
-
+  
+  &__description {
+    display: none;
+    
+    @include b('mobile') {
+      display: block;
+      margin: 30px auto;
+      padding: 10px;
+      background: #34313B;
+      border-radius: 8px;
+      font-family: 'TT Norms', sans-serif;
+      font-size: 18px;
+      line-height: 23px;
+      font-weight: 700;
+    }
+  }
+  
   &__dropdown {
     background: #25232a;
     border-radius: 8px;
@@ -125,10 +141,7 @@
     padding: 0;
 
     &__img {
-      padding: 0;
-      justify-content: center;
-      align-items: center;
-      overflow-x: auto;
+      display: none;
     }
 
     &__insights {
@@ -157,7 +170,7 @@
     justify-content: space-between;
 
     @include b('mobile') {
-      margin: -80px 0;
+      display: none;
     }
   }
 

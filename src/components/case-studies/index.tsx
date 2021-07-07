@@ -83,6 +83,8 @@ const dropdown = [
         '../../assets/img/case-ducatus-2.png',
         '../../assets/img/case-ducatus-3.png'
       ],
+      description: 'Full functional custodial wallet development for IOS, Android and web, ' +
+        'with more than 10,000 installs.',
       features: [
         'Blockchain developement',
         'Mobile wallet application development',
@@ -100,6 +102,8 @@ const dropdown = [
         '../../assets/img/case-census-2.png',
         '../../assets/img/case-census-3.png'
       ],
+      description: 'Census wallet is an app that enables you to control Open Finance by Tangem Card. ' +
+        'Available on IOS and Android devices.',
       features: ['Tangem integration',
         'Open Finance',
         'Loans',
@@ -117,6 +121,8 @@ const dropdown = [
         '../../assets/img/case-quras-2.png',
         '../../assets/img/case-quras-3.png'
       ],
+      description: 'Quras wallet is a tool that allows for interacting with the secret contract platform and fulfill ' +
+        'various privacy protection needs.',
       features: ['Private blockchain integrations', 'Cross-blockchain swap'],
       stacks: ['Web3js', 'Solidity', 'JavaScript', 'Openzeppelin', 'Truffle']
     },
@@ -129,6 +135,7 @@ const dropdown = [
         '../../assets/img/case-hex-2.png',
         '../../assets/img/case-hex-3.png'
       ],
+      description: '',
       features: ['QR', 'Smart Contract Integration'],
       stacks: ['Web3js', 'Solidity', 'JavaScript', 'Openzeppelin', 'Truffle']
     },
@@ -142,6 +149,9 @@ const dropdown = [
         '../../assets/img/case-axion-1.png',
         '../../assets/img/case-axion-2.png'
       ],
+      description: <p>The dashboard visualize financial statistics of the context of individual user wallets and time periods.<br />
+        To implement instant access to all information on the project, a centralized database was developed that
+        stores all information about events occurring on the contract, received in real time from the Ethereum network.</p>,
       features: ['Staking', 'Auction', 'H2T token swap', 'Uniswap auto-buy', 'Dashboard'],
       stacks: ['Solidity']
     },
@@ -153,6 +163,10 @@ const dropdown = [
         '../../assets/img/case-pion-1.png',
         '../../assets/img/case-pion-2.png'
       ],
+      description: <p>A stablecoin with a token price of $1 by changing the total supply of tokens through a smart contract
+        by rebase at a random time.\nA second token convertible with the stablecoin at rate of 1 : 1, allows to
+        fix the number of tokens pending the next rebase at a more favorable rate.<br />Stablecoin can generate
+        income from yield farming by staking the LP2 Uniswap token.</p>,
       features: ['Multicomponent system', 'Stablecoin', 'Liquidity Pool Staking'],
       stacks: ['Solidity']
     },
@@ -165,6 +179,12 @@ const dropdown = [
         '../../assets/img/case-inflat-2.png',
         '../../assets/img/case-inflat-3.png'
       ],
+      description: <p>A project based on complex smart contracts that give users the ability to exchange, purchase and
+        stake the token.<br /> Receiving tokens is implemented in several ways:<br />
+        • Exchange tokens at the rate of 1: 1<br />
+        • Free issuance of tokens from a snapshot with a Merkle tree check at a rate of 1: 1<br />
+        • Instant Token Buyback Auction with Uniswap to Maintain the Token Price<br />
+        • Staking and receiving dividends due to token inflation.</p>,
       features: [],
       stacks: ['Solidity']
     },
@@ -176,6 +196,8 @@ const dropdown = [
         '../../assets/img/case-bitgear-1.png',
         '../../assets/img/case-bitgear-2.png'
       ],
+      description: 'By using the Ox protocol, Bitgear helps to find the best prices across exchanges and combines them' +
+        ' into one trade.',
       features: [
         '0x protocol integration',
         'all DEXs trading',
@@ -192,6 +214,8 @@ const dropdown = [
         '../../assets/img/case-minto-1.png',
         '../../assets/img/case-minto-2.png'
       ],
+      description: 'Mine Bitcoin by staking BTCMT tokens. We’ve made smart contracts and crosschain integration between blockchains' +
+        ' that helps to make mining easier than getting a BTC wallet.',
       features: [
         'HECO blockchain integration',
         'staking',
@@ -207,6 +231,9 @@ const dropdown = [
         '../../assets/img/case-duc-1.png',
         '../../assets/img/case-duc-2.png'
       ],
+      description: 'Infrastructure creation and deployment of Ducatus and DucatusX blockchains. Blockchain tools' +
+        ' development: API, explorer/insight, scanner and wallet. Network and user maintenance support. Application' +
+        ' development for created blockchains, integration with exchanges and other blockchains.',
       features: [
         'custom blockchains development',
         'explorer'
@@ -281,16 +308,6 @@ const CaseStudies: FunctionalComponent = () => {
         <div className={style['dropdown__img']}>
           {activeTab === 0 ? (
             <div>
-              <div className={style.scroll}>
-                {activeDropdown.images.map((img, i) => (
-                  <img
-                    key={i}
-                    className={style.scroll__dev}
-                    src={img}
-                    alt={`case ${activeDropdown.name} 1`}
-                  />
-                ))}
-              </div>
               <div className={style.noscroll}>
                 {activeDropdown.images.map((img, i) => (
                   <img
@@ -317,18 +334,11 @@ const CaseStudies: FunctionalComponent = () => {
                   <img src={'../../assets/img/icons/icon-switch-right.svg'} alt="switch right icon" />
                 </button>
               </div>
-              <div className={style.scroll}>
-                {activeDropdown.images.map((img, i) => (
-                  <img
-                    key={i}
-                    className={style.scroll__contract}
-                    src={img}
-                    alt={`${activeDropdown.name} ${i + 1}`}
-                  />
-                ))}
-              </div>
             </div>
           )}
+        </div>
+        <div className={activeDropdown.description ? style['case-studies__description'] : undefined}>
+          {activeDropdown.description}
         </div>
         <div className={style['dropdown__insights']}>
           <div className={`${style['dropdown__insights-insight']} ${style['insight-features']}`}>

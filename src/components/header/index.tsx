@@ -15,7 +15,7 @@ const Header: FunctionalComponent = () => {
         <nav class={style['main-nav']}>
           <section class={style['main-nav__mobile']}>
             <a href="#" class={style.logo}>
-              <img src="../../assets/img/logo.png" alt="Rock'n'Block" />
+              <img src="../../assets/img/icons/logo.svg" alt="Rock'n'Block" />
             </a>
             <div
               class={`${style.burger} ${style.icon} ${style['icon-burger']}`}
@@ -47,9 +47,9 @@ const Header: FunctionalComponent = () => {
             >Partners</a>
             <a
               href="#contact-us"
-              class={style['nav-pages__contact-button']}
+              class={burger === '' ? style['nav-pages__contact-button'] : style['nav-pages__link']}
               onClick={(): void => switchIcon()}
-            >CONTACT US</a>
+            >{burger === '' ? 'CONTACT US' : 'Contact us'}</a>
           </section>
         </nav>
       </div>

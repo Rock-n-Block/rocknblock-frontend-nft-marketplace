@@ -38,28 +38,25 @@
       }
 
       .icon {
+        &-tw {
+          padding-top: 4px;
+        }
+
         &-tg {
-          @include before-img(block, 20px, 18px, r) {
-            background-size: cover;
-          }
+          padding-top: 4px;
+          padding-right: 2px;
         }
 
         &-fb {
-          @include before-img(block, 8px, 18px, r) {
-            background-size: cover;
-          }
+          padding-top: 4px;
         }
 
         &-in {
-          @include before-img(block, 16px, 16px, r) {
-            background-size: cover;
-          }
+          padding-top: 4px;
         }
 
         &-mail {
-          @include before-img(block, 24px, 18px, r) {
-            background-size: cover;
-          }
+          padding-top: 4px;
         }
       }
     }

@@ -22,7 +22,6 @@ const ContactUs: FunctionalComponent = () => {
   const onSubmit = async (e: Event | undefined): Promise<void> => {
     if (e) e.preventDefault();
     const formData = JSON.stringify({name, socialNetwork: contact, message: idea});
-    console.log(formData);
 
     const headers = new Headers({
       'Content-Type': 'application/json',
@@ -57,17 +56,14 @@ const ContactUs: FunctionalComponent = () => {
   }
 
   const onSetName = (e: any): void => {
-    console.log('Name:', e.target.value);
     setName(e.target.value);
   }
 
   const onSetContact = (e: any): void => {
-    console.log('Contact:', e.target.value);
     setContact(e.target.value);
   }
 
   const onSetIdea = (e: any): void => {
-    console.log('Idea:', e.target.value);
     setIdea(e.target.value);
   }
 
@@ -118,7 +114,7 @@ const ContactUs: FunctionalComponent = () => {
         >
           Submit request
         </button>
-        {/*{ReCaptchaBadge && ReCaptchaBadge}*/}
+        {ReCaptchaBadge && ReCaptchaBadge}
       </form>
       <div id="contact-us-popup" className={`${style['contact-us__popup-container']} ${isSubmitted ? style.show : null}`}>
         <div className={`${style['contact-us__popup']} ${style.popup}`}>
