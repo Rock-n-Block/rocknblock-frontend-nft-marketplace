@@ -42,7 +42,11 @@
     justify-content: space-evenly;
 
     @include b('mobile') {
+      margin-top: 20px;
       width: 170px;
+      height: 130px;
+      justify-content: flex-start;
+      gap: 6px;
     }
 
     &__primary {
@@ -124,7 +128,7 @@
       @include right-border;
     }
 
-    @include b('mobile') {
+    @include b('tablet') {
       &:nth-child(-n+5) {
         border: none;
         border-bottom: 1px solid #2e2e35;

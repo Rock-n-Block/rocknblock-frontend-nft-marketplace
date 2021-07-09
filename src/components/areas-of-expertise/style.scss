@@ -39,6 +39,13 @@
   &__cards {
     margin-top: 82px;
 
+    @include b('tablet') {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
     @include b('mobile') {
       margin-top: 50px;
       overflow-x: auto;
@@ -46,9 +53,10 @@
     
     &__scroll {
       display: flex;
-      justify-content: space-between;
       flex-wrap: wrap;
+      justify-content: center;
       gap: 20px;
+
 
       @include b('mobile') {
         display: inline-flex;

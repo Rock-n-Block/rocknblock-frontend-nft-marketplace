@@ -30,7 +30,7 @@ const CaseStudiesContent:
       className={`${style['case-studies__content-item']} ${style['content-item']} ${activeBtn === number ? style.active : null}`}
       onClick={(): void => handleSwitch()}
     >
-      <img className={style['content-item__img']} src={`../../assets/img/${source}.png`} alt={alt} />
+      <img className={style['content-item__img']} src={`../../assets/img/${source}.svg`} alt={alt} />
       <h4 className={style['content-item__name']}>{name}</h4>
     </button>
   )

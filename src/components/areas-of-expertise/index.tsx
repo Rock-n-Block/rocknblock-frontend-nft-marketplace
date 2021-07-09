@@ -17,7 +17,7 @@ const cards = [
   {
     source: 'mobile',
     title: 'MOBILE AND WEB',
-    text: 'Android/iOS applications; Project management interfaces; Investors cabinets; top-notch UX/UI, etc.'
+    text: 'Android/iOS applications, project management interfaces, investors cabinets, top-notch UX/UI, etc.'
   },
   {
     source: 'wallet',

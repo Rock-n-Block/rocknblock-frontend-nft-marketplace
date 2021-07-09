@@ -123,7 +123,7 @@ const ContactUs: FunctionalComponent = () => {
             className={`${style.btn} ${style['btn-orange']} ${style['btn-rounded']} ${style['popup__button-ok']}`}
             onClick={(): void => setIsSubmitted(false)}
           >
-            Close/ok
+            Close
           </button>
           <div className={`${style['background-img']} ${style['background-img-left']}`}>
             <img src="../../assets/img/background-popup-left.png" alt="background-popup-left" />

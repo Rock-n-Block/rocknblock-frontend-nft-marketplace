@@ -74,10 +74,13 @@ $scheme-icons-mask: ((), ('close', 'close', 'svg'));
       }
 
       &-textarea {
-        resize: vertical;
         padding-top: 24px;
         padding-bottom: 23px;
         overflow: hidden;
+
+        @include b('mobile') {
+          height: 90px;
+        }
       }
     }
 

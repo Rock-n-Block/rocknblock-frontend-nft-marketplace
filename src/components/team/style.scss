@@ -47,6 +47,11 @@
     flex-direction: row;
     justify-content: space-between;
 
+    @include b('tablet') {
+      justify-content: center;
+      gap: 20px;
+    }
+
     @include b('mobile') {
       display: inline-flex;
       flex-wrap: nowrap;
@@ -208,6 +213,11 @@
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
+
+    @include b('tablet') {
+      justify-content: center;
+      gap: 20px;
+    }
 
     @include b('mobile') {
       margin: 30px auto;

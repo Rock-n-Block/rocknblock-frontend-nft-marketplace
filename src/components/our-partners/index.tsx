@@ -18,6 +18,25 @@ const partners = [
   'bw'
 ];
 
+const achievements = [
+  {
+    src: '../../assets/img/logo-achieve-1.png',
+    url: 'https://techreviewer.co/companies/rock-n-block'
+  },
+  {
+    src: '../../assets/img/logo-achieve-2.png',
+    url: 'https://topappdevelopmentcompanies.com/ru/directory/blockchain-developers/russia'
+  },
+  {
+    src: '../../assets/img/logo-achieve-3.png',
+    url: 'https://www.itfirms.co/top-blockchain-development-companies/'
+  },
+  {
+    src: '../../assets/img/logo-achieve-4.png',
+    url: 'https://www.designrush.com/agency/profile/rock-n-block'
+  }
+]
+
 const OurPartners: FunctionalComponent = () => {
   return (
     <div className={`${style['our-partners']} ${style.container}`} id="partners">
@@ -34,6 +53,13 @@ const OurPartners: FunctionalComponent = () => {
           </li>
         ))}
       </ul>
+      <div className={style.achievements}>
+        {achievements.map((achieve, index) => (
+          <a className={style.achieve} key={index} href={achieve.url} rel="noreferrer" target="_blank">
+            <img src={achieve.src} alt={`achieve ${index + 1}`} />
+          </a>
+        ))}
+      </div>
     </div>
   )
 }

@@ -9,7 +9,7 @@ const team = {
     {
       post: 'Backend Team Lead',
       name: 'Maksim Strenk',
-      text: 'Development experience 6 years, in blockchain 4 years',
+      text: '6 years development experience and 4 years experience in blockchain',
       skillTitle: 'Completed projects:',
       skills: [
         'MyWish Backend (4 years)',
@@ -103,34 +103,28 @@ const team = {
 
 const overview = [
   {
-    number: 16,
+    number: 23,
     primary: 'Backend team',
-    secondary: '16 developers'
+  },
+  {
+    number: 27,
+    primary: 'Frontend team',
+  },
+  {
+    number: 19,
+    primary: 'Smart Contracts team',
   },
   {
     number: 13,
-    primary: 'Frontend team',
-    secondary: '12 developers'
-  },
-  {
-    number: 10,
-    primary: 'Smart Contracts team',
-    secondary: '6 developers'
-  },
-  {
-    number: 7,
     primary: 'Project managers',
-    secondary: ''
+  },
+  {
+    number: 5,
+    primary: 'Designers',
   },
   {
     number: 3,
-    primary: 'Designers',
-    secondary: ''
-  },
-  {
-    number: 2,
     primary: 'Analytics',
-    secondary: ''
   }
 ];
 
@@ -206,7 +200,6 @@ const Team: FunctionalComponent = () => {
           <li className={style.team__overview__item} key={item.primary}>
             <div className={style.team__overview__item__number}>{item.number}</div>
             <div className={`${style['team__overview__item__primary-text']} ${style.text}`}>{item.primary}</div>
-            <div className={`${style['team__overview__item__secondary-text']} ${style.text}`}>{item.secondary}</div>
           </li>
         ))}
       </ul>

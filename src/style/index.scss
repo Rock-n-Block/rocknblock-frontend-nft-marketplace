@@ -16,6 +16,11 @@ html {
   box-sizing: border-box;
   scroll-behavior: smooth;
 
+  @include b('tablet') {
+    max-width: $mediaWidthTablet;
+    width: 768px;
+  }
+
   @include b('mobile') {
     max-width: $mediaWidthMobile;
     width: 375px;
@@ -30,6 +35,12 @@ body {
   background-color: var(--body-background-color);
   cursor: default;
   color: white;
+
+  @include b('tablet') {
+    max-width: $mediaWidthTablet;
+    width: 768px;
+    padding: 0 15px;
+  }
 
   @include b('mobile') {
     max-width: $mediaWidthMobile;
@@ -65,6 +76,10 @@ span {
   max-width: $mediaWidthDesktop;
   padding: 0 12px;
   margin: 0 auto;
+
+  @include b('tablet') {
+    max-width: $mediaWidthTablet;
+  }
 
   @include b('mobile') {
     max-width: $mediaWidthMobile;
@@ -170,7 +185,7 @@ ul {
     margin-top: 6px;
     padding: 3px 8px;
     color: #fff;
-    font-family: "TT Norms", sans-serif;
+    font-family: "Karla", sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 17px;

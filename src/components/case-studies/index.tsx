@@ -1,9 +1,9 @@
 import {FunctionalComponent, h} from 'preact';
 
 import style from './style.scss';
-import BlockHeader from "../block-header";
-import CaseStudiesContent from "../case-studies__content";
-import {useState} from "preact/hooks";
+import BlockHeader from '../block-header';
+import CaseStudiesContent from '../case-studies__content';
+import {useState} from 'preact/hooks';
 
 const content = [
   [
@@ -34,33 +34,33 @@ const content = [
   ],
   [
     {
-      source: 'logo-axion',
-      alt: 'axion logo',
-      name: 'Axion Dashboard',
-      number: 1
-    },
-    {
       source: 'logo-pion',
       alt: 'pion logo',
       name: 'Pion',
-      number: 2
+      number: 1
     },
     {
       source: 'logo-inflat',
       alt: 'inflat logo',
       name: 'Inflationary Staking',
-      number: 3
+      number: 2
     },
     {
       source: 'logo-bitgear',
       alt: 'bitgear logo',
       name: 'Bitgear',
-      number: 4
+      number: 3
     },
     {
       source: 'logo-minto',
       alt: 'minto logo',
       name: 'Minto',
+      number: 4
+    },
+    {
+      source: 'logo-axion',
+      alt: 'axion logo',
+      name: 'Axion Dashboard',
       number: 5
     },
     {
@@ -86,7 +86,7 @@ const dropdown = [
       description: 'Full functional custodial wallet development for IOS, Android and web, ' +
         'with more than 10,000 installs.',
       features: [
-        'Blockchain developement',
+        'Blockchain development',
         'Mobile wallet application development',
         'Crowdfunding platform',
         'Online stores with crypto support'
@@ -143,20 +143,6 @@ const dropdown = [
   [
     {
       key: 1,
-      name: 'axion',
-      title: 'Axion Dashboard',
-      images: [
-        '../../assets/img/case-axion-1.png',
-        '../../assets/img/case-axion-2.png'
-      ],
-      description: <p>The dashboard visualize financial statistics of the context of individual user wallets and time periods.<br />
-        To implement instant access to all information on the project, a centralized database was developed that
-        stores all information about events occurring on the contract, received in real time from the Ethereum network.</p>,
-      features: ['Staking', 'Auction', 'H2T token swap', 'Uniswap auto-buy', 'Dashboard'],
-      stacks: ['Solidity']
-    },
-    {
-      key: 2,
       name: 'pion',
       title: 'Pion',
       images: [
@@ -164,14 +150,14 @@ const dropdown = [
         '../../assets/img/case-pion-2.png'
       ],
       description: <p>A stablecoin with a token price of $1 by changing the total supply of tokens through a smart contract
-        by rebase at a random time.\nA second token convertible with the stablecoin at rate of 1 : 1, allows to
+        by rebase at a random time.\nA second token convertible with the stablecoin at rate of 1:1, allows to
         fix the number of tokens pending the next rebase at a more favorable rate.<br />Stablecoin can generate
         income from yield farming by staking the LP2 Uniswap token.</p>,
       features: ['Multicomponent system', 'Stablecoin', 'Liquidity Pool Staking'],
       stacks: ['Solidity']
     },
     {
-      key: 3,
+      key: 2,
       name: 'inflat',
       title: 'Inflationary Staking',
       images: [
@@ -181,15 +167,15 @@ const dropdown = [
       ],
       description: <p>A project based on complex smart contracts that give users the ability to exchange, purchase and
         stake the token.<br /> Receiving tokens is implemented in several ways:<br />
-        • Exchange tokens at the rate of 1: 1<br />
-        • Free issuance of tokens from a snapshot with a Merkle tree check at a rate of 1: 1<br />
+        • Exchange tokens at the rate of 1:1<br />
+        • Free issuance of tokens from a snapshot with a Merkle tree check at a rate of 1:1<br />
         • Instant Token Buyback Auction with Uniswap to Maintain the Token Price<br />
         • Staking and receiving dividends due to token inflation.</p>,
       features: [],
       stacks: ['Solidity']
     },
     {
-      key: 4,
+      key: 3,
       name: 'bitgear',
       title: 'Bitgear',
       images: [
@@ -207,7 +193,7 @@ const dropdown = [
       stacks: ['React', 'Web3', '0x protocol', 'Solidity']
     },
     {
-      key: 5,
+      key: 4,
       name: 'minto',
       title: 'Minto',
       images: [
@@ -222,6 +208,20 @@ const dropdown = [
         'mining tokenization',
       ],
       stacks: ['React', 'Web3', 'Python', 'Solidity']
+    },
+    {
+      key: 5,
+      name: 'axion',
+      title: 'Axion Dashboard',
+      images: [
+        '../../assets/img/case-axion-1.png',
+        '../../assets/img/case-axion-2.png'
+      ],
+      description: <p>The dashboard visualizes financial statistics of the context of individual user wallets and time periods.<br />
+        To implement instant access to all information on the project, a centralized database was developed that
+        stores all information about events occurring on the contract, received in real time from the Ethereum network.</p>,
+      features: ['Staking', 'Auction', 'H2T token swap', 'Uniswap auto-buy', 'Dashboard'],
+      stacks: ['Solidity']
     },
     {
       key: 6,

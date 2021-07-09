@@ -148,20 +148,17 @@
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
-    gap: 33px;
     width: 353px;
 
-
-    @include b('mobile') {
-      margin: 30px auto 0 auto;
+    @include b('tablet') {
+      margin-top: 50px;
+      display: flex;
+      justify-self: center;
     }
 
-    &__top {
-      height: 137px;
-
-      @include b('mobile') {
-        display: none;
-      }
+    @include b('mobile') {
+      width: 345px;
+      margin: 30px auto 0 auto;
     }
   }
 }

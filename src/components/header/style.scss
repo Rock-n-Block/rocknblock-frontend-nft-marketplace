@@ -102,6 +102,13 @@ header {
 			&:hover {
 				border-color: #d23e10;
 			}
+
+			@include b('mobile') {
+				justify-content: flex-start;
+				color: #d23e10;
+				font-size: 16px;
+				border: none;
+			}
 		}
 
 		@include b('tablet') {
@@ -113,8 +120,7 @@ header {
 		flex-direction: column;
 
 		.topnav {
-			margin-top: 65px;
-			margin-left: 0;
+			margin: 30px 0;
 			align-self: flex-start;
 			display: flex;
 			flex-direction: column;
@@ -126,24 +132,19 @@ header {
 				position: relative;
 				display: flex;
 				align-items: center;
-				padding-left: 36px;
+				margin-left: 36px;
 				height: 48px;
-			}
-
-			&__contact-button {
-				display: none;
 			}
 		}
 	}
 }
 
 .burger {
-	margin-right: 30px;
+	margin-right: 15px;
 	display: none;
 	cursor: pointer;
 
 	@include b('tablet') {
 		display: inline-block;
-		margin-right: 15px;
 	}
 }

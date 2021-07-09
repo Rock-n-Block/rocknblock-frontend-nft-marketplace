@@ -17,6 +17,12 @@
     }
   }
 
+  .noscroll {
+    @include b('tablet') {
+      justify-content: center;
+    }
+  }
+
   .scroll {
     @include b('mobile') {
       overflow-x: auto;
@@ -112,10 +118,10 @@
       padding: 10px;
       background: #34313B;
       border-radius: 8px;
-      font-family: 'TT Norms', sans-serif;
-      font-size: 18px;
+      font-family: 'Karla', sans-serif;
+      //font-weight: 600;
+      font-size: 20px;
       line-height: 23px;
-      font-weight: 700;
     }
   }
   
@@ -175,6 +181,13 @@
   }
 
   .noscroll {
+    @include b('tablet') {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+
     @include b('mobile') {
       display: none;
     }
@@ -203,9 +216,10 @@
   }
 
   .switch {
+    width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
 
     @include b('mobile') {
       display: none;
@@ -213,7 +227,6 @@
 
     &Image {
       width: 80%;
-      height: 90%;
       border-radius: 15px;
 
       @include b('mobile') {

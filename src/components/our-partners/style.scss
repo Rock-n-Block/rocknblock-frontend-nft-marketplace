@@ -52,4 +52,28 @@
       gap: 30px;
     }
   }
+
+  .achievements {
+    margin-top: 140px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
+    @include b('mobile') {
+      margin-top: 60px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-row-gap: 30px;
+      align-items: center;
+    }
+
+    .achieve {
+      @include b('mobile') {
+        display: flex;
+        align-self: center;
+        justify-self: center;
+      }
+    }
+  }
 }
