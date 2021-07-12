@@ -52,17 +52,22 @@
     }
     
     &__scroll {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-column-gap: 20px;
+      grid-row-gap: 20px;
+      align-items: center;
+      justify-items: center;
 
+      @include b(1060) {
+        grid-template-columns: repeat(2, 1fr);
+      }
 
-      @include b('mobile') {
+      @include b('tablet') {
         display: inline-flex;
         flex-direction: row;
+        justify-content: flex-start;
         flex-wrap: nowrap;
-        gap: 10px;
         overflow-x: scroll;
       }
     }
@@ -76,8 +81,9 @@
     border-radius: 20px;
     transition: 0.4s ease;
 
-    @include b('mobile') {
-      width: 320px;
+    @include b('tablet') {
+      margin-right: 10px;
+      min-width: 320px;
       height: 300px;
     }
 

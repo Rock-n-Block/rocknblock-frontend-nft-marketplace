@@ -25,7 +25,15 @@
     border: 3px solid #2e2e35;
     border-radius: 20px;
 
-    @include b('mobile') {
+    @include b(960) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 15px;
+      align-items: center;
+    }
+
+    @include b(650) {
+      width: 100%;
       margin-top: -50px;
       margin-bottom: -50px;
       border: none;
@@ -41,12 +49,17 @@
     flex-direction: column;
     justify-content: space-evenly;
 
+    @include b(960) {
+      margin: 0 auto;
+      width: 50%;
+    }
+
     @include b('mobile') {
       margin-top: 20px;
-      width: 170px;
-      height: 130px;
+      width: 50%;
+      height: 150px;
       justify-content: flex-start;
-      gap: 6px;
+      align-items: center;
     }
 
     &__primary {
@@ -55,7 +68,7 @@
       justify-content: space-evenly;
       align-items: center;
 
-      @include b('mobile') {
+      @include b(650) {
         flex-direction: column;
       }
     }
@@ -69,7 +82,8 @@
       font-feature-settings: 'liga' off;
       color: #d23e10;
 
-      @include b('mobile') {
+      @include b('tablet') {
+        margin-right: 10px;
         font-size: 40px;
         line-height: 47px;
       }
@@ -128,7 +142,7 @@
       @include right-border;
     }
 
-    @include b('tablet') {
+    @include b(960) {
       &:nth-child(-n+5) {
         border: none;
         border-bottom: 1px solid #2e2e35;

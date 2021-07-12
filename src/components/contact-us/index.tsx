@@ -10,6 +10,7 @@ import { RECAPTCHA_KEY } from '../../definitions';
 
 const ContactUs: FunctionalComponent = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isCompleted, setIsCompleted] = useState(false);
   const [name, setName] = useState('');
   const [contact, setContact] = useState('');
   const [idea, setIdea] = useState('');
@@ -19,40 +20,48 @@ const ContactUs: FunctionalComponent = () => {
     siteKey: RECAPTCHA_KEY
   });
 
+  const formData = JSON.stringify({name, socialNetwork: contact, message: idea});
+
+  const headers = {
+    'Content-Type': 'application/json',
+  };
+
+  const fetchForm = (token: string): void => {
+    if (token) fetch(`https://newlp.mywish.io/api/v1/send_unblocking_feedback/`, {
+      method: 'POST',
+      headers,
+      body: formData
+    }).then(response => {
+      if (response.ok) {
+        console.log('OK:', response.json());
+        setIsSubmitted(true);
+      } else {
+        console.log('Error:', response);
+      }
+    }).catch(response => console.log('Error:', response));
+  }
+
   const onSubmit = async (e: Event | undefined): Promise<void> => {
     if (e) e.preventDefault();
-    const formData = JSON.stringify({name, socialNetwork: contact, message: idea});
 
-    const headers = new Headers({
-      'Content-Type': 'application/json',
-    });
+    if (name && contact && idea) {
+      setIsCompleted(true);
+      setIsSubmitted(true);
+      try {
+        const token = await executeReCaptcha();
+        setToken(token);
+        fetchForm(token);
+      } catch (e) {
+        console.error(e);
+      }
 
-    const fetchForm = (token: string): void => {
-      if (token) fetch(`https://newlp.mywish.io/api/v1/send_unblocking_feedback/`, {
-        method: 'POST',
-        headers,
-        body: formData
-      }).then(response => {
-        if (response.ok) {
-          console.log('OK:', response.json());
-          setIsSubmitted(true);
-        } else {
-          console.log('Error:', response);
-        }
-      }).catch(response => console.log('Error:', response));
+      setName('');
+      setContact('');
+      setIdea('');
+    } else {
+      setIsCompleted(false);
+      setIsSubmitted(true);
     }
-
-    try {
-      const token = await executeReCaptcha();
-      setToken(token);
-      fetchForm(token);
-    } catch (e) {
-      console.error(e);
-    }
-
-    setName('');
-    setContact('');
-    setIdea('');
   }
 
   const onSetName = (e: any): void => {
@@ -110,15 +119,17 @@ const ContactUs: FunctionalComponent = () => {
         <button
           type="submit"
           className=
-            {`${style['g-recaptcha']} ${style['contact-us__form__submit-btn']} ${style.btn} ${style['btn-orange']} ${style['btn-rounded']}`}
+            {`${style['contact-us__form__submit-btn']} ${style.btn} ${style['btn-orange']} ${style['btn-rounded']}`}
         >
           Submit request
         </button>
-        {ReCaptchaBadge && ReCaptchaBadge}
+        <div className={style['g-recaptcha']}>
+          {ReCaptchaBadge && ReCaptchaBadge}
+        </div>
       </form>
       <div id="contact-us-popup" className={`${style['contact-us__popup-container']} ${isSubmitted ? style.show : null}`}>
         <div className={`${style['contact-us__popup']} ${style.popup}`}>
-          <h3 className={style.popup__title}>Thanks for your request!</h3>
+          <h3 className={style.popup__title}>{isCompleted ? 'Thanks for your request!' : 'Wrong input, please try again'}</h3>
           <button
             className={`${style.btn} ${style['btn-orange']} ${style['btn-rounded']} ${style['popup__button-ok']}`}
             onClick={(): void => setIsSubmitted(false)}

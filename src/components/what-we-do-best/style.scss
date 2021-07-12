@@ -16,18 +16,24 @@
   }
 
   .scroll {
-    @include b('mobile') {
+    @include b('tablet') {
       overflow-x: auto;
     }
   }
 
   &__cards {
-    margin-top: 30px;
+    margin: 30px auto 0;
     display: grid;
-    grid-template-columns: repeat(3, 310px);
-    grid-template-rows: repeat(5, 200px);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
     grid-column-gap: 20px;
     grid-row-gap: 20px;
+    align-items: center;
+    justify-items: center;
+
+    @include b(1025) {
+      grid-template-columns: repeat(2, 1fr);
+    }
 
     @include b('tablet') {
       display: flex;
@@ -36,7 +42,7 @@
       justify-content: center;
     }
 
-    @include b('mobile') {
+    @include b(694) {
       display: inline-flex;
       flex-direction: row;
       flex-wrap: nowrap;
@@ -47,7 +53,7 @@
   &__card {
     width: 100%;
     max-width: 310px;
-    min-height: 200px;
+    height: 200px;
     padding: 40px 20px 20px 20px;
     display: flex;
     flex-direction: column;
@@ -61,10 +67,11 @@
     border: 3px solid #2e2e35;
     border-radius: 20px;
 
-    @include b('mobile') {
+    @include b(694) {
       padding: 20px 10px;
       width: 200px;
-      min-height: 130px;
+      height: 130px;
+      margin-right: 10px;
       justify-content: space-between;
     }
 
@@ -72,7 +79,7 @@
       width: fit-content;
       align-self: center;
 
-      @include b('mobile') {
+      @include b(694) {
         width: auto;
         height: 30px;
       }

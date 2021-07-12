@@ -15,40 +15,16 @@ html {
   margin: 0 auto;
   box-sizing: border-box;
   scroll-behavior: smooth;
-
-  @include b('tablet') {
-    max-width: $mediaWidthTablet;
-    width: 768px;
-  }
-
-  @include b('mobile') {
-    max-width: $mediaWidthMobile;
-    width: 375px;
-    overflow-x: hidden;
-    overflow-y: auto;
-  }
+  overflow-x: hidden;
 }
 
 body {
   margin: 0 auto;
-  padding: 0;
+  padding: 0 15px;
   background-color: var(--body-background-color);
   cursor: default;
+  overflow-x: hidden;
   color: white;
-
-  @include b('tablet') {
-    max-width: $mediaWidthTablet;
-    width: 768px;
-    padding: 0 15px;
-  }
-
-  @include b('mobile') {
-    max-width: $mediaWidthMobile;
-    width: 375px;
-    padding: 0 15px;
-    overflow-x: hidden;
-    overflow-y: auto;
-  }
 }
 
 img {
@@ -77,14 +53,8 @@ span {
   padding: 0 12px;
   margin: 0 auto;
 
-  @include b('tablet') {
-    max-width: $mediaWidthTablet;
-  }
-
-  @include b('mobile') {
-    max-width: $mediaWidthMobile;
-    width: 345px;
-    padding: 0;
+  @include b($mediaWidthDesktop) {
+    width: 100%;
   }
 }
 
@@ -205,9 +175,6 @@ ul {
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-  }
-
-  &-arrow-top {
   }
 }
 

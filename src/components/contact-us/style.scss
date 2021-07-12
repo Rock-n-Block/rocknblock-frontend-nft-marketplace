@@ -3,10 +3,6 @@
 @import "../../style/index";
 @import "../../style/common/buttons";
 
-$scheme-icons-mask: ((), ('close', 'close', 'svg'));
-
-//@include theme-mask($scheme-icons-mask);
-
 .contact-us {
   position: relative;
   margin-top: 182px;
@@ -209,6 +205,10 @@ $scheme-icons-mask: ((), ('close', 'close', 'svg'));
       background-size: cover;
     }
   }
+}
+
+.g-recaptcha {
+  visibility: hidden;
 }
 
 ::-webkit-resizer {

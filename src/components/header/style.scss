@@ -59,6 +59,7 @@ header {
 		font-weight: bold;
 
 		&__link {
+			margin-right: 10px;
 			font-size: 16px;
 			line-height: 19px;
 
@@ -103,7 +104,7 @@ header {
 				border-color: #d23e10;
 			}
 
-			@include b('mobile') {
+			@include b('tablet') {
 				justify-content: flex-start;
 				color: #d23e10;
 				font-size: 16px;
