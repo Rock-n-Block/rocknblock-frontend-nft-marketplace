@@ -46,7 +46,6 @@ const ContactUs: FunctionalComponent = () => {
 
     if (name && contact && idea) {
       setIsCompleted(true);
-      setIsSubmitted(true);
       try {
         const token = await executeReCaptcha();
         setToken(token);
