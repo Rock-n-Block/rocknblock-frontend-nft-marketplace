@@ -13,6 +13,7 @@
     bottom: -170px;
     left: 900px;
     width: 98px;
+    opacity: 0.4;
 
     @include b('mobile') {
       display: none;

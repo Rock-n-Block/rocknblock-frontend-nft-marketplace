@@ -39,10 +39,8 @@ const About: FunctionalComponent = () => {
             </a>
           </section>
         </div>
-        <div className={style['about__content-item']}>
-          <div className={style.about__achievements}>
-            <img src="../../assets/img/achievements.svg" alt="our achievements" />
-          </div>
+        <div className={style.about__achievements}>
+          <img src="../../assets/img/achievements.svg" alt="our achievements" />
         </div>
       </div>
     </div>

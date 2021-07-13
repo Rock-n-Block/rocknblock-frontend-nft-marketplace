@@ -162,8 +162,7 @@ const dropdown = [
       title: 'Inflationary Staking',
       images: [
         '../../assets/img/case-inflat-1.png',
-        '../../assets/img/case-inflat-2.png',
-        '../../assets/img/case-inflat-3.png'
+        '../../assets/img/case-inflat-2.png'
       ],
       description: <p>A project based on complex smart contracts that give users the ability to exchange, purchase and
         stake the token.<br /> Receiving tokens is implemented in several ways:<br />

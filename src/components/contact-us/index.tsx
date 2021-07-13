@@ -126,7 +126,11 @@ const ContactUs: FunctionalComponent = () => {
           {ReCaptchaBadge && ReCaptchaBadge}
         </div>
       </form>
-      <div id="contact-us-popup" className={`${style['contact-us__popup-container']} ${isSubmitted ? style.show : null}`}>
+      <div
+        id="contact-us-popup"
+        className={`${style['contact-us__popup-container']} ${isSubmitted ? style.show : null}`}
+        onClick={(): void => setIsSubmitted(false)}
+      >
         <div className={`${style['contact-us__popup']} ${style.popup}`}>
           <h3 className={style.popup__title}>{isCompleted ? 'Thanks for your request!' : 'Wrong input, please try again'}</h3>
           <button
