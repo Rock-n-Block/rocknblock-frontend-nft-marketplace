@@ -124,7 +124,7 @@ const overview = [
   },
   {
     number: 3,
-    primary: 'Analytics',
+    primary: 'Analysts',
   }
 ];
 

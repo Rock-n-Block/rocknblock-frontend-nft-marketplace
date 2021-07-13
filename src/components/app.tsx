@@ -1,5 +1,6 @@
 import { FunctionalComponent, h } from 'preact';
 import { useState } from 'preact/hooks';
+import * as smoothscroll from 'smoothscroll-polyfill';
 
 import About from './about';
 import Header from './header';
@@ -23,6 +24,8 @@ const App: FunctionalComponent = () => {
       setIsActive(false);
     }
   }
+
+  smoothscroll.polyfill();
 
   return (
     <div id="preact_root">
