@@ -17,15 +17,17 @@ import UpButton from './up-button';
 const App: FunctionalComponent = () => {
   const [isActive, setIsActive] = useState(false);
 
-  if (typeof window !== 'undefined') window.onscroll = (): void => {
-    if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
-      setIsActive(true);
-    } else {
-      setIsActive(false);
+  if (typeof window !== 'undefined') {
+    window.onscroll = (): void => {
+      if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+        setIsActive(true);
+      } else {
+        setIsActive(false);
+      }
     }
-  }
 
-  smoothscroll.polyfill();
+    smoothscroll.polyfill();
+  }
 
   return (
     <div id="preact_root">
