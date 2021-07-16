@@ -27,7 +27,7 @@ const ContactUs: FunctionalComponent = () => {
   };
 
   const fetchForm = (token: string): void => {
-    if (token) fetch(`https://newlp.mywish.io/api/v1/send_unblocking_feedback/`, {
+    if (token) fetch(`https://rocknblock.io/api/v1/send_unblocking_feedback/`, {
       method: 'POST',
       headers,
       body: formData
