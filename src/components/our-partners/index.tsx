@@ -33,7 +33,7 @@ const achievements = [
   },
   {
     src: '../../assets/img/logo-achieve-4.png',
-    url: 'https://www.designrush.com/agency/profile/rock-n-block'
+    url: 'https://www.designrush.com/agency/blockchain-development-companies'
   }
 ]
 
