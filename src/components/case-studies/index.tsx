@@ -150,7 +150,7 @@ const dropdown = [
         '../../assets/img/case-pion-2.png'
       ],
       description: <p>A stablecoin with a token price of $1 by changing the total supply of tokens through a smart contract
-        by rebase at a random time.\nA second token convertible with the stablecoin at rate of 1:1, allows to
+        by rebase at a random time.<br />A second token convertible with the stablecoin at rate of 1:1, allows to
         fix the number of tokens pending the next rebase at a more favorable rate.<br />Stablecoin can generate
         income from yield farming by staking the LP2 Uniswap token.</p>,
       features: ['Multicomponent system', 'Stablecoin', 'Liquidity Pool Staking'],
