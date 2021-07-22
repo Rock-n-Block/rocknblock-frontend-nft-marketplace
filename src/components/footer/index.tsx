@@ -1,4 +1,4 @@
-import {FunctionalComponent, h} from 'preact';
+import { FunctionalComponent, h } from 'preact';
 
 import style from './style.scss';
 
@@ -54,7 +54,11 @@ const Footer: FunctionalComponent = () => {
             ))}
           </ul>
         </nav>
-        <p className={style['footer__copyrights']}>© Copyright Rock’n’Block 2021</p>
+        <div className={style.bottom}>
+          <p className={style.bottom__copyright}>© Copyright Rock’n’Block 2021</p>
+          <a href="/privacy-policy" target="_top">Privacy Policy</a>
+          <a href="/terms-of-service" target="_top">Terms of Service</a>
+        </div>
       </div>
     </footer>
   )

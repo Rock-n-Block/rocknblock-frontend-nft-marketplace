@@ -1,0 +1,60 @@
+.popup {
+  padding: 17px;
+  position: fixed;
+  right: 71px;
+  bottom: 30px;
+  z-index: 999;
+  width: 300px;
+  height: 166px;
+  background: rgb(29, 27, 33);
+  border: 3px solid #2E2E35;
+  border-radius: 20px;
+
+  p {
+    font-family: 'TT Commons', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+    opacity: 0.85;
+
+    a:hover {
+      color: #D23E10;
+    }
+  }
+
+  .btn {
+    &__close {
+      cursor: pointer;
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #2E2E35;
+      border: transparent;
+      border-radius: 50%;
+    }
+
+    &__accept {
+      cursor: pointer;
+      margin-top: 14px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 115px;
+      height: 49px;
+      background-color: #D23E10;
+      border: transparent;
+      border-radius: 46px;
+      font-family: 'TT Norms', sans-serif;
+      font-weight: bold;
+      font-size: 15.5378px;
+      line-height: 18px;
+      color: #fff;
+    }
+  }
+}

@@ -1,0 +1,104 @@
+@import "../../style/mixins/mixins";
+
+.container {
+  margin: 25px auto;
+  padding: 20px 0 45px;
+  max-width: $mediaWidthDesktop;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+  @include b(1024) {
+    padding: 20px 50px 45px;
+  }
+
+  @include b(750) {
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+
+  .bg__img {
+    position: absolute;
+    right: 85px;
+    top: 3500px;
+
+    @include b(1360) {
+      display: none;
+    }
+  }
+
+  h2 {
+    margin-top: 60px;
+    font-family: 'TTNorms', sans-serif;
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 75px;
+    @include text-gradient(linear-gradient(to right, #FFFFFF 60%, #171628 100%));
+
+    @include b(750) {
+      margin-top: 20px;
+      font-size: 32px;
+      line-height: 30px;
+    }
+  }
+
+  .description {
+    margin-top: 10px;
+    font-size: 26px;
+    line-height: 31px;
+    opacity: 0.85;
+
+    @include b(750) {
+      font-size: 22px;
+      line-height: 24px;
+    }
+  }
+
+  h3 {
+    margin-top: 40px;
+    font-family: 'TTNorms', sans-serif;
+    font-weight: 800;
+    font-size: 26px;
+    line-height: 31px;
+
+    @include b(750) {
+      margin-top: 20px;
+      font-size: 22px;
+      line-height: 20px;
+    }
+  }
+
+  .orange {
+    color: #D23E10;
+  }
+
+  .paragraph {
+    margin-top: 10px;
+    font-family: 'TTCommons', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    opacity: 0.85;
+
+    @include b(750) {
+      font-size: 18px;
+      line-height: 18px;
+    }
+
+    a {
+      color: #D23E10;
+    }
+
+    &__date {
+      margin-top: 40px;
+      font-family: 'TTCommons', sans-serif;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 28px;
+      opacity: 0.5;
+
+      @include b(750) {
+        font-size: 18px;
+        line-height: 18px;
+      }
+    }
+  }
+}

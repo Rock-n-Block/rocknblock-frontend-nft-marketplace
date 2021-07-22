@@ -1,4 +1,4 @@
-# Rock'n'Block Landing developed by [Kirill Gusev](https://github.com/KiryaFT) used Preact CLI
+# Rock'n'Block Landing developed by team Rock'n'Block used Preact CLI
 
 ## This landing page contains information about blockchain company Rock'n'Block
 

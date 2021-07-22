@@ -1,49 +1,24 @@
 import { FunctionalComponent, h } from 'preact';
-import { useState } from 'preact/hooks';
-import * as smoothscroll from 'smoothscroll-polyfill';
+import { Router } from 'preact-router';
 
-import About from './about';
 import Header from './header';
-import WhyUs from './why-us';
-import AreasOfExpertise from './areas-of-expertise';
-import WhatWeDoBest from './what-we-do-best';
-import CaseStudies from './case-studies';
-import Team from './team';
-import OurPartners from './our-partners';
-import ContactUs from './contact-us';
 import Footer from './footer';
-import UpButton from './up-button';
+import HomePage from '../pages/Home';
+import ThanksPage from '../pages/Thanks';
+import PrivacyPolicyPage from '../pages/PrivacyPolicy';
+import TermsPage from "../pages/Terms";
 
-const App: FunctionalComponent = () => {
-  const [isActive, setIsActive] = useState(false);
-
-  if (typeof window !== 'undefined') {
-    window.onscroll = (): void => {
-      if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
-        setIsActive(true);
-      } else {
-        setIsActive(false);
-      }
-    }
-
-    smoothscroll.polyfill();
-  }
-
-  return (
-    <div id="preact_root">
-      <Header />
-      <About />
-      {isActive ? <UpButton /> : null}
-      <WhyUs />
-      <AreasOfExpertise />
-      <WhatWeDoBest />
-      <CaseStudies />
-      <Team />
-      <OurPartners />
-      <ContactUs />
-      <Footer />
-    </div>
-  );
-};
+const App: FunctionalComponent = () => (
+  <div id="preact_root">
+    <Header />
+    <Router>
+      <HomePage path='/' />
+      <ThanksPage path='/calendly' />
+      <PrivacyPolicyPage path='/privacy-policy' />
+      <TermsPage path='/terms-of-service' />
+    </Router>
+    <Footer />
+  </div>
+);
 
 export default App;

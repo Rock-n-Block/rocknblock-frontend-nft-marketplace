@@ -62,15 +62,35 @@
     }
   }
 
-  &__copyrights {
+  .bottom {
     margin: 35px auto;
+    display: flex;
+    justify-content: space-around;
     font-family: 'TT Commons', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
     line-height: 21px;
-    text-align: center;
     color: #fff;
     opacity: 0.5;
+
+    a:hover {
+      color: #d23e10;
+    }
+
+    @include b(750) {
+      margin: 35px 50px 60px;
+      flex-direction: column-reverse;
+      align-items: center;
+      justify-content: space-between;
+
+      a {
+        margin-bottom: 10px;
+      }
+
+      &__copyright {
+        text-align: center;
+      }
+    }
   }
 }
