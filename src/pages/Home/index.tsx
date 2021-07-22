@@ -17,37 +17,6 @@ import PopUp from '../../components/pop-up';
 const HomePage: FunctionalComponent = () => {
   const [isActive, setIsActive] = useState(false);
 
-  // Start of LiveChat (www.livechatinc.com) code
-  if (typeof window !== "undefined") {
-    window.__lc = window.__lc || {};
-    window.__lc.license = 9683030;
-    (function (n, t, c) {
-      const e = {
-        _q: [], _h: null, _v: "2.0", on: function () {
-          i(["on", c.call(arguments)])
-        }, once: function () {
-          i(["once", c.call(arguments)])
-        }, off: function () {
-          i(["off", c.call(arguments)])
-        }, get: function () {
-          if (!e._h) throw new Error("[LiveChatWidget] You can't use getters before load.");
-          return i(["get", c.call(arguments)])
-        }, call: function () {
-          i(["call", c.call(arguments)])
-        }, init: function () {
-          const n = t.createElement("script");
-          n.async = !0, n.type = "text/javascript", n.src = "https://cdn.livechatinc.com/tracking.js", t.head.appendChild(n)
-        }
-      };
-
-      function i(n) {
-        return e._h ? e._h.apply(null, n) : e._q.push(n)
-      }
-
-      !n.__lc.asyncInit && e.init(), n.LiveChatWidget = n.LiveChatWidget || e
-    }(window, document, [].slice))
-  }
-
   if (typeof window !== 'undefined') {
     window.onscroll = (): void => {
       if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
