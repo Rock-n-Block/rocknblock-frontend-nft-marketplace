@@ -3,7 +3,8 @@
 .container {
   position: relative;
   z-index: 5;
-  margin: -70px auto -130px;
+  margin: -70px 0 -130px;
+  padding: 0 -15px;
   width: 100%;
   display: flex;
   align-self: center;
