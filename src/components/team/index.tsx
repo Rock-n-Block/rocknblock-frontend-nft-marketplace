@@ -159,7 +159,7 @@ const Team: FunctionalComponent = () => {
           <div id="team__development-tab" className={style.team__content}>
             {activeTab === 0 ? team.dev.map((item: any) => (
               <div key={item.name} className={style.content__card}>
-                <img src={`../../assets/img/team-${item.img}.png`} alt={item.name} />
+                <img src={`../../assets/img/team-${item.img}-min.png`} alt={item.name} />
                 <h3 className={style.content__card__post}>{item.post}</h3>
                 <h4 className={style.content__card__name}>{item.name}</h4>
                 <div className={style.content__card__exp}>
@@ -184,7 +184,7 @@ const Team: FunctionalComponent = () => {
               </div>
             )) : team.mng.map((item: any) => (
               <div key={item.name} className={style.content__card__mng}>
-                <img src={`../../assets/img/team-${item.img}.png`} alt="image of manager" />
+                <img src={`../../assets/img/team-${item.img}-min.png`} alt="image of manager" />
                 <div className={style.description}>
                   <div className={style.description__name}>{item.name}</div>
                   <div className={style.description__post}>{item.post}</div>
