@@ -10,9 +10,8 @@ const team = {
       img: 'dev-1',
       post: 'Backend Team Lead',
       name: 'Maksim Strenk',
-      text: '6 years development experience and 4 years experience in blockchain',
-      skillTitle: 'Completed projects:',
       skills: [
+        'Development experience 6 years, in blockchain 4 years',
         'MyWish Backend (4 years)',
         'Implementation of UTREEXO and HTLC for the Bitcoin network',
         'Made the current Ducatus Exchange',
@@ -39,8 +38,6 @@ const team = {
       img: 'dev-2',
       post: 'Blockchain Team Lead',
       name: 'Rita Tsepeleva',
-      text: '',
-      skillTitle: 'Experience:',
       skills: [
         'smart contract development collaterized stable coin',
         'Anonymizer powered by ZK proof',
@@ -60,8 +57,6 @@ const team = {
       img: 'dev-3',
       post: 'Frontend Team Lead',
       name: 'Nikita Sireishikov',
-      text: '',
-      skillTitle: 'Experience:',
       skills: [
         'manual compilation of transactions to send for Bitcoin and Ethereum networks on node.js',
         'development of nodes for interacting with the blockchain on node.js',
@@ -167,9 +162,8 @@ const Team: FunctionalComponent = () => {
                 <img src={`../../assets/img/team-${item.img}.png`} alt={item.name} />
                 <h3 className={style.content__card__post}>{item.post}</h3>
                 <h4 className={style.content__card__name}>{item.name}</h4>
-                <p className={style.content__card__description}>{item.text}</p>
                 <div className={style.content__card__exp}>
-                  <h5 className={style.content__card__exp__title}>{item.skillTitle}</h5>
+                  <h5 className={style.content__card__exp__title}>Experience:</h5>
                   <ul className={style.content__card__exp__list}>
                     {item.skills.map((skill: string) => (
                       <li key={skill} className={style.content__card__exp__list__item}>{skill}</li>
