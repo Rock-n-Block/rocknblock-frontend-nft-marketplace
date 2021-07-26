@@ -163,14 +163,16 @@ const Team: FunctionalComponent = () => {
                 <h3 className={style.content__card__post}>{item.post}</h3>
                 <h4 className={style.content__card__name}>{item.name}</h4>
                 <div className={style.content__card__exp}>
-                  <h5 className={style.content__card__exp__title}>Experience:</h5>
-                  <ul className={style.content__card__exp__list}>
-                    {item.skills.map((skill: string) => (
-                      <li key={skill} className={style.content__card__exp__list__item}>{skill}</li>
-                    ))}
-                  </ul>
+                  <div>
+                    <h5 className={style.content__card__exp__title}>Experience:</h5>
+                    <ul className={style.content__card__exp__list}>
+                      {item.skills.map((skill: string) => (
+                        <li key={skill} className={style.content__card__exp__list__item}>{skill}</li>
+                      ))}
+                    </ul>
+                  </div>
                   <div className={style.content__card__exp__stacks}>
-                    <h5 className={style.stacks__title}>Stacks:</h5>
+                    <h5 className={style.stacks__title}>Stack:</h5>
                     <ul className={style['gray-list']}>
                       {item.stacks.map((stack: string) => (
                         <li className={`${style['stacks__item']} ${style['gray-list__item']}`}

@@ -13,7 +13,7 @@
   background-color: var(--body-background-color);
 
   @include b(547) {
-    margin-bottom: -200px
+    margin-bottom: -200px;
   }
 
   @include b('mobile') {

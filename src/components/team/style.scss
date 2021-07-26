@@ -79,7 +79,7 @@
         padding: 0 15px;
         font-style: normal;
         font-weight: 800;
-        font-size: 25px;
+        font-size: 22px;
         line-height: 30px;
         font-feature-settings: 'liga' off;
       }
@@ -109,10 +109,13 @@
       &__exp {
         margin-top: 30px;
         padding: 0 15px;
+        height: 608px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
 
         &__title {
           @include text-gradient(linear-gradient(87.05deg, #FFFFFF 54.97%, #171628 152.38%));
-
           font-style: normal;
           font-weight: 800;
           font-size: 16px;
@@ -153,6 +156,9 @@
         }
 
         &__stacks {
+          vertical-align: bottom;
+          height: 312px;
+
           .stacks__title {
             margin-top: 20px;
 
@@ -165,7 +171,13 @@
           }
 
           .gray-list {
+            height: min-content;
             margin-top: 7px;
+            display: flex;
+            flex-direction: row;
+            justify-self: flex-end;
+            align-items: flex-start;
+            flex-wrap: wrap;
           }
         }
       }
