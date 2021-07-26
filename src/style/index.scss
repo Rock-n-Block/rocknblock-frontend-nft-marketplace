@@ -15,8 +15,6 @@ html {
   margin: 0 auto;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  overflow-x: hidden;
-  overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
 }
 
@@ -140,9 +138,9 @@ ul {
   }
 
   .link-active {
-    color: #d23e10;
+    color: #DC2C2C;
     font-weight: 700;
-    border-bottom: 3px solid #d23e10;
+    border-bottom: 3px solid #DC2C2C;
     opacity: 1;
   }
 }

@@ -7,6 +7,7 @@ import {useState} from "preact/hooks";
 const team = {
   dev: [
     {
+      img: 'dev-1',
       post: 'Backend Team Lead',
       name: 'Maksim Strenk',
       text: '6 years development experience and 4 years experience in blockchain',
@@ -35,8 +36,9 @@ const team = {
       ]
     },
     {
+      img: 'dev-2',
       post: 'Blockchain Team Lead',
-      name: 'Nikita Tepelin',
+      name: 'Rita Tsepeleva',
       text: '',
       skillTitle: 'Experience:',
       skills: [
@@ -55,6 +57,7 @@ const team = {
       ]
     },
     {
+      img: 'dev-3',
       post: 'Frontend Team Lead',
       name: 'Nikita Sireishikov',
       text: '',
@@ -64,7 +67,6 @@ const team = {
         'development of nodes for interacting with the blockchain on node.js',
         'development of web-wallets in Angular',
         'frontend development for interacting with smart contracts through the backend',
-        'Axion Dashboard frontend development for interacting with smart contracts directly (web3j and web3js) - Axion'
       ],
       stacks: [
         'Express',
@@ -84,17 +86,17 @@ const team = {
   ],
   mng: [
     {
-      img: '../../assets/img/team-mng-1.png',
+      img: 'mng-1',
       name: 'Dmitry Ershov',
       post: 'CEO'
     },
     {
-      img: '../../assets/img/team-mng-2.png',
+      img: 'mng-2',
       name: 'Alex Tkachev',
       post: 'CBDO'
     },
     {
-      img: '../../assets/img/team-mng-3.png',
+      img: 'mng-3',
       name: 'Olya Kulakova',
       post: 'CMO'
     },
@@ -162,6 +164,7 @@ const Team: FunctionalComponent = () => {
           <div id="team__development-tab" className={style.team__content}>
             {activeTab === 0 ? team.dev.map((item: any) => (
               <div key={item.name} className={style.content__card}>
+                <img src={`../../assets/img/team-${item.img}.png`} alt={item.name} />
                 <h3 className={style.content__card__post}>{item.post}</h3>
                 <h4 className={style.content__card__name}>{item.name}</h4>
                 <p className={style.content__card__description}>{item.text}</p>
@@ -185,7 +188,7 @@ const Team: FunctionalComponent = () => {
               </div>
             )) : team.mng.map((item: any) => (
               <div key={item.name} className={style.content__card__mng}>
-                <img src={item.img} alt="image of manager" />
+                <img src={`../../assets/img/team-${item.img}.png`} alt="image of manager" />
                 <div className={style.description}>
                   <div className={style.description__name}>{item.name}</div>
                   <div className={style.description__post}>{item.post}</div>

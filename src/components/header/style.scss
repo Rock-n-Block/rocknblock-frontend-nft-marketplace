@@ -72,7 +72,7 @@ header {
 					color: #d4d2d2;
 
 					@include b('tablet') {
-						color: #d23e10;
+						color: #DC2C2C;
 
 						&::before {
 							position: absolute;
@@ -82,7 +82,7 @@ header {
 							display: inline-block;
 							width: 5px;
 							height: 48px;
-							background-color: #d23e10;
+							background-color: #DC2C2C;
 						}
 					}
 				}
@@ -101,12 +101,12 @@ header {
 			align-items: center;
 
 			&:hover {
-				border-color: #d23e10;
+				border-color: #DC2C2C;
 			}
 
 			@include b('tablet') {
 				justify-content: flex-start;
-				color: #d23e10;
+				color: #DC2C2C;
 				font-size: 16px;
 				border: none;
 			}

@@ -57,7 +57,7 @@
     .content__card {
       margin: 5px;
       width: 320px;
-      padding: 30px 11px 30px 20px;
+      height: 1050px;
       background: #17141c;
       border: 2px solid #33333a;
       box-sizing: border-box;
@@ -67,9 +67,16 @@
         margin-top: 30px;
       }
 
+      img {
+        margin: 3px 3px 30px;
+        width: 310px;
+        border-radius: 17px;
+        text-align: center;
+      }
+
       &__post {
         @include text-gradient(linear-gradient(87.05deg, #FFFFFF 54.97%, #171628 152.38%));
-
+        padding: 0 15px 0 20px;
         font-style: normal;
         font-weight: 800;
         font-size: 25px;
@@ -79,15 +86,17 @@
 
       &__name {
         margin-top: 5px;
+        padding: 0 15px 0 20px;
         font-style: normal;
         font-weight: bold;
         font-size: 20px;
         line-height: 24px;
-        color: #d4491d;
+        color: #DC2C2C;
       }
 
       &__description {
         margin-top: 20px;
+        padding: 0 15px 0 20px;
         font-style: normal;
         font-weight: 500;
         font-size: 16px;
@@ -99,6 +108,7 @@
 
       &__exp {
         margin-top: 30px;
+        padding: 0 15px 0 20px;
 
         &__title {
           @include text-gradient(linear-gradient(87.05deg, #FFFFFF 54.97%, #171628 152.38%));
@@ -112,6 +122,7 @@
 
         &__list {
           margin-top: 20px;
+          padding: 0 15px 0 20px;
           display: flex;
           flex-direction: column;
 
@@ -145,6 +156,7 @@
         &__stacks {
           .stacks__title {
             margin-top: 20px;
+            padding: 0 15px 0 20px;
 
             @include text-gradient(linear-gradient(87.05deg, #FFFFFF 54.97%, #171628 152.38%));
 
@@ -164,18 +176,21 @@
         margin: 30px 5px 0;
         padding: 0;
         width: 322px;
-        height: 396px;
+        height: 466px;
         background: #17141c;
         border: 1px solid #33333a;
         box-sizing: border-box;
         border-radius: 23px;
 
         img {
-          margin: 3px;
+          margin: 3px 3px 40px;
+          width: 314px;
+          border-radius: 20px;
+          text-align: center;
         }
 
         .description {
-          margin: 36px 20px;
+          margin: 0 20px;
           display: flex;
           flex-direction: column;
           font-family: 'TT Norms', sans-serif;
@@ -190,7 +205,7 @@
             margin-top: 10px;
             font-style: normal;
             font-weight: 400;
-            color: #d4491d;
+            color: #DC2C2C;
           }
         }
       }
@@ -245,7 +260,7 @@
         text-align: center;
         color: #fff;
         mix-blend-mode: normal;
-        background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%), #d23e10;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%), #DC2C2C;
         box-shadow: 0 4px 25px rgba(0, 0, 0, 0.25);
         border-radius: 30px;
       }
