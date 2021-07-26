@@ -9,7 +9,7 @@ const Terms: FunctionalComponent = () => (
     <h3 className={style.orange}>Welcome to Rock'n'Block!</h3>
     <div className={style.paragraph}>
       These are the terms and conditions that define the rules and regulations to use the Rock'n'Block website:
-      https://Rock'n'Block.io/
+      <a href='https://rocknblock.io'> https://rocknblock.io/</a>
       <br />
       <br />
       This website is the property of Rock'n'Block, developed by the Rock'n'Block development team.
