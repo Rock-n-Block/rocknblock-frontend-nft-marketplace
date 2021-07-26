@@ -26,43 +26,43 @@
   }
 
   h2 {
-    margin-top: 60px;
+    margin-top: 40px;
     font-family: 'TTNorms', sans-serif;
     font-weight: 800;
-    font-size: 50px;
-    line-height: 75px;
+    font-size: 36px;
+    line-height: 44px;
     @include text-gradient(linear-gradient(to right, #FFFFFF 60%, #171628 100%));
 
     @include b(750) {
       margin-top: 20px;
-      font-size: 32px;
+      font-size: 24px;
       line-height: 30px;
     }
   }
 
   .description {
     margin-top: 10px;
-    font-size: 26px;
-    line-height: 31px;
+    font-size: 24px;
+    line-height: 28px;
     opacity: 0.85;
 
     @include b(750) {
-      font-size: 22px;
+      font-size: 20px;
       line-height: 24px;
     }
   }
 
   h3 {
-    margin-top: 40px;
+    margin-top: 20px;
     font-family: 'TTNorms', sans-serif;
     font-weight: 800;
     font-size: 26px;
     line-height: 31px;
 
     @include b(750) {
-      margin-top: 20px;
-      font-size: 22px;
-      line-height: 20px;
+      margin-top: 15px;
+      font-size: 18px;
+      line-height: 24px;
     }
   }
 
@@ -74,13 +74,13 @@
     margin-top: 10px;
     font-family: 'TTCommons', sans-serif;
     font-weight: 400;
-    font-size: 24px;
-    line-height: 28px;
+    font-size: 20px;
+    line-height: 24px;
     opacity: 0.85;
 
     @include b(750) {
-      font-size: 18px;
-      line-height: 18px;
+      font-size: 16px;
+      line-height: 22px;
     }
 
     a {
@@ -88,7 +88,7 @@
     }
 
     &__date {
-      margin-top: 40px;
+      margin-top: 20px;
       font-family: 'TTCommons', sans-serif;
       font-weight: 400;
       font-size: 24px;

@@ -116,7 +116,7 @@ const ContactUs: FunctionalComponent = () => {
         />
         <label htmlFor="" className={style['visually-hidden']}>Briefly describe your project or idea</label>
         <p className={style.terms}>
-          By using the service, you accept the <a href="/terms-of-service" target="_top">Terms or Service</a>
+          By using the service, you accept the <a href="/terms-of-service" target="_top">Terms of Service</a>
         </p>
         <button
           type="submit"
