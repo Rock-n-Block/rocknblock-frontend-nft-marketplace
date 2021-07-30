@@ -7,6 +7,7 @@ import HomePage from '../pages/Home';
 import ThanksPage from '../pages/Thanks';
 import PrivacyPolicyPage from '../pages/PrivacyPolicy';
 import TermsPage from "../pages/Terms";
+import CompanyPage from "../pages/Company";
 
 const App: FunctionalComponent = () => (
   <div id="preact_root">
@@ -16,6 +17,7 @@ const App: FunctionalComponent = () => (
       <ThanksPage path='/calendly' />
       <PrivacyPolicyPage path='/privacy-policy' />
       <TermsPage path='/terms-of-service' />
+      <CompanyPage path='/company' />
     </Router>
     <Footer />
   </div>

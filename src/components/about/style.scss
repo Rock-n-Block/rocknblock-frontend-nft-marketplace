@@ -4,12 +4,21 @@
 
 .about {
   position: relative;
-  margin: 30px auto 0;
+  margin: 40px auto 0;
+  padding-top: 20px;
   display: flex;
   flex-direction: column;
 
+  @include b('tablet') {
+
+  }
+
+  @include b('mobile') {
+
+  }
+
   .background-img-first {
-    top: -20px;
+    top: 0;
     left: 576px;
     z-index: 1;
 
@@ -45,7 +54,7 @@
 
     @include b('mobile') {
       width: 192px;
-      left: 190px;
+      right: 15px;
       top: -20px;
       z-index: -2;
       transform: rotate(210deg);

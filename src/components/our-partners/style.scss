@@ -15,7 +15,7 @@
     width: 98px;
     opacity: 0.4;
 
-    @include b('mobile') {
+    @include b(1015) {
       display: none;
     }
   }

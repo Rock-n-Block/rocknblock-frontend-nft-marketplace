@@ -16,7 +16,7 @@
     width: 186px;
     z-index: -1;
 
-    @include b('mobile') {
+    @include b(1215) {
       display: none;
     }
   }

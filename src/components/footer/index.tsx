@@ -64,6 +64,8 @@ const Footer: FunctionalComponent = () => {
             <a href="/privacy-policy" target="_top">Privacy Policy</a>
             <div className={style.tab}>&nbsp;|&nbsp;</div>
             <a href="/terms-of-service" target="_top">Terms of Service</a>
+            <div className={style.tab}>&nbsp;|&nbsp;</div>
+            <a href="/company" target="_top">Company</a>
           </div>
           <p className={style.bottom__copyright}>© Copyright Rock’n’Block 2021</p>
         </div>

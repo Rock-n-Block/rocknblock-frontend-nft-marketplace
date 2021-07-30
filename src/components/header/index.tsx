@@ -1,5 +1,5 @@
 import { FunctionalComponent, h } from 'preact';
-import { useState } from "preact/hooks";
+import { useState } from 'preact/hooks';
 import style from './style.scss';
 
 const Header: FunctionalComponent = () => {
