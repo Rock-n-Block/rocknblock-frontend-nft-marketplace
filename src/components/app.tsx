@@ -6,10 +6,20 @@ import Footer from './footer';
 import HomePage from '../pages/Home';
 import ThanksPage from '../pages/Thanks';
 import PrivacyPolicyPage from '../pages/PrivacyPolicy';
-import TermsPage from "../pages/Terms";
-import CompanyPage from "../pages/Company";
+import TermsPage from '../pages/Terms';
+import CompanyPage from '../pages/Company';
 
-const App: FunctionalComponent = () => (
+// const hashChange = (): void => {
+//   if (location.hash) {
+//     const hash = location.hash.replace(/#/, '');
+//     history.replaceState({}, '', hash);
+//   }
+// }
+
+const App: FunctionalComponent = () => {
+  //if (typeof window !== "undefined") window.onhashchange = hashChange;
+
+  return (
   <div id="preact_root">
     <Header />
     <Router>
@@ -21,6 +31,6 @@ const App: FunctionalComponent = () => (
     </Router>
     <Footer />
   </div>
-);
+)};
 
 export default App;
