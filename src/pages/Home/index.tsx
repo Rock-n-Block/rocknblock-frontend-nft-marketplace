@@ -11,20 +11,20 @@ import OurPartners from '../../components/our-partners';
 import ContactUs from '../../components/contact-us';
 import UpButton from '../../components/up-button';
 import TelegramWidget from '../../components/telegram-widget';
-import PopUp from '../../components/pop-up';
+// import PopUp from '../../components/pop-up';
 
-let isPopupClosed: string;
+// let isPopupClosed: string;
 
 const HomePage: FunctionalComponent = () => {
   const [isActive, setIsActive] = useState(false);
 
   if (typeof window !== 'undefined') {
-    const item = window.sessionStorage.getItem('isPopupClosed');
-    if (!item) {
-      window.sessionStorage.setItem('isPopupClosed', 'no')
-    } else {
-      isPopupClosed = item;
-    }
+    // const item = window.sessionStorage.getItem('isPopupClosed');
+    // if (!item) {
+    //   window.sessionStorage.setItem('isPopupClosed', 'no')
+    // } else {
+    //   isPopupClosed = item;
+    // }
 
     window.onscroll = (): void => {
       if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
@@ -47,7 +47,7 @@ const HomePage: FunctionalComponent = () => {
       <Team />
       <OurPartners />
       <ContactUs />
-      {isPopupClosed === 'yes' ? null : <PopUp />}
+      {/*{isPopupClosed === 'yes' ? null : <PopUp />}*/}
     </div>
   )
 }
