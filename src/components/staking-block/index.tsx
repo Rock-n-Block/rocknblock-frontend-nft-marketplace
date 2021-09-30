@@ -11,7 +11,7 @@ const StakingBlock: FunctionalComponent = () => {
                         <h2>One-stop to building an exclusive staking solution</h2>
                         <section className={style['staking__buttons']}>
                             <a
-                                className={`${style['staking__buttons-order']} ${style.btn} ${style['btn-orange']} ${style['btn-rounded']}`}
+                                className={`${style['staking__buttons-order']} ${style.btn} ${style['btn-orange-cl-solid']} ${style['btn-rounded']}`}
                             >
                                 ORDER STAKING
                                 <img src="../../assets/img/icons/icon-arrow-right-mask.svg" alt="arrow-right" />
