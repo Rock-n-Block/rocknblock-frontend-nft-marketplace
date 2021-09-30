@@ -6,7 +6,7 @@ const StakingCards: FunctionalComponent = () => {
     return (
         <div className={`${style['staking__container_info']}`}>
             <div className={`${style['staking__container_info_head_1']}`}>
-                <p>Unlimited ways to earn rewards for users</p>
+                <p className={style['staking__container_info_head_1_title']}>Unlimited ways to earn rewards for users</p>
                 <div className={`${style['staking__container_info_block']}`}>
                     {cards.item1.map((item: CardItem, index: number) =>
                         <div className={`${style['staking__container_info_block_card']}`} key={`${index}_card`}>
@@ -21,8 +21,8 @@ const StakingCards: FunctionalComponent = () => {
             </div>
 
             <div className={`${style['staking__container_info_head_2']}`}>
-                <p>Staking Development Flow</p>
-                <h3>DeFi staking includes various development criteria that include:</h3>
+                <p className={style['staking__container_info_head_2_title']}>Staking Development Flow</p>
+                <p className={style['staking__container_info_head_2_desc']}>DeFi staking includes various development criteria that include:</p>
                 <div className={`${style['staking__container_info_block']}`}>
                     {cards.item2.map((item: CardItem, index: number) =>
                         <div className={`${style['staking__container_info_block_card']}`} key={`${index}_card`}>
