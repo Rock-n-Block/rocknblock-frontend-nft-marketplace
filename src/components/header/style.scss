@@ -17,10 +17,11 @@ header {
 
 .main-nav {
 	margin: 0 auto;
-	padding: 20px 0;
+	padding: 33px 0;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	border-bottom: 2px solid rgba(255, 255, 255, 0.1);
 
 	&__mobile {
 		width: 100%;

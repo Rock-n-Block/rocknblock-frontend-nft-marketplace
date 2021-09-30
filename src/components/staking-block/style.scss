@@ -1,18 +1,40 @@
 @import "../../style/mixins/mixins";
 @import "../../style/common/buttons";
 @import "../../style/index";
+@import "../../style/common/fonts";
 
 .staking {
   margin: 40px auto 0;
 
   &__container {
-    &_block_1 {
+
+    &_block_1, &_block_2 {
       display: flex;
+    }
+    &_block_1 {
       margin: 0 auto;
+      position: relative;
       padding-bottom: 55px;
+      height: 620px;
+
+      div:first-child {
+        padding-top: 50px;
+      }
 
       picture {
-        min-width: 100%;
+        position: absolute;
+        left: 500px;
+        height: 100%;
+        width: 100%;
+      }
+
+      h1 {
+        font-family: TT Norms, sans-serif;
+        font-weight: 800;
+        font-size: 60px;
+        line-height: 60px;
+        text-transform: uppercase;
+        color: #FFFFFF;
       }
 
       h2 {
@@ -26,17 +48,77 @@
     }
 
     &_block_2 {
-      display: flex;
       align-items: center;
+      padding-bottom: 93px;
 
       h2 {
         font-family: TT Commons, sans-serif;
-        font-size: 24px;
+        font-size: 20px;
         font-weight: 400;
         line-height: 30px;
         text-align: right;
         max-width: 400px;
         padding-left: 2em;
+      }
+    }
+
+    &_info {
+
+      &_head_1, &_head_2 {
+        p:first-child {
+          font-family: TT Norms, sans-serif;
+          font-weight: 800;
+          font-size: 34px;
+          line-height: 60px;
+          max-width: 800px;
+          text-align: center;
+          margin: 0 auto;
+          text-transform: uppercase;
+        }
+
+        h3 {
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 30px;
+          text-align: center;
+          margin: 0 auto;
+          color: #FFFFFF;
+          opacity: 0.5;
+        }
+      }
+      &_head_1 {
+        padding-bottom: 145px;
+      }
+      &_block {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 41px;
+
+        &_card {
+          width: 31%;
+          padding: 25px 25px 50px 25px;
+          background: linear-gradient(30.15deg, #000000 14.13%, #272525 79.31%);
+          border-radius: 4px;
+
+          h2 {
+            font-size: 20px;
+            line-height: 24px;
+            text-transform: uppercase;
+          }
+
+          h3 {
+            font-size: 16px;
+            padding-top: 22px;
+            font-weight: 400;
+            line-height: 21px;
+            color: #FFFFFF;
+            opacity: 0.5;
+          }
+
+          &_text-container {
+            padding-top: 51px;
+          }
+        }
       }
     }
   }
@@ -69,12 +151,4 @@
     }
   }
 
-  h1 {
-    font-family: TT Norms, sans-serif;
-    font-weight: 800;
-    font-size: 60px;
-    line-height: 60px;
-    text-transform: uppercase;
-    color: #FFFFFF;
-  }
 }
