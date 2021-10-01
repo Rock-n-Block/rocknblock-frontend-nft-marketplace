@@ -1,10 +1,10 @@
-import {Fragment, FunctionalComponent, h} from "preact";
+import {FunctionalComponent, h} from "preact";
 import style from "./style.scss";
 
 const StakingBlock: FunctionalComponent = () => {
     return (
-        <Fragment>
-            <div className={`${style['staking__container_block_1']}`}>
+        <div className={style.w1000px}>
+            <div className={style['staking__container_block_1']}>
                 <div>
                     <h1>Staking Platform Development</h1>
                     <h2>One-stop to building an exclusive staking solution</h2>
@@ -31,7 +31,7 @@ const StakingBlock: FunctionalComponent = () => {
                     Ethereum is the top network, the DeFi staking platform can be built on any blockchain network as
                     requested by the client.</h2>
             </div>
-        </Fragment>
+        </div>
     );
 };
 

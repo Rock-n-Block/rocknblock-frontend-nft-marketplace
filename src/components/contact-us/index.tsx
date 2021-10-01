@@ -8,7 +8,12 @@ import BlockHeader from '../block-header';
 import useGoogleReCaptchaV2 from '../../hooks/useGoogleReCaptcha';
 import { RECAPTCHA_KEY } from '../../definitions';
 
-const ContactUs: FunctionalComponent = () => {
+interface ContactUsProps {
+  title: string;
+  subtitle?: string;
+}
+
+const ContactUs: FunctionalComponent<ContactUsProps> = ({title, subtitle}) => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isCompleted, setIsCompleted] = useState(false);
   const [name, setName] = useState('');
@@ -82,9 +87,8 @@ const ContactUs: FunctionalComponent = () => {
       </div>
       <BlockHeader
         style={style}
-        primary="Estimate your project now!"
-        secondary=
-          "Get free consultation and build your blockchain project with our highly qualified team!"
+        primary={title}
+        secondary={subtitle}
       />
       <form name="contact-us-form" onSubmit={(): Promise<void> => onSubmit(event)} className={style['contact-us__form']}>
         <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response" />

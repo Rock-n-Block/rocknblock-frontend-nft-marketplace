@@ -46,7 +46,7 @@ const HomePage: FunctionalComponent = () => {
       <CaseStudies />
       <Team />
       <OurPartners />
-      <ContactUs />
+      <ContactUs title={'Estimate your project now!'} subtitle={'Get free consultation and build your blockchain project with our highly qualified team!'} />
       {/*{isPopupClosed === 'yes' ? null : <PopUp />}*/}
     </div>
   )
