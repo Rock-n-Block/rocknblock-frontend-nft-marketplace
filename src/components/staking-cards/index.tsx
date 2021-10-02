@@ -1,5 +1,5 @@
 import {FunctionalComponent, h} from "preact";
-import style from "../staking-block/style.scss";
+import style from "../staking-about/style.scss";
 import {CardItem, cards} from "../../assets/data/stakingCards";
 
 const StakingCards: FunctionalComponent = () => {

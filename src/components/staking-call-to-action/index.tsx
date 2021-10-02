@@ -1,5 +1,5 @@
 import {Fragment, FunctionalComponent, h} from "preact";
-import style from "../staking-block/style.scss";
+import style from "../staking-about/style.scss";
 
 const StakingCallToAction: FunctionalComponent = () => {
     return (
@@ -13,7 +13,8 @@ const StakingCallToAction: FunctionalComponent = () => {
                 </div>
                 <div className={style['staking__call-to-action_picture']}>
                     <picture>
-                        <source srcSet="../../assets/img/rock-n-block-img.webp" type="image/webp" />
+                        <source srcSet="../../assets/img/rock-n-block-img.webp" media="(min-width: 768px)" type="image/webp" />
+                        <source srcSet="../../assets/img/rock-n-block-img-mobile.webp" media="(max-width: 768px)" type="image/webp" />
                         <img className={style['staking__call-to-action_picture_bg']} src='../../assets/img/rock-n-block-img.png' alt='Rock n Block staking platform' />
                     </picture>
                 </div>

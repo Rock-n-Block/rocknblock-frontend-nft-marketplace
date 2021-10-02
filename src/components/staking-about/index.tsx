@@ -1,7 +1,7 @@
 import {FunctionalComponent, h} from "preact";
 import style from "./style.scss";
 
-const StakingBlock: FunctionalComponent = () => {
+const StakingAbout: FunctionalComponent = () => {
     return (
         <div className={style.w1000px}>
             <div className={style['staking__container_block_1']}>
@@ -35,4 +35,4 @@ const StakingBlock: FunctionalComponent = () => {
     );
 };
 
-export default StakingBlock;
+export default StakingAbout;

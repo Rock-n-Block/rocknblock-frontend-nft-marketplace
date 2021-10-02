@@ -5,13 +5,13 @@ header {
 	position: sticky;
 	top: 0;
 	left: 0;
-	z-index: 3;
+	z-index: 5;
 	background-color: #1d1b21;
 	transition: 0.5s ease;
 
 	@include b('tablet') {
 		background-color: transparent;
-		position: relative;
+		//position: relative;
 	}
 }
 
@@ -21,15 +21,20 @@ header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+
+	@include b('768') {
+		border-bottom: none;
+	}
 	border-bottom: 2px solid rgba(255, 255, 255, 0.1);
 
 	&__mobile {
 		width: 100%;
 		display: flex;
 		justify-content: space-between;
+		padding: 1em 15px;
 
 		.icon {
-			background-color: var(--body-background-color);
+			//background-color: var(--body-background-color);
 			transition: 0.4s ease;
 
 			&-burger-close {}
@@ -44,7 +49,7 @@ header {
 		width: 100%;
 		max-width: 220px;
 
-		@include b('mobile') {
+		@include b(470) {
 			max-width: 169px;
 		}
 	}
@@ -127,6 +132,7 @@ header {
 			display: flex;
 			flex-direction: column;
 			align-items: flex-start;
+			background: var(--body-background-color);
 		}
 
 		.nav-pages {
