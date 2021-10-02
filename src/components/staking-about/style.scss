@@ -9,6 +9,9 @@
   .w1000px {
     max-width: 1000px;
     margin: 0 auto;
+  }
+
+  .pd15px {
     padding: 0 15px;
   }
 
@@ -51,7 +54,7 @@
 
         @include b(1100) {
           left: auto;
-          right: 5px;
+          right: 0;
         }
 
         @include b(768) {
@@ -125,6 +128,7 @@
           text-align: left;
           max-width: none;
           line-height: 25px;
+          padding-bottom: 60px;
         }
       }
     }
@@ -171,6 +175,7 @@
           @include b(768) {
             font-size: 30px;
             line-height: 40px;
+            padding: 0 15px;
           }
         }
 
@@ -185,6 +190,7 @@
 
           @include b(768) {
             text-align: left;
+            padding: 0 15px;
           }
         }
 
@@ -192,6 +198,7 @@
           display: flex;
           justify-content: space-between;
           padding-top: 41px;
+          padding-left: 15px;
 
           @include b(900) {
             overflow-x: auto;
@@ -402,6 +409,10 @@
       text-align: center;
       text-transform: uppercase;
       color: #FFFFFF;
+
+      @include b(768) {
+        padding: 0 15px;
+      }
     }
 
     &_container {
@@ -413,6 +424,7 @@
 
       @include b(768) {
         padding-top: 40px;
+        padding-left: 15px;
     }
 
 

@@ -5,7 +5,7 @@ const StakingAbout: FunctionalComponent = () => {
     return (
         <div className={style.w1000px}>
             <div className={style['staking__container_block_1']}>
-                <div>
+                <div className={style.pd15px}>
                     <h1>Staking Platform Development</h1>
                     <h2>One-stop to building an exclusive staking solution</h2>
                     <section className={style['staking__buttons']}>
@@ -22,7 +22,7 @@ const StakingAbout: FunctionalComponent = () => {
                     <img src='../../assets/img/staking-coins.png' alt='staking coins' />
                 </picture>
             </div>
-            <div className={`${style['staking__container_block_2']}`}>
+            <div className={`${style['staking__container_block_2']} ${style.pd15px}`}>
                 <picture>
                     <source srcSet="../../assets/img/staking-tablet.webp" type="image/webp" />
                     <img src='../../assets/img/staking-tablet.png' alt='staking tablet' />
