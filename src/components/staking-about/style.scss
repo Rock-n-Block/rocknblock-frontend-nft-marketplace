@@ -55,14 +55,15 @@
         }
 
         @include b(768) {
-          top: -15%;
+          top: -22%;
         }
 
         img {
-          @include b(768) {
-            object-position: left;
+          @include b(1000) {
+            min-height: 400px;
+            width: 600px;
             object-fit: cover;
-            min-width: 400px;
+            object-position: left;
           }
         }
       }
@@ -78,6 +79,11 @@
         @include b(768) {
           font-size: 40px;
           line-height: 40px;
+        }
+
+        @include b(400) {
+          font-size: 30px;
+          line-height: 30px;
         }
       }
 
