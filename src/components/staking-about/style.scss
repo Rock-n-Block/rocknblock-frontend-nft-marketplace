@@ -46,10 +46,10 @@
         left: 500px;
         height: 100%;
         width: 100%;
+        max-width: 600px;
         z-index: 3;
 
         @include b(1100) {
-          width: 400px;
           left: auto;
           right: 5px;
         }
@@ -58,8 +58,12 @@
           top: -15%;
         }
 
-        @include b(428) {
-          left: 10px;
+        img {
+          @include b(768) {
+            object-position: left;
+            object-fit: cover;
+            min-width: 400px;
+          }
         }
       }
 
