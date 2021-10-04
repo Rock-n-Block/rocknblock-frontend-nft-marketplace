@@ -21,6 +21,7 @@
 .areas-of-expertise {
   position: relative;
   margin-top: 90px;
+  scroll-margin-top: 120px;
 
   @include b('mobile') {
     margin-top: 60px;
