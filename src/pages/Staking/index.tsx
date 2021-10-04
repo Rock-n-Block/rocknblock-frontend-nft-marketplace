@@ -13,13 +13,6 @@ import {useState} from "preact/hooks";
 const StakingPage: FunctionalComponent = () => {
     const [isActive, setIsActive] = useState(false);
     if (typeof window !== 'undefined') {
-        // const item = window.sessionStorage.getItem('isPopupClosed');
-        // if (!item) {
-        //   window.sessionStorage.setItem('isPopupClosed', 'no')
-        // } else {
-        //   isPopupClosed = item;
-        // }
-
         window.onscroll = (): void => {
             if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
                 setIsActive(true);

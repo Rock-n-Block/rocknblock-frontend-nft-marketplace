@@ -17,7 +17,7 @@ const OtherSites: FunctionalComponent = () => {
 
                     <h3>Farming</h3>
                     <a
-                        className={`${style['staking__buttons-order']} ${style.btn} ${style['btn-white']} ${style['btn-rounded']}`}
+                        className={`${style['staking__buttons-order']} ${style.btn} ${style['btn-white']} ${style['btn-hover']} ${style['btn-rounded']}`}
                     >
                         Click here
                         <img src="../../assets/img/icons/icon-arrow-right-mask.svg" alt="arrow-right" />

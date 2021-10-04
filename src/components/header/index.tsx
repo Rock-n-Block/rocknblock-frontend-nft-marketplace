@@ -1,14 +1,16 @@
 import {Fragment, FunctionalComponent, h} from 'preact';
 import {useEffect, useState} from 'preact/hooks';
+import {getCurrentUrl} from 'preact-router'
 import style from './style.scss';
 
 const Header: FunctionalComponent = () => {
   const [burger, setBurger] = useState('');
-  const [isHomePage, setIsHomePage] = useState<boolean>(true);
+  const [isHomePage, setIsHomePage] = useState<boolean>(false);
+  const location = getCurrentUrl();
 
   useEffect(() => {
-    if (document.location.pathname !== '/') {
-      setIsHomePage(false)
+    if (location === '/') {
+      setIsHomePage(true)
     }
   })
 

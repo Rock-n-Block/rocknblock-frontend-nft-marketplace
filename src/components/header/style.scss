@@ -8,11 +8,6 @@ header {
 	z-index: 5;
 	background-color: #1d1b21;
 	transition: 0.5s ease;
-
-	@include b('tablet') {
-		background-color: transparent;
-		//position: relative;
-	}
 }
 
 .justify-end {
@@ -26,8 +21,9 @@ header {
 	justify-content: space-between;
 	align-items: center;
 
-	@include b('768') {
+	@include b('tablet') {
 		border-bottom: none;
+
 	}
 	border-bottom: 2px solid rgba(255, 255, 255, 0.1);
 
@@ -35,10 +31,9 @@ header {
 		width: 100%;
 		display: flex;
 		justify-content: space-between;
-		padding: 1em 15px;
+		padding: .5em 15px;
 
 		.icon {
-			//background-color: var(--body-background-color);
 			transition: 0.4s ease;
 
 			&-burger-close {}
@@ -67,6 +62,11 @@ header {
 		align-items: center;
 		font-style: normal;
 		font-weight: bold;
+
+		@include b('tablet') {
+			position: absolute;
+			top: 74px;
+		}
 
 		&__link {
 			margin-right: 10px;
