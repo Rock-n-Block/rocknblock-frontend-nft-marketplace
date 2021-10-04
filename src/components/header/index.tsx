@@ -1,9 +1,16 @@
-import { FunctionalComponent, h } from 'preact';
-import { useState } from 'preact/hooks';
+import {Fragment, FunctionalComponent, h} from 'preact';
+import {useEffect, useState} from 'preact/hooks';
 import style from './style.scss';
 
 const Header: FunctionalComponent = () => {
   const [burger, setBurger] = useState('');
+  const [isHomePage, setIsHomePage] = useState<boolean>(true);
+
+  useEffect(() => {
+    if (document.location.pathname !== '/') {
+      setIsHomePage(false)
+    }
+  })
 
   const switchIcon = (): void => {
     setBurger(burger === '' ? '-close' : '');
@@ -24,27 +31,29 @@ const Header: FunctionalComponent = () => {
               <img src={`../../assets/img/icons/icon-header-burger${burger}-mask.svg`} alt={`burger ${burger}`} />
             </div>
           </section>
-          <section id="nav-pages" class={`${style['nav-pages']} ${burger === '' ? null : style.topnav}`}>
-            <a
-              href="#services"
-              class={style['nav-pages__link']}
-              onClick={(): void => switchIcon()}
-            >Services</a>
-            <a
-              href="#cases"
-              class={style['nav-pages__link']}
-              onClick={(): void => switchIcon()}
-            >Cases</a>
-            <a
-              href="#team"
-              class={style['nav-pages__link']}
-              onClick={(): void => switchIcon()}
-            >Team</a>
-            <a
-              href="#partners"
-              class={style['nav-pages__link']}
-              onClick={(): void => switchIcon()}
-            >Partners</a>
+          <section id="nav-pages" class={`${style['nav-pages']} ${!isHomePage ? style['justify-end'] : ''} ${burger === '' ? null : style.topnav}`}>
+            {isHomePage && <Fragment>
+              <a
+                  href="#services"
+                  className={style['nav-pages__link']}
+                  onClick={(): void => switchIcon()}
+              >Services</a>
+              <a
+                  href="#cases"
+                  className={style['nav-pages__link']}
+                  onClick={(): void => switchIcon()}
+              >Cases</a>
+              <a
+                  href="#team"
+                  className={style['nav-pages__link']}
+                  onClick={(): void => switchIcon()}
+              >Team</a>
+              <a
+                  href="#partners"
+                  className={style['nav-pages__link']}
+                  onClick={(): void => switchIcon()}
+              >Partners</a>
+            </Fragment>}
             <a
               href="#contact-us"
               className={`${style['nav-pages__contact-button']} ${style['nav-pages__link']} ${style['nav-pages__link__contact-us']}`}

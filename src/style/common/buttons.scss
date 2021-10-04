@@ -1,3 +1,5 @@
+@import "../../style/common/fonts";
+
 .btn {
   display: flex;
   justify-content: center;
@@ -7,6 +9,7 @@
   width: 100%;
   position: relative;
   transition: 0.4s ease;
+  @include font-face('TTNorms', '../../assets/fonts/TTNorms/TTNorms-Bold', 700);
 
   &:active {
     transform: scale(0.95);

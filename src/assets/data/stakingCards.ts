@@ -28,7 +28,7 @@ export const cards: Cards = {
             source: '../../assets/img/icons/icon-card-validate.svg',
             alt: 'validate img',
             title: 'Validate',
-            desc: 'Built-in codebase assessment tools to recognize and avoid rugpulls, and quality assessment parameters advised by the developer of vfat.tools.'
+            desc: 'Built-in codebase assessment tools to recognize and avoid rugpulls, and quality assessment parameters.'
         },
     ],
 

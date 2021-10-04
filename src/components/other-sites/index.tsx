@@ -4,7 +4,6 @@ import style from "../staking-about/style.scss";
 const OtherSites: FunctionalComponent = () => {
     return (
         <div className={`${style['staking__sites']} ${style.w1000px}`}>
-            <h2 className={style['staking__sites_title']}>Head</h2>
             <div className={style['staking__sites_container']}>
                 <div className={style['staking__sites_container_item']}>
                     <div className={style['staking__sites_container_item_img']}>

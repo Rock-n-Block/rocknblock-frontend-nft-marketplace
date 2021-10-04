@@ -1,4 +1,5 @@
 @import "../../style/mixins/mixins";
+@import "../../style/mixins/main";
 @import "../../style/common/buttons";
 @import "../../style/index";
 @import "../../style/common/fonts";
@@ -26,7 +27,7 @@
       padding-bottom: 55px;
       height: 620px;
 
-      @include b(768) {
+      @include b('tablet') {
         height: 100%;
       }
 
@@ -34,11 +35,11 @@
         padding-top: 50px;
         z-index: 4;
 
-        @include b(1000) {
+        @include b('desktop') {
           max-width: 300px;
         }
 
-        @include b(768) {
+        @include b('tablet') {
           padding-top: 200px;
 
         }
@@ -57,12 +58,12 @@
           right: 0;
         }
 
-        @include b(768) {
+        @include b('tablet') {
           top: -22%;
         }
 
         img {
-          @include b(1000) {
+          @include b('desktop') {
             min-height: 400px;
             width: 600px;
             object-fit: cover;
@@ -72,14 +73,14 @@
       }
 
       h1 {
-        font-family: TT Norms, sans-serif;
+        font-family: TTNORMS, sans-serif;
         font-weight: 800;
         font-size: 60px;
         line-height: 60px;
         text-transform: uppercase;
         color: #FFFFFF;
 
-        @include b(768) {
+        @include b('tablet') {
           font-size: 40px;
           line-height: 40px;
         }
@@ -91,14 +92,14 @@
       }
 
       h2 {
-        font-family: TT Commons, sans-serif;
+        font-family: TTCOMMONS, sans-serif;
         font-weight: 400;
         font-size: 24px;
         line-height: 30px;
         color: #FFFFFF;
         opacity: 0.5;
 
-        @include b(768) {
+        @include b('tablet') {
           font-size: 22px;
           line-height: 25px;
         }
@@ -109,21 +110,21 @@
       align-items: center;
       padding-bottom: 93px;
 
-      @include b(768) {
+      @include b('tablet') {
         flex-direction: column;
         padding-bottom: 60px;
       }
 
       h2 {
-        font-family: TT Commons, sans-serif;
-        font-size: 20px;
+        font-family: TTCOMMONS, sans-serif;
         font-weight: 400;
+        font-size: 20px;
         line-height: 30px;
         text-align: right;
         max-width: 400px;
         padding-left: 2em;
 
-        @include b(768) {
+        @include b('tablet') {
           padding-left: 0;
           text-align: left;
           max-width: none;
@@ -139,7 +140,7 @@
       &_head:nth-child(1) {
         padding-bottom: 145px;
 
-        @include b(768) {
+        @include b('tablet') {
           padding-bottom: 60px;
         }
 
@@ -151,7 +152,7 @@
       &_head:last-child {
         padding-bottom: 180px;
 
-        @include b(768) {
+        @include b('tablet') {
           padding-bottom: 60px;
         }
 
@@ -163,16 +164,16 @@
       &_head {
 
         &_title {
-          font-family: TT Norms, sans-serif;
+          font-family: TTNORMS, sans-serif;
           font-weight: 800;
           font-size: 34px;
           line-height: 60px;
-          max-width: 800px;
+          max-width: 700px;
           text-align: center;
           margin: 0 auto;
           text-transform: uppercase;
 
-          @include b(768) {
+          @include b('tablet') {
             font-size: 30px;
             line-height: 40px;
             padding: 0 15px;
@@ -180,6 +181,7 @@
         }
 
         &_desc {
+          font-family: TTCOMMONS, sans-serif;
           font-size: 18px;
           font-weight: 400;
           line-height: 30px;
@@ -188,7 +190,7 @@
           color: #FFFFFF;
           opacity: 0.5;
 
-          @include b(768) {
+          @include b('tablet') {
             text-align: left;
             padding: 0 15px;
           }
@@ -200,7 +202,7 @@
           padding-top: 41px;
           padding-left: 15px;
 
-          @include b(900) {
+          @include b('desktop') {
             overflow-x: auto;
           }
 
@@ -212,15 +214,18 @@
             border-radius: 4px;
 
             h2 {
+              font-family: TTNORMS, sans-serif;
+              font-weight: 700;
               font-size: 20px;
               line-height: 24px;
               text-transform: uppercase;
             }
 
             h3 {
-              font-size: 16px;
-              padding-top: 22px;
               font-weight: 400;
+              font-family: TTCOMMONS, sans-serif;
+              font-size: 18px;
+              padding-top: 22px;
               line-height: 21px;
               color: #FFFFFF;
               opacity: 0.5;
@@ -255,22 +260,11 @@
     max-width: 245px;
     padding-top: 30px;
 
-    &-order {
+    a {
       width: 100%;
-      height: 50px;
-      display: flex;
+      height: 49px;
       justify-content: space-evenly;
-
-      font-family: TT Norms, sans-serif;
-      font-weight: bold;
-      font-size: 16px;
-      line-height: 18px;
-      font-feature-settings: 'kern' off, 'liga' off;
-
-      &:hover {
-        background: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%), #DC2C2C;
-        box-shadow: 0 4px 25px rgba(0, 0, 0, 0.25);
-      }
+      font-weight: 500;
     }
   }
 
@@ -279,7 +273,7 @@
     display: flex;
     justify-content: center;
 
-    @include b('1000') {
+    @include b('desktop') {
       flex-direction: column;
     }
 
@@ -289,12 +283,12 @@
       padding: 0 15px;
       margin: 0 auto;
 
-      @include b('1000') {
+      @include b('desktop') {
         position: initial;
       }
 
       h2 {
-        font-family: TT Norms, sans-serif;
+        font-family: TTNORMS, sans-serif;
         font-weight: 800;
         font-size: 50px;
         padding-bottom: 36px;
@@ -303,27 +297,27 @@
         text-transform: uppercase;
         color: #FFFFFF;
 
-        @include b('1000') {
+        @include b('desktop') {
           font-size: 30px;
           line-height: 40px;
         }
       }
 
       h3 {
-        font-family: TT Commons, sans-serif;
-        font-size: 24px;
+        font-family: TTCOMMONS, sans-serif;
         font-weight: 400;
+        font-size: 22px;
         line-height: 30px;
+        padding: 0 50px;
         text-align: center;
         color: #FFFFFF;
 
-        @include b('1000') {
+        @include b('desktop') {
           font-size: 20px;
           line-height: 25px;
+          padding: 0;
         }
       }
-
-
     }
 
     &_picture {
@@ -335,7 +329,7 @@
         width: 100%;
         max-height: 916px;
 
-        @include b('1000') {
+        @include b('desktop') {
           object-position: center;
           height: 447px;
         }
@@ -349,7 +343,7 @@
     margin-bottom: 174px;
     margin-top: -4px;
 
-    @include b(768) {
+    @include b('tablet') {
       margin-bottom: 50px;
     }
 
@@ -372,21 +366,21 @@
 
     a, p {
       color: #FFFFFF;
+      font-family: TTNORMS, sans-serif;
+      font-weight: 700;
     }
 
     a {
       max-width: 245px;
       height: 60px;
-      font-family: TT Norms, sans-serif;
-      font-weight: bold;
       font-size: 24px;
       line-height: 28px;
+      border: 3px solid #ffffff;
       color: #FFFFFF;
+      justify-content: space-evenly;
     }
 
     p {
-      font-family: TT Norms, sans-serif;
-      font-weight: bold;
       font-size: 26px;
       line-height: 31px;
       max-width: 500px;
@@ -402,7 +396,7 @@
 
   &__about-us {
     &_title {
-      font-family: TT Norms, sans-serif;
+      font-family: TTNORMS, sans-serif;
       font-weight: 800;
       font-size: 34px;
       line-height: 60px;
@@ -410,7 +404,7 @@
       text-transform: uppercase;
       color: #FFFFFF;
 
-      @include b(768) {
+      @include b('tablet') {
         padding: 0 15px;
       }
     }
@@ -422,10 +416,10 @@
       justify-content: space-between;
       overflow-x: auto;
 
-      @include b(768) {
+      @include b('tablet') {
         padding-top: 40px;
         padding-left: 15px;
-    }
+      }
 
 
       &_item {
@@ -446,10 +440,11 @@
 
         &_text {
           padding-left: 21px;
+          font-family: TTNORMS, sans-serif;
 
           h2 {
-            font-family: TT Norms, sans-serif;
-            font-weight: bold;
+            font-family: TTNORMS, sans-serif;
+            font-weight: 800;
             font-size: 18px;
             line-height: 21px;
             text-transform: uppercase;
@@ -457,8 +452,8 @@
           }
 
           h3 {
-            font-family: TT Norms, sans-serif;
-            font-weight: bold;
+            font-family: sans-serif;
+            font-weight: 400;
             font-size: 16px;
             line-height: 19px;
             color: #FFFFFF;
@@ -473,7 +468,7 @@
     display: block;
 
     &_title {
-      font-family: TT Norms, sans-serif;
+      font-family: TTNORMS, sans-serif;
       font-weight: 800;
       font-size: 34px;
       line-height: 60px;
@@ -481,7 +476,7 @@
       text-transform: uppercase;
       color: #FFFFFF;
 
-      @include b(768) {
+      @include b('tablet') {
         display: none;
       }
     }
@@ -493,7 +488,7 @@
       margin: 0 auto;
       justify-content: space-between;
 
-      @include b(768) {
+      @include b('tablet') {
         flex-direction: column;
         width: 100%;
       }
@@ -509,7 +504,7 @@
           top: -3px;
         }
 
-        @include b(768) {
+        @include b('tablet') {
           margin-bottom: 10px;
         }
       }
@@ -524,13 +519,13 @@
         border-radius: 4px;
         padding: 1em 0;
 
-        @include b(768) {
+        @include b('tablet') {
           width: 100%;
           height: 100%;
         }
 
         h3 {
-          font-family: TT Norms, sans-serif;
+          font-family: TTNORMS, sans-serif;
           font-style: normal;
           font-weight: 800;
           font-size: 24px;
@@ -540,15 +535,19 @@
           text-transform: uppercase;
           color: #FFFFFF;
 
-          @include b(768) {
+          @include b('tablet') {
             padding: 6px 0;
           }
         }
 
         a {
+          font-family: TTNORMS, sans-serif;
+          font-weight: 700;
           max-width: 200px;
           color: #ffffff;
           border-color: #DC2C2C;
+          height: 52px;
+          justify-content: space-evenly;
         }
 
         picture {
@@ -560,7 +559,7 @@
           position: relative;
           margin-top: 3em;
 
-          @include b(768) {
+          @include b('tablet') {
             margin-top: 1em;
           }
 
