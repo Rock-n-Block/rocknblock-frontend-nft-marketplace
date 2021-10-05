@@ -1,8 +1,7 @@
 import { FunctionalComponent, h } from 'preact';
-import Terms from '../../components/terms';
-import UpButton from '../../components/up-button';
 import {useState} from 'preact/hooks';
 import * as smoothscroll from 'smoothscroll-polyfill';
+import {Terms, UpButton} from "../../components";
 
 const TermsPage: FunctionalComponent = () => {
   const [isActive, setIsActive] = useState(false);

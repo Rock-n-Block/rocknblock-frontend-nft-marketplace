@@ -1,5 +1,5 @@
 import { FunctionalComponent, h } from 'preact';
-import ThanksContainer from '../../components/thanks-container';
+import {ThanksContainer} from "../../components";
 
 const ThanksPage: FunctionalComponent = () => (
   <ThanksContainer />
