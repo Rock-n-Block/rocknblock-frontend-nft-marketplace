@@ -11,7 +11,7 @@ import {
     OurPartners,
     ContactUs,
     UpButton,
-    TelegramWidget
+    TelegramWidget, ClientsFeedback
 } from "../../components";
 
 const HomePage: FunctionalComponent = () => {
@@ -38,6 +38,7 @@ const HomePage: FunctionalComponent = () => {
             <CaseStudies />
             <Team />
             <OurPartners />
+            <ClientsFeedback />
             <ContactUs title={'Estimate your project now!'}
                        subtitle={'Get free consultation and build your blockchain project with our highly qualified team!'} />
             {/*{isPopupClosed === 'yes' ? null : <PopUp />}*/}

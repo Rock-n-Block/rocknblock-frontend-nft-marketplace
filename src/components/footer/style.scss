@@ -5,6 +5,7 @@
 .footer {
   position: relative;
   margin-top: 81px;
+  z-index: 10;
 
   @include b('mobile') {
     margin-top: 20px;
@@ -21,6 +22,14 @@
       justify-content: center;
       flex-direction: row;
       flex-wrap: wrap;
+
+      @include b('tablet') {
+        margin: 0;
+      }
+
+      @include b(460) {
+        width: 100%;
+      }
     }
 
     &__link {
@@ -34,6 +43,10 @@
       border: 1px solid #DC2C2C;
       border-radius: 50%;
       transition: 0.4s ease;
+
+      @include b(460) {
+        margin: 10px 5px;
+      }
 
       &:hover {
         background-color: #DC2C2C;
@@ -71,47 +84,78 @@
   .bottom {
     margin: 35px auto;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    font-family: 'TT Commons', sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 21px;
-    color: #fff;
-    opacity: 0.5;
+    justify-content: space-between;
+    max-width: 659px;
+
+    @include b('desktop') {
+      flex-direction: column;
+    }
+
+    a, p {
+      font-family: TTCommons, sans-serif;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 21px;
+      color: #fff;
+      opacity: 0.5;
+    }
 
     &__copyright {
       text-align: center;
-
       @include b('mobile') {
         width: 240px;
       }
     }
 
+    &__copyright-mobile {
+      display: none;
+      @include b('tablet') {
+        display: block;
+        padding-top: 2em;
+      }
+    }
+
+    &__copyright-desktop {
+      display: block;
+      @include b('tablet') {
+        display: none;
+      }
+    }
+
     .links {
-      margin-bottom: 30px;
       display: flex;
+      width: 100%;
       flex-direction: row;
-      justify-content: center;
       align-items: center;
+      justify-content: space-between;
       font-size: 16px;
 
-      a, .tab {
-        margin-bottom: 10px;
-      }
-
-      @include b('mobile') {
-        flex-direction: column;
-
+      @include b('tablet') {
+        justify-content: center;
         .tab {
           display: none;
         }
+      }
+
+      @include b('mobile') {
+        justify-content: space-between;
       }
     }
 
     a:hover {
       color: #DC2C2C;
+    }
+
+    a:not(:last-child) {
+      margin-right: 1em;
+      @include b('tablet') {
+        margin-right: 3em;
+      }
+
+      @include b(460) {
+        margin-right: 1em;
+      }
     }
   }
 }

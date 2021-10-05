@@ -5,6 +5,10 @@
 .what-we-do-best {
   margin-top: 100px;
 
+  .primary-header {
+    @include text-gradient(linear-gradient(87.05deg, #FFFFFF 58.97%, #171628 84.38%));
+  }
+
   @include b('mobile') {
     margin-top: 60px;
   }

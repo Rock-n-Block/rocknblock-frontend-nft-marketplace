@@ -77,9 +77,6 @@ ul {
 .block-header {
   .primary-header {
     margin: 0;
-
-    @include text-gradient(linear-gradient(87.05deg, #FFFFFF 54.97%, #171628 152.38%));
-
     font-style: normal;
     font-weight: 800;
     font-size: 50px;

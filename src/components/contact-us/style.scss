@@ -8,6 +8,25 @@
   margin-top: 182px;
   scroll-margin-top: 120px;
 
+
+
+  .background-img:nth-child(1), .background-img:nth-child(2) {
+    width: 98px;
+
+    @include b(1015) {
+      display: none;
+    }
+  }
+
+  .background-img:nth-child(1) {
+    left: 1100px;
+  }
+
+  .background-img:nth-child(2) {
+    padding-top: 100px;
+    opacity: 0.4;
+  }
+
   @include b('mobile') {
     margin-top: 60px;
   }

@@ -22,3 +22,4 @@ export { default as ThanksContainer } from './thanks-container';
 export { default as UpButton } from './up-button';
 export { default as WhatWeDoBest } from './what-we-do-best';
 export { default as WhyUs } from './why-us';
+export { default as ClientsFeedback } from './clients-feedback';

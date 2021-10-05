@@ -7,6 +7,10 @@
   margin-top: 100px;
   scroll-margin-top: 120px;
 
+  .primary-header {
+    @include text-gradient(linear-gradient(87.05deg, #FFFFFF 50.97%, #171628 62.38%));
+  }
+
   @include b('mobile') {
     margin-top: 50px;
   }
@@ -73,6 +77,7 @@
         width: 310px;
         border-radius: 17px;
         text-align: center;
+        object-fit: none;
       }
 
       &__post {

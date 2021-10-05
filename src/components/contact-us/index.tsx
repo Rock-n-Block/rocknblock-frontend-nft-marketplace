@@ -1,5 +1,5 @@
-import {FunctionalComponent, h} from 'preact';
-import {useState} from 'preact/hooks';
+import {Fragment, FunctionalComponent, h} from 'preact';
+import {useEffect, useState} from 'preact/hooks';
 
 import style from './style.scss';
 
@@ -7,6 +7,7 @@ import BlockHeader from '../block-header';
 
 import useGoogleReCaptchaV2 from '../../hooks/useGoogleReCaptcha';
 import { RECAPTCHA_KEY } from '../../definitions';
+import {getCurrentUrl} from "preact-router";
 
 interface ContactUsProps {
   title: string;
@@ -20,6 +21,15 @@ const ContactUs: FunctionalComponent<ContactUsProps> = ({title, subtitle}) => {
   const [contact, setContact] = useState('');
   const [idea, setIdea] = useState('');
   const [token, setToken] = useState('');
+  const [isImgAvailable, setIsImgAvailable] = useState(false);
+
+  const location = getCurrentUrl();
+
+  useEffect(() => {
+    if (location === '/') {
+      setIsImgAvailable(true)
+    } else setIsImgAvailable(false)
+  }, [location])
 
   const { ReCaptchaBadge, executeReCaptcha } = useGoogleReCaptchaV2({
     siteKey: RECAPTCHA_KEY
@@ -82,9 +92,16 @@ const ContactUs: FunctionalComponent<ContactUsProps> = ({title, subtitle}) => {
 
   return (
     <div className={`${style['contact-us']} ${style.container}`} id="contact-us">
-      <div className={style['background-img']}>
-        <img src="../../assets/img/background-contact.png" alt="background-img" />
-      </div>
+      {isImgAvailable && 
+          <Fragment>
+            <div className={style['background-img']}>
+              <img src="../../assets/img/background-partners.png" alt="background-img" />
+            </div>
+            <div className={style['background-img']}>
+              <img src="../../assets/img/background-contact.png" alt="background-img" />
+            </div>
+          </Fragment>
+      }
       <BlockHeader
         style={style}
         primary={title}

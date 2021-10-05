@@ -4,12 +4,6 @@ import style from '../privacy-policy/style.scss';
 
 const Terms: FunctionalComponent = () => (
   <div className={style.container}>
-    <div className={style.logo}>
-      <img src="../../assets/img/background-about-2.png" alt="bg img" className={style.bg__1} />
-      <a href="/">
-        <img src="../../assets/img/icons/logo.svg" alt="R'n'B logo" />
-      </a>
-    </div>
     <div className={style.content}>
       <h2>Terms of Service</h2>
       <p className={style.description}>Thank you for visiting Rock'n'Block</p>

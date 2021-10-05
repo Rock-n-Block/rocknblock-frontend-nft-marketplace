@@ -6,19 +6,12 @@
   margin-top: 150px;
   scroll-margin-top: 120px;
 
-  @include b('mobile') {
-    margin-top: 60px;
+  .primary-header {
+    @include text-gradient(linear-gradient(87.05deg, #FFFFFF 51.97%, #171628 82.38%));
   }
 
-  .background-img {
-    bottom: -170px;
-    left: 900px;
-    width: 98px;
-    opacity: 0.4;
-
-    @include b(1015) {
-      display: none;
-    }
+  @include b('mobile') {
+    margin-top: 60px;
   }
 
   &__partners {

@@ -13,6 +13,10 @@
 .why-us {
   margin: 50px auto 0;
 
+  .primary-header {
+    @include text-gradient(linear-gradient(87.05deg, #FFFFFF 51.97%, #171628 77.38%));
+  }
+
   &__content {
     min-height: 532px;
     margin-top: 35px;

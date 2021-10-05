@@ -6,6 +6,10 @@
   margin-top: 120px;
   scroll-margin-top: 120px;
 
+  .primary-header {
+    @include text-gradient(linear-gradient(87.05deg, #FFFFFF 51.97%, #171628 78.38%));
+  }
+
   @include b('mobile') {
     margin-top: 60px;
   }

@@ -42,12 +42,6 @@ const contacts = [
 
 const Company: FunctionalComponent = () => (
   <div className={style.container}>
-    <div className={style.logo}>
-      <img src="../../assets/img/background-about-2.png" alt="bg img" className={style.bg__1} />
-      <a href="/">
-        <img src="../../assets/img/icons/logo.svg" alt="R'n'B logo" />
-      </a>
-    </div>
     <img className={style.bg__2} src="../../assets/img/background-about-3.png" alt="bg img" />
     <div className={style.blocks}>
       <div className={style.company}>
