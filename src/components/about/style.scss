@@ -27,14 +27,14 @@
       right: 100px;
       left: auto;
       top: -50px;
-      z-index: -1;
+      z-index: 3;
     }
 
     @include b('mobile') {
       width: 246px;
       left: 10px;
       top: -70px;
-      z-index: -1;
+      z-index: 2;
     }
   }
 
@@ -48,7 +48,7 @@
       right: 0;
       left: auto;
       top: -50px;
-      z-index: -2;
+      z-index: 2;
       transform: rotate(210deg);
     }
 
@@ -56,7 +56,6 @@
       width: 192px;
       right: 15px;
       top: -20px;
-      z-index: -2;
       transform: rotate(210deg);
     }
   }
@@ -71,14 +70,11 @@
       right: 230px;
       left: auto;
       top: 45px;
-      z-index: -3;
+      z-index: 1;
     }
 
     @include b('mobile') {
-      width: 192px;
       left: 10px;
-      top: 45px;
-      z-index: -3;
     }
   }
 

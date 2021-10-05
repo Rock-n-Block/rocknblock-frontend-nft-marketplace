@@ -15,6 +15,10 @@
 
   .primary-header {
     @include text-gradient(linear-gradient(87.05deg, #FFFFFF 51.97%, #171628 77.38%));
+
+    @include b('tablet') {
+      @include text-gradient(linear-gradient(to right, #FFFFFF 51.97%, #171628 85.38%));
+    }
   }
 
   &__content {
@@ -91,6 +95,11 @@
         font-size: 40px;
         line-height: 47px;
       }
+
+      @include b('mobile') {
+        font-size: 35px;
+        line-height: 42px;
+      }
     }
 
     &-units {
@@ -150,6 +159,7 @@
       &:nth-child(-n+5) {
         border: none;
         border-bottom: 1px solid #2e2e35;
+        width: 100%;
       }
 
       &:last-child {

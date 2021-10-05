@@ -18,6 +18,10 @@ header {
 	justify-content: center!important;
 }
 
+.bg-transparent {
+	background-color: transparent;
+}
+
 .main-nav {
 	margin: 0 auto;
 	padding: 33px 0;
@@ -27,6 +31,7 @@ header {
 
 	@include b('tablet') {
 		border-bottom: none;
+		padding: 24px 0;
 
 	}
 	border-bottom: 2px solid rgba(255, 255, 255, 0.1);
@@ -69,13 +74,17 @@ header {
 
 		@include b('tablet') {
 			position: absolute;
-			top: 74px;
+			top: 61px;
 		}
 
 		&__link {
 			margin-right: 10px;
 			font-size: 16px;
 			line-height: 19px;
+
+			@include b('tablet') {
+				@include text-gradient(linear-gradient(to right, #FFFFFF 83.97%, #171628 120.38%));
+			}
 
 			&:first-child {
 				font-feature-settings: 'liga' off;

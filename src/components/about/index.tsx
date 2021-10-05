@@ -29,7 +29,7 @@ const About: FunctionalComponent = () => {
               rel="noreferrer"
               target="_blank"
               className={`${style['about__buttons-call']} ${style.btn} ${style['btn-hollow']} ${style['btn-rounded']}`}
-            >Book a call</a>
+            >Book A Call</a>
             <a
               href="#contact-us"
                className={`${style['about__buttons-contact']} ${style.btn} ${style['btn-orange']} ${style['btn-rounded']}`}

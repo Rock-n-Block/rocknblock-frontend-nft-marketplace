@@ -81,11 +81,13 @@ ul {
     font-weight: 800;
     font-size: 50px;
     line-height: 75px;
-
-    /* identical to box height, or 150% */
-
     text-align: center;
     font-feature-settings: 'liga' off;
+
+    @include b('tablet') {
+      font-size: 40px;
+      line-height: 47px;
+    }
 
     @include b('mobile') {
       font-size: 32px;

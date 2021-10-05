@@ -8,6 +8,10 @@
 
   .primary-header {
     @include text-gradient(linear-gradient(87.05deg, #FFFFFF 51.97%, #171628 78.38%));
+
+    @include b('tablet') {
+      @include text-gradient(linear-gradient(to right, #FFFFFF 51.97%, #171628 125.38%));
+    }
   }
 
   @include b('mobile') {
@@ -24,7 +28,7 @@
 
   .noscroll {
     @include b('tablet') {
-      justify-content: center;
+      justify-content: flex-start;
     }
   }
 
@@ -183,7 +187,7 @@
     justify-content: space-between;
 
     @include b('tablet') {
-      display: none;
+      min-height: auto;
     }
   }
 
@@ -193,7 +197,9 @@
     justify-content: center;
     width: 100%;
     @include b('tablet') {
-      display: none;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      overflow-x: auto;
     }
 
 
@@ -216,7 +222,7 @@
       max-height: 386px;
 
       &__dev {
-        width: 179px;
+        width: 100%;
       }
 
       &__contract {
@@ -232,10 +238,10 @@
     justify-self: center;
     flex-direction: row;
     justify-content: center;
-
-    @include b('tablet') {
-      display: none;
-    }
+    //
+    //@include b('tablet') {
+    //  display: none;
+    //}
 
     &Image {
       width: 80%;

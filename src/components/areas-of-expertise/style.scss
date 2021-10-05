@@ -25,6 +25,10 @@
 
   .primary-header {
     @include text-gradient(linear-gradient(87.05deg, #FFFFFF 58.97%, #171628 84.38%));
+
+    @include b('tablet') {
+      @include text-gradient(linear-gradient(to right, #FFFFFF 51.97%, #171628 125.38%));
+    }
   }
 
   @include b('mobile') {
