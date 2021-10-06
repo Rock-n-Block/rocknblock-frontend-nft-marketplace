@@ -55,6 +55,7 @@ span {
 
   @include b($mediaWidthDesktop) {
     width: 100%;
+    padding: 0;
   }
 }
 

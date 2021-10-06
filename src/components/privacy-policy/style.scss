@@ -11,12 +11,8 @@
   align-items: center;
   background-color: var(--body-background-color);
 
-  @include b(547) {
-    margin-bottom: -200px;
-  }
-
-  @include b('mobile') {
-    margin: -70px auto -180px;
+  @include b('tablet') {
+    margin: 0 auto -100px auto;
   }
 
   @include b(340) {
