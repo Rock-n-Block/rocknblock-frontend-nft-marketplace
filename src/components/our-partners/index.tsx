@@ -40,9 +40,6 @@ const achievements = [
 const OurPartners: FunctionalComponent = () => {
   return (
     <div className={`${style['our-partners']} ${style.container}`} id="partners">
-      <div className={style['background-img']}>
-        <img src="../../assets/img/background-partners.png" alt="background-img" />
-      </div>
       <BlockHeader style={style} primary="Our partners" />
       <ul className={style['our-partners__partners']}>
         {partners.map(partner => (

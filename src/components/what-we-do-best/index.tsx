@@ -86,7 +86,7 @@ const WhatWeDoBest: FunctionalComponent = () => {
     <div className={`${style['what-we-do-best']} ${style.container}`}>
       <BlockHeader
         style={style}
-        primary="What we do Best?"
+        primary="What we do Best"
         secondary="We are ready to take on a blockchain project of any complexity, from the stage of idea development to final implementation. Here are the most popular requests we receive regularly:"
       />
       <div className={style.scroll}>

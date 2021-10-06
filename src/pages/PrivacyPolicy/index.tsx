@@ -1,8 +1,7 @@
 import { FunctionalComponent, h } from 'preact';
-import PrivacyPolicy from '../../components/privacy-policy';
-import UpButton from '../../components/up-button';
 import { useState } from 'preact/hooks';
 import * as smoothscroll from 'smoothscroll-polyfill';
+import {PrivacyPolicy, UpButton} from "../../components";
 
 const PrivacyPolicyPage: FunctionalComponent = () => {
   const [isActive, setIsActive] = useState(false);

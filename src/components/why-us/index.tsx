@@ -10,7 +10,7 @@ const cards = [
     text: 'created on a turn-key basis'
   },
   {
-    number: '15,000+',
+    number: '15 000+',
     units: '',
     text: 'smart contracts deployed'
   },

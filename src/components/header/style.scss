@@ -5,30 +5,44 @@ header {
 	position: sticky;
 	top: 0;
 	left: 0;
-	z-index: 3;
+	z-index: 20;
 	background-color: #1d1b21;
 	transition: 0.5s ease;
+}
 
-	@include b('tablet') {
-		background-color: transparent;
-		position: relative;
-	}
+.justify-end {
+	justify-content: flex-end!important;
+}
+
+.justify-center {
+	justify-content: center!important;
+}
+
+.bg-transparent {
+	background-color: transparent;
 }
 
 .main-nav {
 	margin: 0 auto;
-	padding: 20px 0;
+	padding: 33px 0;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+
+	@include b('tablet') {
+		border-bottom: none;
+		padding: 24px 0;
+
+	}
+	border-bottom: 2px solid rgba(255, 255, 255, 0.1);
 
 	&__mobile {
 		width: 100%;
 		display: flex;
 		justify-content: space-between;
+		padding: .5em 15px;
 
 		.icon {
-			background-color: var(--body-background-color);
 			transition: 0.4s ease;
 
 			&-burger-close {}
@@ -43,7 +57,7 @@ header {
 		width: 100%;
 		max-width: 220px;
 
-		@include b('mobile') {
+		@include b(470) {
 			max-width: 169px;
 		}
 	}
@@ -58,10 +72,19 @@ header {
 		font-style: normal;
 		font-weight: bold;
 
+		@include b('tablet') {
+			position: absolute;
+			top: 53px;
+		}
+
 		&__link {
 			margin-right: 10px;
 			font-size: 16px;
 			line-height: 19px;
+
+			@include b('tablet') {
+				@include text-gradient(linear-gradient(to right, #FFFFFF 83.97%, #171628 120.38%));
+			}
 
 			&:first-child {
 				font-feature-settings: 'liga' off;
@@ -126,6 +149,7 @@ header {
 			display: flex;
 			flex-direction: column;
 			align-items: flex-start;
+			background: var(--body-background-color);
 		}
 
 		.nav-pages {

@@ -242,7 +242,7 @@ const dropdown = [
   ]
 ];
 
-const tabs = ['web/mobile development', 'Smart contracts'];
+const tabs = ['Smart contracts', 'web/mobile development'];
 
 const CaseStudies: FunctionalComponent = () => {
   const [activeTab, setActiveTab] = useState(0);

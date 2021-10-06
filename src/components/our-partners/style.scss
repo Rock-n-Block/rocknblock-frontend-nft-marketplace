@@ -4,20 +4,18 @@
 .our-partners {
   position: relative;
   margin-top: 150px;
+  scroll-margin-top: 120px;
+
+  .primary-header {
+    @include text-gradient(linear-gradient(87.05deg, #FFFFFF 51.97%, #171628 82.38%));
+
+    @include b('tablet') {
+      @include text-gradient(linear-gradient(to right, #FFFFFF 51.97%, #171628 125.38%));
+    }
+  }
 
   @include b('mobile') {
     margin-top: 60px;
-  }
-
-  .background-img {
-    bottom: -170px;
-    left: 900px;
-    width: 98px;
-    opacity: 0.4;
-
-    @include b(1015) {
-      display: none;
-    }
   }
 
   &__partners {

@@ -1,5 +1,5 @@
-import {FunctionalComponent, h} from 'preact';
-import {useState} from 'preact/hooks';
+import {Fragment, FunctionalComponent, h} from 'preact';
+import {useEffect, useState} from 'preact/hooks';
 
 import style from './style.scss';
 
@@ -7,14 +7,29 @@ import BlockHeader from '../block-header';
 
 import useGoogleReCaptchaV2 from '../../hooks/useGoogleReCaptcha';
 import { RECAPTCHA_KEY } from '../../definitions';
+import {getCurrentUrl} from "preact-router";
 
-const ContactUs: FunctionalComponent = () => {
+interface ContactUsProps {
+  title: string;
+  subtitle?: string;
+}
+
+const ContactUs: FunctionalComponent<ContactUsProps> = ({title, subtitle}) => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isCompleted, setIsCompleted] = useState(false);
   const [name, setName] = useState('');
   const [contact, setContact] = useState('');
   const [idea, setIdea] = useState('');
   const [token, setToken] = useState('');
+  const [isImgAvailable, setIsImgAvailable] = useState(false);
+
+  const location = getCurrentUrl();
+
+  useEffect(() => {
+    if (location === '/') {
+      setIsImgAvailable(true)
+    } else setIsImgAvailable(false)
+  }, [location])
 
   const { ReCaptchaBadge, executeReCaptcha } = useGoogleReCaptchaV2({
     siteKey: RECAPTCHA_KEY
@@ -77,14 +92,20 @@ const ContactUs: FunctionalComponent = () => {
 
   return (
     <div className={`${style['contact-us']} ${style.container}`} id="contact-us">
-      <div className={style['background-img']}>
-        <img src="../../assets/img/background-contact.png" alt="background-img" />
-      </div>
+      {isImgAvailable && 
+          <Fragment>
+            <div className={style['background-img']}>
+              <img src="../../assets/img/background-partners.png" alt="background-img" />
+            </div>
+            <div className={style['background-img']}>
+              <img src="../../assets/img/background-contact.png" alt="background-img" />
+            </div>
+          </Fragment>
+      }
       <BlockHeader
         style={style}
-        primary="Estimate your project now!"
-        secondary=
-          "Get free consultation and build your blockchain project with our highly qualified team!"
+        primary={title}
+        secondary={subtitle}
       />
       <form name="contact-us-form" onSubmit={(): Promise<void> => onSubmit(event)} className={style['contact-us__form']}>
         <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response" />

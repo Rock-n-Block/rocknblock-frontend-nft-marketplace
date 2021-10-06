@@ -3,48 +3,20 @@
 .container {
   position: relative;
   z-index: 5;
-  margin: -70px auto -180px;
-  padding: 0 -15px;
+  margin: 80px auto 0 auto;
+  padding: 0 15px;
   max-width: $mediaWidthDesktop;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: var(--body-background-color);
 
-  @include b(547) {
-    margin-bottom: -200px;
-  }
-
-  @include b('mobile') {
-    margin: -70px auto -180px;
+  @include b('tablet') {
+    margin: 0 auto -100px auto;
   }
 
   @include b(340) {
     margin-bottom: -210px;
-  }
-
-  .logo {
-    padding: 43px 0;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-
-    img {
-      width: 220px;
-    }
-
-    .bg__1 {
-      position: absolute;
-      z-index: 2;
-      top: -120px;
-      right: 50px;
-
-      @include b(750) {
-        display: none;
-      }
-    }
   }
 
   .content {
@@ -57,20 +29,22 @@
   .bg__img {
     position: absolute;
     right: -150px;
-    top: 2400px;
+    top: 2281px;
 
     @include b(1360) {
       display: none;
     }
   }
 
-  h2 {
+  h2:not(:nth-child(1)) {
     margin-top: 40px;
-    font-family: 'TTNorms', sans-serif;
+  }
+
+  h2 {
+    font-family: 'TTCommons', sans-serif;
     font-weight: 800;
-    font-size: 36px;
+    font-size: 50px;
     line-height: 44px;
-    @include text-gradient(linear-gradient(to right, #FFFFFF 60%, #171628 100%));
 
     @include b(750) {
       margin-top: 20px;
@@ -81,7 +55,7 @@
 
   .description {
     margin-top: 10px;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 28px;
     opacity: 0.85;
 
@@ -93,10 +67,11 @@
 
   h3 {
     margin-top: 20px;
-    font-family: 'TTNorms', sans-serif;
+    font-family: 'TTCommons', sans-serif;
     font-weight: 800;
     font-size: 26px;
     line-height: 31px;
+    opacity: 0.85;
 
     @include b(750) {
       margin-top: 15px;
@@ -109,11 +84,15 @@
     color: #DC2C2C;
   }
 
+  h2 {
+    @include text-gradient(linear-gradient(to right, #FFFFFF 59%, #171628 139%));
+  }
+
   .paragraph {
     margin-top: 10px;
     font-family: 'TTCommons', sans-serif;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 22px;
     line-height: 24px;
     opacity: 0.85;
 

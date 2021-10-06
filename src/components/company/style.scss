@@ -3,50 +3,14 @@
 .container {
   position: relative;
   z-index: 5;
-  margin: -70px 0 -180px;
-  padding: 0 -15px;
+  margin: 0 auto;
+  padding: 0 15px;
   width: 100%;
   display: flex;
   align-self: center;
   flex-direction: column;
   align-items: center;
   background-color: var(--body-background-color);
-
-  @include b(547) {
-    margin-bottom: -200px;
-  }
-
-  @include b('mobile') {
-    margin: -70px auto -180px;
-  }
-
-  @include b(340) {
-    margin-bottom: -210px;
-  }
-
-  .logo {
-    padding: 43px 0;
-    width: 60%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-
-    img {
-      width: 220px;
-    }
-
-    .bg__1 {
-      position: absolute;
-      z-index: 2;
-      top: -120px;
-      right: 50px;
-
-      @include b(750) {
-        display: none;
-      }
-    }
-  }
 
   .bg__2 {
     position: absolute;
@@ -59,26 +23,28 @@
   }
 
   .blocks {
-    margin: 78px auto 100px;
+    margin: 78px auto 200px auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     max-width: 1000px;
 
-    @include b(1024) {
-      margin: 40px 15px 100px;
+    @include b('desktop') {
+      margin: 1em auto 0 auto;
       width: 80%;
       flex-wrap: wrap;
+      flex-direction: column;
     }
+
 
     @include b(655) {
       justify-content: center;
     }
 
     h2 {
-      font-family: 'TTNorms', sans-serif;
+      font-family: 'TTCommons', sans-serif;
       font-weight: 800;
-      font-size: 36px;
+      font-size: 50px;
       line-height: 44px;
       @include text-gradient(linear-gradient(to right, #FFFFFF 60%, #171628 100%));
 
@@ -91,12 +57,12 @@
     .company {
       width: 50%;
 
-      @include b(1000) {
+      @include b('desktop') {
         margin-bottom: 50px;
-        width: min-content;
+        width: 100%
       }
 
-      @include b(655) {
+      @include b('tablet') {
         text-align: center;
       }
 
@@ -105,6 +71,10 @@
         flex-direction: row;
         justify-content: space-between;
         flex-wrap: wrap;
+
+        @include b('tablet') {
+          justify-content: center;
+        }
 
         &__item {
           margin-top: 50px;
@@ -136,8 +106,8 @@
     .contacts {
       width: 30%;
 
-      @include b(1000) {
-        width: min-content;
+      @include b('desktop') {
+        width: 100% ;
       }
 
       @include b(655) {
