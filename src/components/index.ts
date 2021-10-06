@@ -18,3 +18,4 @@ export { default as UpButton } from './up-button';
 export { default as WhatWeDoBest } from './what-we-do-best';
 export { default as WhyUs } from './why-us';
 export { default as ClientsFeedback } from './clients-feedback';
+export { default as Banner } from './banner';

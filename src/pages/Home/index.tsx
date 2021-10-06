@@ -11,7 +11,7 @@ import {
     OurPartners,
     ContactUs,
     UpButton,
-    TelegramWidget, ClientsFeedback
+    TelegramWidget, Banner, ClientsFeedback
 } from "../../components";
 
 const HomePage: FunctionalComponent = () => {
@@ -30,6 +30,7 @@ const HomePage: FunctionalComponent = () => {
     return (
         <div>
             <TelegramWidget />
+            <Banner />
             <About />
             {isActive ? <UpButton /> : null}
             <WhyUs />
