@@ -122,6 +122,17 @@
   
   &__description {
     display: none;
+
+    font-family: 'Karla', sans-serif;
+    font-size: 20px;
+    line-height: 23px;
+
+    p {
+      font-family: 'Karla', sans-serif;
+      font-size: 20px;
+      line-height: 23px;
+    }
+
     
     @include b('tablet') {
       display: block;
@@ -129,10 +140,9 @@
       padding: 10px;
       background: #34313B;
       border-radius: 8px;
-      font-family: 'Karla', sans-serif;
-      font-size: 20px;
-      line-height: 23px;
     }
+
+
   }
   
   &__dropdown {
