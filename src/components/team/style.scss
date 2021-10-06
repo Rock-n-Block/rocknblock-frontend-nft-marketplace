@@ -76,10 +76,10 @@
 
       img {
         margin: 3px 3px 30px;
-        width: 310px;
         border-radius: 17px;
         text-align: center;
         object-fit: none;
+        width: 98%;
       }
 
       &__post {
@@ -212,9 +212,10 @@
 
         img {
           margin: 3px 3px 40px;
-          width: 314px;
           border-radius: 20px;
           text-align: center;
+          object-fit: none;
+          width: 98%;
         }
 
         .description {
