@@ -27,15 +27,13 @@ const navPages: NavPages[] = [
     },
     {
         title: 'Blog',
-        href: "#blog"
+        href: "https://rocknblock.medium.com/"
     },
 
 ];
 
 const Header: FunctionalComponent = () => {
     const [burger, setBurger] = useState('');
-    const [isHomePage, setIsHomePage] = useState<boolean>(false);
-    const location = getCurrentUrl();
 
     const [isHeaderTransparent, setIsHeaderTransparent] = useState(false);
 
