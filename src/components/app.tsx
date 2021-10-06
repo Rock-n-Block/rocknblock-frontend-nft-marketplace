@@ -10,7 +10,6 @@ import ThanksPage from '../pages/Thanks';
 import PrivacyPolicyPage from '../pages/PrivacyPolicy';
 import TermsPage from '../pages/Terms';
 import CompanyPage from '../pages/Company';
-import StakingPage from "../pages/Staking";
 
 
 if (typeof window !== "undefined") smoothscroll.polyfill();
@@ -25,7 +24,6 @@ const App: FunctionalComponent = () => {
                 <PrivacyPolicyPage path='/privacy-policy' />
                 <TermsPage path='/terms-of-service' />
                 <CompanyPage path='/company' />
-                <StakingPage path='/staking' />
             </Router>
             <Footer />
         </div>

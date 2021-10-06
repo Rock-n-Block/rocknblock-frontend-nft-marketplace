@@ -59,12 +59,6 @@ const Header: FunctionalComponent = () => {
     });
 
 
-    useEffect(() => {
-        if (location !== '/staking') {
-            setIsHomePage(true)
-        } else setIsHomePage(false)
-    }, [location])
-
     const switchIcon = (): void => {
         setBurger(burger === '' ? '-close' : '');
     }
@@ -88,18 +82,17 @@ const Header: FunctionalComponent = () => {
                     <section id="nav-pages"
                              className={`
                              ${style['nav-pages']} 
-                             ${!isHomePage ? style['justify-end'] : ''}
                              ${burger === '' ? null : style.topnav} 
                               `}>
-                        {isHomePage &&
-                        navPages.map((item: NavPages, index: number) =>
-                            <a
-                                href={item.href}
-                                key={`${item.href}_${index}`}
-                                className={style['nav-pages__link']}
-                                onClick={(): void => switchIcon()}
-                            >{item.title}</a>
-                        )
+                        {
+                            navPages.map((item: NavPages, index: number) =>
+                                <a
+                                    href={item.href}
+                                    key={`${item.href}_${index}`}
+                                    className={style['nav-pages__link']}
+                                    onClick={(): void => switchIcon()}
+                                >{item.title}</a>
+                            )
                         }
                         <a
                             href="#contact-us"
