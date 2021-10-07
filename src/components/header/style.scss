@@ -42,6 +42,10 @@ header {
 		justify-content: space-between;
 		padding: .5em 15px;
 
+		@include b('tablet') {
+			padding: 0 15px;
+		}
+
 		.icon {
 			transition: 0.4s ease;
 
@@ -74,7 +78,7 @@ header {
 
 		@include b('tablet') {
 			position: absolute;
-			top: 53px;
+			top: 39px;
 		}
 
 		&__link {
@@ -154,7 +158,7 @@ header {
 
 		.nav-pages {
 			&__link {
-				position: relative;
+				z-index: 20;
 				display: flex;
 				align-items: center;
 				margin-left: 36px;
