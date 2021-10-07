@@ -1,0 +1,28 @@
+.arrow-top {
+  padding-left: 0.08%;
+  padding-top: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 71px;
+  left: calc(50% + 520px);
+  width: 48px;
+  height: 48px;
+  background: #1d1b21;
+  border: 3px solid #2E2E35;
+  border-radius: 50%;
+  z-index: 99;
+}
+@media (max-width: 1300px) {
+  .arrow-top {
+    left: auto;
+    right: 0.5rem;
+    bottom: 150px;
+  }
+}
+.arrow-top:hover {
+  border-color: #DC2C2C;
+}
+
+/*# sourceMappingURL=style.css.map */

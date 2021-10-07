@@ -1,0 +1,121 @@
+.container {
+  position: relative;
+  z-index: 5;
+  margin: 80px auto 0 auto;
+  padding: 0 15px;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--body-background-color);
+}
+@media (max-width: 768px) {
+  .container {
+    margin: 0 auto -100px auto;
+  }
+}
+@media (max-width: 340px) {
+  .container {
+    margin-bottom: -210px;
+  }
+}
+.container .content {
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.container .bg__img {
+  position: absolute;
+  right: -150px;
+  top: 2281px;
+}
+@media (max-width: 1360px) {
+  .container .bg__img {
+    display: none;
+  }
+}
+.container h2:not(:nth-child(1)) {
+  margin-top: 40px;
+}
+.container h2 {
+  font-family: "TTCommons", sans-serif;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 44px;
+}
+@media (max-width: 750px) {
+  .container h2 {
+    margin-top: 20px;
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
+.container .description {
+  margin-top: 10px;
+  font-size: 20px;
+  line-height: 28px;
+  opacity: 0.85;
+}
+@media (max-width: 750px) {
+  .container .description {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+.container h3 {
+  margin-top: 20px;
+  font-family: "TTCommons", sans-serif;
+  font-weight: 800;
+  font-size: 26px;
+  line-height: 31px;
+  opacity: 0.85;
+}
+@media (max-width: 750px) {
+  .container h3 {
+    margin-top: 15px;
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+.container .orange {
+  color: #DC2C2C;
+}
+.container h2 {
+  background: linear-gradient(to right, #FFFFFF 59%, #171628 139%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.container .paragraph {
+  margin-top: 10px;
+  font-family: "TTCommons", sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 24px;
+  opacity: 0.85;
+}
+@media (max-width: 750px) {
+  .container .paragraph {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+.container .paragraph a {
+  color: #DC2C2C;
+}
+.container .paragraph__date {
+  margin-top: 20px;
+  font-family: "TTCommons", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  opacity: 0.5;
+}
+@media (max-width: 750px) {
+  .container .paragraph__date {
+    font-size: 18px;
+    line-height: 18px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,124 @@
+.container {
+  position: relative;
+  z-index: 5;
+  margin: -70px 0 -180px;
+  padding: 0 -15px;
+  width: 100%;
+  display: flex;
+  align-self: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--body-background-color);
+  overflow-x: hidden;
+}
+@media (max-width: 547px) {
+  .container {
+    margin-bottom: -200px;
+  }
+}
+@media (max-width: 428px) {
+  .container {
+    margin: -70px auto -180px;
+  }
+}
+.container .bg__1 {
+  width: 273px;
+  position: absolute;
+  z-index: 6;
+  right: -21px;
+  top: -103px;
+}
+@media (max-width: 750px) {
+  .container .bg__1 {
+    right: -100px;
+  }
+}
+.container .bg__2 {
+  width: 220px;
+  position: absolute;
+  z-index: 5;
+  right: 77px;
+  top: -122px;
+}
+@media (max-width: 800px) {
+  .container .bg__2 {
+    display: none;
+  }
+}
+.container .bg__3 {
+  position: absolute;
+  z-index: 5;
+  left: -259px;
+  top: 315px;
+}
+.container .bg__4 {
+  position: absolute;
+  z-index: 5;
+  right: 92px;
+  bottom: 106px;
+}
+@media (max-width: 750px) {
+  .container .bg__4 {
+    display: none;
+  }
+}
+.container .logo {
+  padding: 43px 0;
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.container .logo img {
+  width: 220px;
+}
+.container .header {
+  margin-top: 95px;
+  font-family: "TTNorms", sans-serif;
+  font-weight: 800;
+  font-size: 85px;
+  line-height: 85px;
+  text-align: center;
+  background: linear-gradient(to right, #FFFFFF 60%, #171628 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@media (max-width: 750px) {
+  .container .header {
+    margin-top: 50px;
+    font-size: 50px;
+    line-height: 48px;
+  }
+}
+.container .text {
+  margin-top: 53px;
+  width: 52%;
+  font-family: "TTCommons", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  color: #FFFFFF;
+  opacity: 0.85;
+}
+.container .link {
+  margin-top: 42px;
+  margin-bottom: 50px;
+  width: 299px;
+  height: 58px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%), #DC2C2C;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+  font-family: "TTNorms", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+/*# sourceMappingURL=style.css.map */
