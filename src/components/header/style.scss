@@ -86,10 +86,6 @@ header {
 			font-size: 16px;
 			line-height: 19px;
 
-			@include b('tablet') {
-				//@include text-gradient(linear-gradient(to right, #FFFFFF 83.97%, #171628 120.38%));
-			}
-
 			&:first-child {
 				font-feature-settings: 'liga' off;
 			}
