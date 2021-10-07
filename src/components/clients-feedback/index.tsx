@@ -11,41 +11,6 @@ interface FeedbackCard {
     altLogo: string;
 }
 
-const feedbackCardMobile = [
-    {
-        title: 'ENQ (Enecuum)',
-        desc: 'We would like to thank @mywishplatform for a reliable and easy to use service which helped us to distribute Airdrop tokens. Great job http://MyWish.io !',
-        imgClient: '../../assets/img/icons/icon-client-feedback-mock.svg',
-        imgLogo: '../../assets/img/icons/icon-facebook.svg',
-        altClient: 'client feedback',
-        altLogo: 'facebook'
-    },
-    {
-        title: 'Kephi',
-        desc: 'Con nuestro objetivo de convertirnos en un #NFTmarketplace de última generación, nos hemos asociado con el gigante blockchain @RocknBlock2 que ha crecido hasta convertirse en socio de actores como @binance @0xPolygon @Tronfoundation @Changelly_team',
-        imgClient: '../../assets/img/icons/icon-client-feedback-kephi.svg',
-        imgLogo: '../../assets/img/icons/icon-facebook.svg',
-        altClient: 'client kephi',
-        altLogo: 'facebook'
-    },
-    {
-        title: 'Kephi',
-        desc: 'Con nuestro objetivo de convertirnos en un #NFTmarketplace de última generación, nos hemos asociado con el gigante blockchain @RocknBlock2 que ha crecido hasta convertirse en socio de actores como @binance @0xPolygon @Tronfoundation @Changelly_team',
-        imgClient: '../../assets/img/icons/icon-client-feedback-mock.svg',
-        imgLogo: '../../assets/img/icons/icon-facebook.svg',
-        altClient: 'client feedback',
-        altLogo: 'facebook'
-    },
-    {
-        title: 'ENQ (Enecuum)',
-        desc: 'We would like to thank @mywishplatform for a reliable and easy to use service which helped us to distribute Airdrop tokens. Great job http://MyWish.io !',
-        imgClient: '../../assets/img/icons/icon-client-feedback-kephi.svg',
-        imgLogo: '../../assets/img/icons/icon-facebook.svg',
-        altClient: 'client kephi',
-        altLogo: 'facebook'
-    },
-]
-
 const feedbackCard: FeedbackCard[][] = [
     [
         {
@@ -124,7 +89,7 @@ const ClientsFeedback: FunctionalComponent = () => {
             </div>
 
             <div className={`${style['clients-feedback__cards']} ${style.mobile}`}>
-                {feedbackCardMobile.map((item: FeedbackCard, index: number) =>
+                {(feedbackCard.flat()).map((item: FeedbackCard, index: number) =>
                     <div key={`${index}_feedback_card`} className={style['clients-feedback__cards_item']}>
                         <div>
                             <div className={style['clients-feedback__cards_item_images']}>
