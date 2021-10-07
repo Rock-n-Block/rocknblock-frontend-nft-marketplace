@@ -244,13 +244,8 @@
     justify-self: center;
     flex-direction: row;
     justify-content: center;
-    //
-    //@include b('tablet') {
-    //  display: none;
-    //}
 
     &Image {
-      width: 80%;
       border-radius: 15px;
     }
 

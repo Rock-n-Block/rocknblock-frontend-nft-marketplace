@@ -84,7 +84,7 @@ const dropdown = [
         '../../assets/img/case-ducatus-3.png'
       ],
       description: 'Full functional custodial wallet development for IOS, Android and web, ' +
-        'with more than 10,000 installs.',
+          'with more than 10,000 installs.',
       features: [
         'Blockchain development',
         'Mobile wallet application development',
@@ -103,7 +103,7 @@ const dropdown = [
         '../../assets/img/case-census-3.png'
       ],
       description: 'Census wallet is an app that enables you to control Open Finance by Tangem Card. ' +
-        'Available on IOS and Android devices.',
+          'Available on IOS and Android devices.',
       features: ['Tangem integration',
         'Open Finance',
         'Loans',
@@ -122,7 +122,7 @@ const dropdown = [
         '../../assets/img/case-quras-3.png'
       ],
       description: 'Quras wallet is a tool that allows for interacting with the secret contract platform and fulfill ' +
-        'various privacy protection needs.',
+          'various privacy protection needs.',
       features: ['Private blockchain integrations', 'Cross-blockchain swap'],
       stacks: ['Web3js', 'Solidity', 'JavaScript', 'Openzeppelin', 'Truffle']
     },
@@ -182,7 +182,7 @@ const dropdown = [
         '../../assets/img/case-bitgear-2.png'
       ],
       description: 'By using the Ox protocol, Bitgear helps to find the best prices across exchanges and combines them' +
-        ' into one trade.',
+          ' into one trade.',
       features: [
         '0x protocol integration',
         'all DEXs trading',
@@ -200,7 +200,7 @@ const dropdown = [
         '../../assets/img/case-minto-2.png'
       ],
       description: 'Mine Bitcoin by staking BTCMT tokens. We’ve made smart contracts and crosschain integration between blockchains' +
-        ' that helps to make mining easier than getting a BTC wallet.',
+          ' that helps to make mining easier than getting a BTC wallet.',
       features: [
         'HECO blockchain integration',
         'staking',
@@ -231,8 +231,8 @@ const dropdown = [
         '../../assets/img/case-duc-2.png'
       ],
       description: 'Infrastructure creation and deployment of Ducatus and DucatusX blockchains. Blockchain tools' +
-        ' development: API, explorer/insight, scanner and wallet. Network and user maintenance support. Application' +
-        ' development for created blockchains, integration with exchanges and other blockchains.',
+          ' development: API, explorer/insight, scanner and wallet. Network and user maintenance support. Application' +
+          ' development for created blockchains, integration with exchanges and other blockchains.',
       features: [
         'custom blockchains development',
         'explorer'
@@ -270,95 +270,95 @@ const CaseStudies: FunctionalComponent = () => {
   }
 
   return (
-    <div className={`${style['case-studies']} ${style.container}`} id="cases">
-      <BlockHeader style={style} primary="Case Studies" />
-      <div className={style['case-studies__tabs']}>
-        <div className={`${style['tabs__tablinks']} ${style.tablinks}`}>
-          {tabs.map((tab, index) => (
-            <button
-              key={index}
-              className={`${style['case-studies__tablinks__link']} ${style['tablinks__link']} ${index === activeTab ? style['link-active'] : null}`}
-              onClick={(): void => handleClick(index)}
-            >{tab}</button>
-          ))}
-        </div>
-        <div className={style.scroll}>
-          <div id="case-studies__firs-tab" className={style['case-studies__content']}>
-            {content[activeTab].map((item) => (
-              // eslint-disable-next-line react/jsx-key
-              <CaseStudiesContent
-                style={style}
-                source={item.source}
-                alt={item.alt}
-                name={item.name}
-                number={item.number}
-                activeBtn={activeBtn}
-                setBtn={setBtn}
-              />
+      <div className={`${style['case-studies']} ${style.container}`} id="cases">
+        <BlockHeader style={style} primary="Case Studies" />
+        <div className={style['case-studies__tabs']}>
+          <div className={`${style['tabs__tablinks']} ${style.tablinks}`}>
+            {tabs.map((tab, index) => (
+                <button
+                    key={index}
+                    className={`${style['case-studies__tablinks__link']} ${style['tablinks__link']} ${index === activeTab ? style['link-active'] : null}`}
+                    onClick={(): void => handleClick(index)}
+                >{tab}</button>
             ))}
           </div>
-        </div>
-      </div>
-      <div
-        className={`${style['case-studies__dropdown']} ${style.dropdown}`}
-        key={activeDropdown.key}
-      >
-        <h3 className={style['dropdown__title']}>{activeDropdown.title}</h3>
-        <div className={style['dropdown__img']}>
-          {activeTab === 0 ? (
-            <div>
-              <div className={style.noscroll}>
-                {activeDropdown.images.map((img, i) => (
-                  <img
-                    key={i}
-                    className={style.scroll__dev}
-                    src={img}
-                    alt={`case ${activeDropdown.name} 1`}
+          <div className={style.scroll}>
+            <div id="case-studies__firs-tab" className={style['case-studies__content']}>
+              {content[activeTab].map((item) => (
+                  // eslint-disable-next-line react/jsx-key
+                  <CaseStudiesContent
+                      style={style}
+                      source={item.source}
+                      alt={item.alt}
+                      name={item.name}
+                      number={item.number}
+                      activeBtn={activeBtn}
+                      setBtn={setBtn}
                   />
-                ))}
-              </div>
-            </div>
-          ) : (
-            <div>
-              <div className={style.switch}>
-                <button className={style.switchIcon} onClick={(): void => switchLeft()}>
-                  <img src={'../../assets/img/icons/icon-switch-left.svg'} alt="switch left icon" />
-                </button>
-                <img
-                  className={style.switchImage}
-                  src={`../../assets/img/case-${activeDropdown.name}-${activeImg}.png`}
-                  alt={`${activeDropdown.name} ${activeImg}`}
-                />
-                <button className={style.switchIcon} onClick={(): void => switchRight()}>
-                  <img src={'../../assets/img/icons/icon-switch-right.svg'} alt="switch right icon" />
-                </button>
-              </div>
-            </div>
-          )}
-        </div>
-        <div className={activeDropdown.description ? style['case-studies__description'] : undefined}>
-          {activeDropdown.description}
-        </div>
-        <div className={style['dropdown__insights']}>
-          <div className={`${style['dropdown__insights-insight']} ${style['insight-features']}`}>
-            <h5 className={style['insight__title']}>Features:</h5>
-            <ul className={style['gray-list']}>
-              {activeDropdown.features.map(feature => (
-                <li className={`${style['features__item']} ${style['gray-list__item']}`} key={feature}>{feature}</li>
               ))}
-            </ul>
+            </div>
           </div>
-          <div className={`${style['dropdown__insights-insight']} ${style['insight-stacks']}`}>
-            <h5 className={style['insight__title']}>Stacks:</h5>
-            <ul className={style['gray-list']}>
-              {activeDropdown.stacks.map(stack => (
-                <li className={`${style['features__item']} ${style['gray-list__item']}`} key={stack}>{stack}</li>
-              ))}
-            </ul>
+        </div>
+        <div
+            className={`${style['case-studies__dropdown']} ${style.dropdown}`}
+            key={activeDropdown.key}
+        >
+          <h3 className={style['dropdown__title']}>{activeDropdown.title}</h3>
+          <div className={style['dropdown__img']}>
+            {activeTab === 0 ? (
+                <div>
+                  <div className={style.noscroll}>
+                    {activeDropdown.images.map((img, i) => (
+                        <img
+                            key={i}
+                            className={style.scroll__dev}
+                            src={img}
+                            alt={`case ${activeDropdown.name} 1`}
+                        />
+                    ))}
+                  </div>
+                </div>
+            ) : (
+                <div>
+                  <div className={style.switch}>
+                    <button className={style.switchIcon} onClick={(): void => switchLeft()}>
+                      <img src={'../../assets/img/icons/icon-switch-left.svg'} alt="switch left icon" />
+                    </button>
+                    <img
+                        className={style.switchImage}
+                        src={`../../assets/img/case-${activeDropdown.name}-${activeImg}.png`}
+                        alt={`${activeDropdown.name} ${activeImg}`}
+                    />
+                    <button className={style.switchIcon} onClick={(): void => switchRight()}>
+                      <img src={'../../assets/img/icons/icon-switch-right.svg'} alt="switch right icon" />
+                    </button>
+                  </div>
+                </div>
+            )}
+          </div>
+          <div className={activeDropdown.description ? style['case-studies__description'] : undefined}>
+            {activeDropdown.description}
+          </div>
+          <div className={style['dropdown__insights']}>
+            <div className={`${style['dropdown__insights-insight']} ${style['insight-features']}`}>
+              <h5 className={style['insight__title']}>Features:</h5>
+              <ul className={style['gray-list']}>
+                {activeDropdown.features.map(feature => (
+                    <li className={`${style['features__item']} ${style['gray-list__item']}`} key={feature}>{feature}</li>
+                ))}
+              </ul>
+            </div>
+            <div className={`${style['dropdown__insights-insight']} ${style['insight-stacks']}`}>
+              <h5 className={style['insight__title']}>Stacks:</h5>
+              <ul className={style['gray-list']}>
+                {activeDropdown.stacks.map(stack => (
+                    <li className={`${style['features__item']} ${style['gray-list__item']}`} key={stack}>{stack}</li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </div>
-    </div>
   )
 }
 

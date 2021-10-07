@@ -66,6 +66,10 @@
       align-items: center;
     }
 
+    img {
+      object-fit: none;
+    }
+
     .achieve {
       @include b('tablet') {
         display: flex;
