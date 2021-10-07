@@ -55,6 +55,8 @@
     font-feature-settings: 'liga' off;
 
     @include b('tablet') {
+      font-size: 32px;
+      line-height: 39px;
       background: linear-gradient(87.05deg, #FFFFFF 51.97%, #171628 127.38%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
