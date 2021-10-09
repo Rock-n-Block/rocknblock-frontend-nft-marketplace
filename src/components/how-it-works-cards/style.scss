@@ -1,0 +1,65 @@
+@import "../../style/mixins/mixins";
+@import "../../style/common/buttons";
+@import "../../style/index";
+
+
+.how-it-works__cards {
+  max-width: 1000px;
+  padding-top: 80px;
+  margin: 0 auto;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+
+  h2 {
+    font-family: TT Norms, sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 25px;
+    line-height: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    max-width: 700px;
+
+    span {
+      color: #DC2C2C;
+    }
+  }
+
+  &_block {
+    display: flex;
+    padding-top: 50px;
+
+    &_item {
+      width: 300px;
+      background: transparent;
+      border: 4px solid rgba(44, 44, 51, 1);
+      border-radius: 20px;
+      padding: 40px 15px 44px 25px;
+
+      div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 82px;
+        height: 82px;
+        background: #DC2C2C;
+        border-radius: 100%;
+      }
+
+      h3 {
+        padding-top: 40px;
+        font-family: TT Norms, sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+      }
+    }
+
+    &_item:not(:last-child) {
+      margin-right: 40px;
+    }
+  }
+}

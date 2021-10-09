@@ -1,36 +1,6 @@
 import {FunctionalComponent, h} from 'preact';
 import {useEffect, useState} from 'preact/hooks';
-import {getCurrentUrl} from 'preact-router'
 import style from './style.scss';
-
-interface NavPages {
-    title: string;
-    href: string;
-}
-
-const navPages: NavPages[] = [
-    {
-        title: 'Services',
-        href: "#services"
-    },
-    {
-        title: 'Cases',
-        href: "#cases"
-    },
-    {
-        title: 'Team',
-        href: "#team"
-    },
-    {
-        title: 'Partners',
-        href: "#partners"
-    },
-    {
-        title: 'Blog',
-        href: "https://rocknblock.medium.com/"
-    },
-
-];
 
 const Header: FunctionalComponent = () => {
     const [burger, setBurger] = useState('');
@@ -80,18 +50,9 @@ const Header: FunctionalComponent = () => {
                     <section id="nav-pages"
                              className={`
                              ${style['nav-pages']} 
+                             ${style['justify-end']}
                              ${burger === '' ? null : style.topnav} 
                               `}>
-                        {
-                            navPages.map((item: NavPages, index: number) =>
-                                <a
-                                    href={item.href}
-                                    key={`${item.href}_${index}`}
-                                    className={style['nav-pages__link']}
-                                    onClick={(): void => switchIcon()}
-                                >{item.title}</a>
-                            )
-                        }
                         <a
                             href="#contact-us"
                             className={`${style['nav-pages__contact-button']} ${style['nav-pages__link']} ${style['nav-pages__link__contact-us']}`}

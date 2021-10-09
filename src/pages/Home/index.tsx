@@ -1,12 +1,15 @@
-import {FunctionalComponent, h} from 'preact';
-import {About} from "../../components";
+import {Fragment, FunctionalComponent, h} from 'preact';
+import {About, HowItWorks, HowItWorksCards} from "../../components";
 
 
 const HomePage: FunctionalComponent = () => {
 
     return (
-        <About />
-
+        <Fragment>
+            <About />
+            <HowItWorksCards />
+            <HowItWorks />
+        </Fragment>
     )
 };
 
