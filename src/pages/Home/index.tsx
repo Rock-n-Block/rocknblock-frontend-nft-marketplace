@@ -1,5 +1,5 @@
 import {Fragment, FunctionalComponent, h} from 'preact';
-import {About, HowItWorks, HowItWorksCards} from "../../components";
+import {About, HowItWorks, HowItWorksCards, NftGenerator, ContactUs} from "../../components";
 
 
 const HomePage: FunctionalComponent = () => {
@@ -9,6 +9,9 @@ const HomePage: FunctionalComponent = () => {
             <About />
             <HowItWorksCards />
             <HowItWorks />
+            <NftGenerator />
+
+            <ContactUs title={'GET LIVE TECHNICAL DEMO'} />
         </Fragment>
     )
 };

@@ -8,4 +8,7 @@ export { default as ThanksContainer } from './thanks-container';
 export { default as UpButton } from './up-button';
 export { default as HowItWorksCards } from './how-it-works-cards';
 export { default as HowItWorks } from './how-it-works';
+export { default as NftGenerator } from './nft-generator';
+export { default as ContactUs } from './contact-us';
+
 
