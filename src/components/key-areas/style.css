@@ -858,6 +858,7 @@ ul {
 .key-areas h2 {
   padding-top: 130px;
   z-index: 1;
+  max-width: 469px;
   font-family: TT Norms, sans-serif;
   font-style: normal;
   font-weight: 800;
@@ -871,10 +872,12 @@ ul {
 }
 .key-areas_img {
   z-index: 1;
+  padding-top: 100px;
 }
 .key-areas_bg {
   position: absolute;
   filter: blur(17px);
+  top: 130px;
 }
 
 /*# sourceMappingURL=style.css.map */

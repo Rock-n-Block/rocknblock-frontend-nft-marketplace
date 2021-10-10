@@ -16,6 +16,7 @@
   h2 {
     padding-top: 130px;
     z-index: 1;
+    max-width: 469px;
     font-family: TT Norms, sans-serif;
     font-style: normal;
     font-weight: 800;
@@ -31,10 +32,12 @@
 
   &_img {
     z-index: 1;
+    padding-top: 100px;
   }
 
   &_bg {
     position: absolute;
     filter: blur(17px);
+    top: 130px;
   }
 }
