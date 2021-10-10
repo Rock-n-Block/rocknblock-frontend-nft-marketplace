@@ -119,4 +119,51 @@
       }
     }
   }
+
+  &__bottom {
+    display: flex;
+    padding-top: 152px;
+    align-items: center;
+
+    &_block {
+      &_title {
+        font-family: Inter, sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: #DC2C2C;
+        padding-bottom: 22px;
+        max-width: 369px;
+      }
+
+      &_subtitle {
+        font-family: TT Norms, sans-serif;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 48px;
+        line-height: 60px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        padding-bottom: 16px;
+
+        span {
+          color: #DC2C2C;
+        }
+      }
+
+      &_desc {
+        font-family: TT Commons, sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 30px;
+        color: #FFFFFF;
+        opacity: 0.5;
+        max-width: 436px;
+      }
+    }
+  }
 }
