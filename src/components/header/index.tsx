@@ -32,7 +32,7 @@ const Header: FunctionalComponent = () => {
     }
 
     return (
-        <header className={!isHeaderTransparent ? style['bg-transparent'] : ''}>
+        <header className={`${!isHeaderTransparent ? style['bg-transparent'] : ''} ${burger === '' ? '' : style['bg-show']} `}>
             <div className={style.container}>
                 <nav className={style['main-nav']}>
                     <section className={`${style['main-nav__mobile']}`}>
