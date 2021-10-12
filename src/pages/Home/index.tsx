@@ -1,12 +1,7 @@
 import {Fragment, FunctionalComponent, h} from 'preact';
 import {
-    About,
-    HowItWorks,
-    HowItWorksCards,
-    NftGenerator,
     ContactUs,
-    CreateNftCollection,
-    KeyAreas, UpButton
+    UpButton
 } from "../../components";
 import TelegramWidget from "../../components/telegram-widget";
 import {useState} from "preact/hooks";
@@ -30,12 +25,7 @@ const HomePage: FunctionalComponent = () => {
         <Fragment>
             <TelegramWidget />
             {isActive ? <UpButton /> : null}
-            <About />
-            <HowItWorksCards />
-            <HowItWorks />
-            <NftGenerator />
-            <CreateNftCollection />
-            <KeyAreas />
+
 
             <ContactUs title={'GET LIVE TECHNICAL DEMO'} />
         </Fragment>
