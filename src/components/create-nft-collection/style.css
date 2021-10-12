@@ -850,6 +850,11 @@ ul {
   padding-top: 200px;
   position: relative;
 }
+@media (max-width: 768px) {
+  .create-nft {
+    padding-top: 80px;
+  }
+}
 .create-nft__block {
   max-width: 1000px;
   margin: 0 auto;
@@ -860,7 +865,6 @@ ul {
   padding-bottom: 213px;
 }
 .create-nft__block_img {
-  width: 400px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -878,7 +882,7 @@ ul {
   z-index: 1;
 }
 .create-nft__block h2 {
-  font-family: TT Norms, sans-serif;
+  font-family: TTNorms, sans-serif;
   font-style: normal;
   z-index: 1;
   font-weight: 800;
@@ -890,6 +894,13 @@ ul {
   max-width: 850px;
   margin: 0 auto;
   padding-top: 16px;
+}
+@media (max-width: 768px) {
+  .create-nft__block h2 {
+    font-size: 32px;
+    line-height: 32px;
+    padding: 16px 20px 0 20px;
+  }
 }
 .create-nft__block h2 span {
   color: #DC2C2C;
@@ -906,23 +917,62 @@ ul {
   margin-top: 12px;
   padding: 39px;
 }
+@media (max-width: 768px) {
+  .create-nft__block_button {
+    background: transparent;
+  }
+}
 .create-nft__block_button a {
   width: 212px;
   height: 49px;
+  font-family: TTCommons, sans-serif;
+  font-style: normal;
+  justify-content: space-evenly;
+  font-size: 18px;
+  line-height: 18px;
 }
 .create-nft__bg {
   position: absolute;
-  left: 250px;
   top: 467px;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   z-index: -1;
+  margin-left: auto;
+  width: 100%;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
-.create-nft__bg img {
-  object-fit: none;
-  height: 739px;
-}
-@media (max-width: 1500px) {
+@media (max-width: 390px) {
   .create-nft__bg {
-    left: auto;
+    top: 330px;
+  }
+}
+.create-nft__bg_desktop, .create-nft__bg_mobile {
+  object-fit: none;
+}
+.create-nft__bg_desktop {
+  height: 739px;
+  display: block;
+}
+@media (max-width: 768px) {
+  .create-nft__bg_desktop {
+    height: 536px;
+  }
+}
+@media (max-width: 390px) {
+  .create-nft__bg_desktop {
+    display: none;
+  }
+}
+.create-nft__bg_mobile {
+  height: 563px;
+  display: none;
+}
+@media (max-width: 390px) {
+  .create-nft__bg_mobile {
+    display: block;
   }
 }
 .create-nft__block-2 {
@@ -934,19 +984,56 @@ ul {
   flex-direction: column;
   padding-top: 101px;
 }
+@media (max-width: 768px) {
+  .create-nft__block-2 {
+    padding-top: 120px;
+  }
+}
+@media (max-width: 390px) {
+  .create-nft__block-2 {
+    padding-top: 0;
+    margin-top: -131px;
+  }
+}
 .create-nft__block-2_img {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.create-nft__block-2_img_title {
+.create-nft__block-2_img_title-desktop {
   position: absolute;
-  left: 238px;
-  top: 96px;
+  top: 60px;
+}
+@media (max-width: 600px) {
+  .create-nft__block-2_img_title-desktop {
+    display: none;
+  }
+}
+.create-nft__block-2_img_title-mobile {
+  display: none;
+  position: absolute;
+  top: 80px;
+}
+@media (max-width: 600px) {
+  .create-nft__block-2_img_title-mobile {
+    display: block;
+  }
+}
+.create-nft__block-2_img_bg {
+  height: 736px;
+  object-fit: none;
+}
+@media (max-width: 600px) {
+  .create-nft__block-2_img_bg {
+    height: 564px;
+  }
 }
 .create-nft__block-2_desc {
   margin-top: -265px;
 }
 .create-nft__block-2_desc h2 {
-  font-family: TT Norms, sans-serif;
+  font-family: TTNorms, sans-serif;
   font-style: normal;
   font-weight: 800;
   padding-bottom: 40px;
@@ -957,11 +1044,18 @@ ul {
   max-width: 950px;
   margin: 0 auto;
 }
+@media (max-width: 768px) {
+  .create-nft__block-2_desc h2 {
+    font-size: 25px;
+    line-height: 40px;
+    padding: 0 20px;
+  }
+}
 .create-nft__block-2_desc h2 span {
   color: #DC2C2C;
 }
 .create-nft__block-2_desc h3 {
-  font-family: TT Commons, sans-serif;
+  font-family: TTCommons, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 24px;
@@ -969,6 +1063,13 @@ ul {
   text-align: center;
   max-width: 800px;
   margin: 0 auto;
+}
+@media (max-width: 768px) {
+  .create-nft__block-2_desc h3 {
+    font-size: 24px;
+    line-height: 30px;
+    padding: 30px 20px 0 20px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

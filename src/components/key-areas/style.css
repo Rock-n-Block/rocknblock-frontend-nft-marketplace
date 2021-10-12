@@ -855,11 +855,18 @@ ul {
   padding-top: 130px;
   position: relative;
 }
+@media (max-width: 768px) {
+  .key-areas {
+    padding-top: 0;
+    max-width: 100%;
+    overflow-x: auto;
+  }
+}
 .key-areas h2 {
   padding-top: 130px;
   z-index: 1;
   max-width: 469px;
-  font-family: TT Norms, sans-serif;
+  font-family: TTNorms, sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 60px;
@@ -867,12 +874,25 @@ ul {
   text-align: center;
   text-transform: uppercase;
 }
+@media (max-width: 768px) {
+  .key-areas h2 {
+    font-size: 40px;
+    line-height: 40px;
+    padding: 60px 20px 0 20px;
+  }
+}
 .key-areas h2 span {
   color: #DC2C2C;
 }
 .key-areas_img {
   z-index: 1;
   padding-top: 100px;
+}
+@media (max-width: 768px) {
+  .key-areas_img {
+    object-fit: none;
+    min-width: 1147px;
+  }
 }
 .key-areas_bg {
   position: absolute;

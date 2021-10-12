@@ -23,12 +23,14 @@ const CreateNftCollection: FunctionalComponent = () => {
                 </div>
             </div>
             <div className={style['create-nft__bg']}>
-                <img src='../../assets/img/10knft/10knft-background.png' alt='bg' />
+                <img className={style['create-nft__bg_desktop']} src='../../assets/img/10knft/10knft-background.png' alt='bg' />
+                <img className={style['create-nft__bg_mobile']} src='../../assets/img/10knft/10knft-background-mobile.png' alt='bg' />
             </div>
 
             <div className={style['create-nft__block-2']}>
                 <div className={style['create-nft__block-2_img']}>
-                    <img className={style['create-nft__block-2_img_title']} src='../../assets/img/10knft/10knft-big-title.svg' alt='nft big title' />
+                    <img className={style['create-nft__block-2_img_title-desktop']}  src='../../assets/img/10knft/10knft-big-title.svg' alt='nft big title' />
+                    <img className={style['create-nft__block-2_img_title-mobile']}  src='../../assets/img/10knft/10knft-big-title-mobile.png' alt='nft big title' />
                     <img className={style['create-nft__block-2_img_bg']} src='../../assets/img/10knft/10knft-big-title-bg.svg' alt='nft big title bg' />
                 </div>
                 <div className={style['create-nft__block-2_desc']}>

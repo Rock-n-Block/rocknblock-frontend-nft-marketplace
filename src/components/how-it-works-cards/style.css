@@ -854,8 +854,14 @@ ul {
   flex-direction: column;
   align-items: center;
 }
+@media (max-width: 768px) {
+  .how-it-works__cards {
+    padding-top: 0;
+    margin: -60px auto 0 auto;
+  }
+}
 .how-it-works__cards h2 {
-  font-family: TT Norms, sans-serif;
+  font-family: TTNorms, sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 25px;
@@ -864,6 +870,13 @@ ul {
   text-transform: uppercase;
   max-width: 700px;
 }
+@media (max-width: 768px) {
+  .how-it-works__cards h2 {
+    font-size: 25px;
+    line-height: 40px;
+    padding: 0 20px;
+  }
+}
 .how-it-works__cards h2 span {
   color: #DC2C2C;
 }
@@ -871,12 +884,23 @@ ul {
   display: flex;
   padding-top: 50px;
 }
+@media (max-width: 768px) {
+  .how-it-works__cards_block {
+    overflow-x: auto;
+    max-width: 100%;
+  }
+}
 .how-it-works__cards_block_item {
   width: 354px;
   background: transparent;
   border: 4px solid #2c2c33;
   border-radius: 20px;
   padding: 40px 15px 44px 25px;
+}
+@media (max-width: 768px) {
+  .how-it-works__cards_block_item {
+    min-width: 280px;
+  }
 }
 .how-it-works__cards_block_item div {
   display: flex;
@@ -889,7 +913,7 @@ ul {
 }
 .how-it-works__cards_block_item h3 {
   padding-top: 40px;
-  font-family: TT Norms, sans-serif;
+  font-family: TTCommons, sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 20px;

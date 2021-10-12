@@ -7,7 +7,7 @@
   margin: 0 auto;
 
   &__title {
-    font-family: TT Norms, sans-serif;
+    font-family: TTNorms, sans-serif;
     font-style: normal;
     font-weight: 800;
     font-size: 60px;
@@ -17,6 +17,14 @@
     padding-bottom: 47px;
     max-width: 1000px;
     margin: 0 auto;
+
+    @include b('tablet') {
+      font-size: 40px;
+      line-height: 40px;
+      padding-top: 40px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
   }
 
   a {
@@ -26,23 +34,27 @@
     display: flex;
     justify-content: space-evenly;
 
-    font-family: TT Norms, sans-serif;
+    font-family: TTNorms, sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 15.5378px;
     line-height: 18px;
     font-feature-settings: 'kern' off, 'liga' off;
-
-    color: #FFFFFF;
   }
 
   &__container {
     display: block;
     padding-top: 49px;
 
+    @include b('tablet') {
+      max-width: 100%;
+      overflow-x: auto;
+    }
+
     &_titles {
       display: flex;
       justify-content: flex-end;
+      width: 1100px;
       &_item {
         width: 264px;
         height: 45px;
@@ -66,8 +78,10 @@
 
       &_row {
         width: 100%;
-        display: flex;
-        flex-direction: row;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        gap: 15px 16px;
         margin-left: 16px;
         flex-wrap: wrap;
 
@@ -78,21 +92,12 @@
           border-radius: 12px;
 
           h2 {
-            font-family: TT Commons, sans-serif;
+            font-family: TTCommons, sans-serif;
             font-style: normal;
             font-weight: bold;
             font-size: 15px;
             line-height: 30px;
             padding-right: 2em;
-          }
-        }
-        &_item:not(:nth-child(3n+3)) {
-          margin-right: 14px;
-        }
-
-        @include b(1100) {
-          &_item:not(:nth-child(3n+3)) {
-            margin-right: 0;
           }
         }
       }
@@ -103,6 +108,9 @@
           justify-content: center;
           background: linear-gradient(30.15deg, #191111 14.13%, #272525 64.22%);
           border-radius: 12px;
+          &:not(:last-child) {
+            margin-bottom: 15px;
+          }
         }
       }
 
@@ -111,10 +119,6 @@
           width: 264px;
           height: 140px;
           display: flex;
-
-          &:not(:last-child) {
-            margin-bottom: 15px;
-          }
         }
       }
     }
@@ -125,7 +129,35 @@
     padding-top: 152px;
     align-items: center;
 
+    @include b('tablet') {
+      flex-direction: column;
+      justify-content: center;
+      padding-top: 60px;
+    }
+
+    .img_desktop {
+      display: block;
+
+      @include b('600') {
+        display: none;
+      }
+    }
+
+    .img_mobile {
+      display: none;
+
+      @include b('600') {
+        display: block;
+      }
+    }
+
     &_block {
+      @include b('tablet') {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
       &_title {
         font-family: Inter, sans-serif;
         font-style: normal;
@@ -137,10 +169,20 @@
         color: #DC2C2C;
         padding-bottom: 22px;
         max-width: 369px;
+
+        @include b('tablet') {
+          font-size: 14px;
+          line-height: 18px;
+          text-align: center;
+          letter-spacing: 0.2em;
+          padding-top: 40px;
+          padding-left: 20px;
+          padding-right: 20px;
+        }
       }
 
       &_subtitle {
-        font-family: TT Norms, sans-serif;
+        font-family: TTNorms, sans-serif;
         font-style: normal;
         font-weight: 800;
         font-size: 48px;
@@ -149,13 +191,20 @@
         color: #FFFFFF;
         padding-bottom: 16px;
 
+        @include b('tablet') {
+          font-size: 32px;
+          line-height: 32px;
+          text-align: center;
+          padding: 0 20px;
+        }
+
         span {
           color: #DC2C2C;
         }
       }
 
       &_desc {
-        font-family: TT Commons, sans-serif;
+        font-family: TTCommons, sans-serif;
         font-style: normal;
         font-weight: normal;
         font-size: 20px;
@@ -163,6 +212,12 @@
         color: #FFFFFF;
         opacity: 0.5;
         max-width: 436px;
+
+        @include b('tablet') {
+          line-height: 25px;
+          text-align: center;
+          padding:20px 20px 0px 20px;
+        }
       }
     }
   }

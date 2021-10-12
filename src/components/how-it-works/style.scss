@@ -11,9 +11,14 @@
   padding-top: 139px;
   padding-bottom: 139px;
 
+  @include b('tablet') {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
   h2 {
     text-align: center;
-    font-family: TT Norms, sans-serif;
+    font-family: TTNorms, sans-serif;
     font-style: normal;
     font-weight: 800;
     font-size: 60px;
@@ -21,12 +26,34 @@
     text-transform: uppercase;
     padding-bottom: 80px;
 
+    @include b('tablet') {
+      font-size: 40px;
+      line-height: 40px;
+      text-align: center;
+      padding: 0 20px 33px 20px;
+    }
+
     span {
       color: #DC2C2C;
     }
   }
 
   &__roadmap {
-    margin-left: 2em;
+    &_desktop {
+      margin-left: 2em;
+
+      @include b('600') {
+        display: none;
+      }
+    }
+
+    &_mobile {
+      display: none;
+      @include b('600') {
+        display: block;
+        margin: 0 auto;
+        padding: 0 10px;
+      }
+    }
   }
 }

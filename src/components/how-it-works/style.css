@@ -854,9 +854,15 @@ ul {
   padding-top: 139px;
   padding-bottom: 139px;
 }
+@media (max-width: 768px) {
+  .how-it-works {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
 .how-it-works h2 {
   text-align: center;
-  font-family: TT Norms, sans-serif;
+  font-family: TTNorms, sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 60px;
@@ -864,11 +870,34 @@ ul {
   text-transform: uppercase;
   padding-bottom: 80px;
 }
+@media (max-width: 768px) {
+  .how-it-works h2 {
+    font-size: 40px;
+    line-height: 40px;
+    text-align: center;
+    padding: 0 20px 33px 20px;
+  }
+}
 .how-it-works h2 span {
   color: #DC2C2C;
 }
-.how-it-works__roadmap {
+.how-it-works__roadmap_desktop {
   margin-left: 2em;
+}
+@media (max-width: 600px) {
+  .how-it-works__roadmap_desktop {
+    display: none;
+  }
+}
+.how-it-works__roadmap_mobile {
+  display: none;
+}
+@media (max-width: 600px) {
+  .how-it-works__roadmap_mobile {
+    display: block;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

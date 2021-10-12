@@ -47,6 +47,7 @@ const NftGenerator: FunctionalComponent = () => {
             </div>
 
             <div className={style['nft-generator__bottom']}>
+                <img className={style['img_mobile']} src='../../assets/img/10knft/10k-nft-collection-art-mobile.png' alt='nft collection' />
                 <div className={style['nft-generator__bottom_block']}>
                     <h2 className={style['nft-generator__bottom_block_title']}>Rock'n'Block creates a special type of NFT Collection:</h2>
                     <h2 className={style['nft-generator__bottom_block_subtitle']}>Algorithmically <span>Generated NFT</span> collections.</h2>
@@ -55,7 +56,7 @@ const NftGenerator: FunctionalComponent = () => {
                         collections and have done really well.
                     </h3>
                 </div>
-                <img src='../../assets/img/10knft/10k-nft-collection-art.png' alt='nft collection' />
+                <img className={style['img_desktop']} src='../../assets/img/10knft/10k-nft-collection-art.png' alt='nft collection' />
             </div>
         </div>
     );

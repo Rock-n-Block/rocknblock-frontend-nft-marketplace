@@ -7,6 +7,10 @@
   padding-top: 200px;
   position: relative;
 
+  @include b('tablet') {
+    padding-top: 80px;
+  }
+
   &__block {
     max-width: 1000px;
     margin: 0 auto;
@@ -17,7 +21,6 @@
     padding-bottom: 213px;
 
     &_img {
-      width: 400px;
       margin: 0 auto;
       display: flex;
       justify-content: center;
@@ -39,7 +42,7 @@
     }
 
     h2 {
-      font-family: TT Norms, sans-serif;
+      font-family: TTNorms, sans-serif;
       font-style: normal;
       z-index: 1;
       font-weight: 800;
@@ -51,6 +54,12 @@
       max-width: 850px;
       margin: 0 auto;
       padding-top: 16px;
+
+      @include b('tablet') {
+        font-size: 32px;
+        line-height: 32px;
+        padding: 16px 20px 0 20px;
+      }
 
       span {
         color: #DC2C2C;
@@ -69,26 +78,61 @@
       margin-top: 12px;
       padding: 39px;
 
+      @include b('tablet') {
+        background: transparent;
+      }
+
       a {
         width: 212px;
         height: 49px;
+        font-family: TTCommons, sans-serif;
+        font-style: normal;
+        justify-content: space-evenly;
+        font-size: 18px;
+        line-height: 18px;
       }
     }
   }
 
   &__bg {
     position: absolute;
-    left: 250px;
     top: 467px;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     z-index: -1;
+    margin-left: auto;
+    width: 100%;
+    left: 50%;
+    transform: translate(-50%, 0);
 
-    img {
-      object-fit: none;
-      height: 739px;
+    @include b('390') {
+      top: 330px;
     }
 
-    @include b('1500') {
-      left: auto;
+    &_desktop, &_mobile {
+      object-fit: none;
+    }
+
+    &_desktop {
+      height: 739px;
+      display: block;
+
+      @include b('tablet') {
+        height: 536px;
+      }
+      @include b('390') {
+        display: none;
+      }
+    }
+
+    &_mobile {
+      height: 563px;
+      display: none;
+      @include b('390') {
+        display: block;
+      }
     }
   }
 
@@ -101,20 +145,53 @@
     flex-direction: column;
     padding-top: 101px;
 
+    @include b('tablet') {
+      padding-top: 120px;
+    }
+
+    @include b('390') {
+      padding-top: 0;
+      margin-top: -131px;
+    }
+
     &_img {
       position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
-      &_title {
+      &_title-desktop {
         position: absolute;
-        left: 238px;
-        top: 96px;
+        top: 60px;
+
+        @include b('600') {
+          display: none;
+        }
+      }
+
+      &_title-mobile {
+        display: none;
+        position: absolute;
+        top: 80px;
+        @include b('600') {
+          display: block;
+        }
+      }
+
+      &_bg {
+        height: 736px;
+        object-fit: none;
+
+        @include b('600') {
+          height: 564px;
+        }
       }
     }
 
     &_desc {
       margin-top: -265px;
       h2 {
-        font-family: TT Norms, sans-serif;
+        font-family: TTNorms, sans-serif;
         font-style: normal;
         font-weight: 800;
         padding-bottom: 40px;
@@ -125,13 +202,19 @@
         max-width: 950px;
         margin: 0 auto;
 
+        @include b('tablet') {
+          font-size: 25px;
+          line-height: 40px;
+          padding: 0 20px;
+        }
+
         span {
           color: #DC2C2C;
         }
       }
 
       h3 {
-        font-family: TT Commons, sans-serif;
+        font-family: TTCommons, sans-serif;
         font-style: normal;
         font-weight: normal;
         font-size: 24px;
@@ -139,6 +222,12 @@
         text-align: center;
         max-width: 800px;
         margin: 0 auto;
+
+        @include b('tablet') {
+          font-size: 24px;
+          line-height: 30px;
+          padding: 30px 20px 0 20px;
+        }
       }
     }
   }
