@@ -12,6 +12,11 @@
     text-align: center;
     text-transform: uppercase;
     margin-bottom: 30px;
+    margin-top: 50px;
+
+    @media (max-width: 1024px) {
+      margin-top: 0;
+    }
 
     @include b('mobile') {
       font-size: 34px;

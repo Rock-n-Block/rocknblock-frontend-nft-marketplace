@@ -3,7 +3,11 @@
 .block {
   position: relative;
   z-index: 1;
-  padding-top: 320px;
+
+  @include b('mobile') {
+    padding-top: 320px;
+  }
+
 
   .imgGroup {
     position: absolute;

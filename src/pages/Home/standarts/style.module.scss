@@ -4,7 +4,15 @@
   margin-top: 103px;
   position: relative;
   z-index: 1;
-  padding-bottom: 600px;
+  padding-bottom: 900px;
+
+  @media (max-width: 1200px) {
+    height: 600px;
+  }
+
+  @media (max-width: 980px) {
+    height: 400px;
+  }
 
   @include b('mobile') {
     margin-top: 60px;
@@ -128,12 +136,16 @@
     background-size: cover;
     background-position: 50%;
     width: 100%;
-    height: 700px;
+    height: 900px;
     margin: auto;
     display: block;
     position: absolute;
     margin-top: 60px;
     z-index: -1;
+
+    @media (max-width: 1200) {
+      height: 700px;
+    }
 
     @media (max-width: 980px) {
       margin-top: 300px;
