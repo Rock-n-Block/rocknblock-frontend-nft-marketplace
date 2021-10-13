@@ -5,10 +5,20 @@ import {
 } from "../../components";
 import TelegramWidget from "../../components/telegram-widget";
 import {useState} from "preact/hooks";
+import style from './style.module.scss';
+import NftMarketplace from './nftMarketplace';
+import WhatIsAn from './whatIsAn';
+import Features from './features';
+import Standarts from './standarts';
+import OrderDevelopment from './orderDevelopment';
+import Working from './working';
+import Choose from './choose';
+import Portfolio from './portfolio';
+import OtherSites from './other-sites';
+import CustomeFooter from './customeFooter';
 
 
 const HomePage: FunctionalComponent = () => {
-
     const [isActive, setIsActive] = useState(false);
 
     if (typeof window !== 'undefined') {
@@ -25,9 +35,19 @@ const HomePage: FunctionalComponent = () => {
         <Fragment>
             <TelegramWidget />
             {isActive ? <UpButton /> : null}
-
-
-            <ContactUs title={'GET LIVE TECHNICAL DEMO'} />
+            <div class={style.container}>
+                <NftMarketplace />
+                <Portfolio />
+                <WhatIsAn />
+                <Features />
+                <Standarts />
+                <OrderDevelopment />
+                <Working />
+                <Choose />
+                <OtherSites />
+                <ContactUs title={'GET LIVE TECHNICAL DEMO'} />
+                <CustomeFooter />
+            </div>
         </Fragment>
     )
 };

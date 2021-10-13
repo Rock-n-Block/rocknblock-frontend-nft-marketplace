@@ -81,6 +81,9 @@ const Footer: FunctionalComponent = () => {
                     <p className={style['bottom__copyright-mobile']}>© Copyright Rock’n’Block 2021</p>
                 </div>
             </div>
+            <div class={style.ellipseContainer}>
+                <div class={style.ellipse} />
+            </div>
         </footer>
     )
 }

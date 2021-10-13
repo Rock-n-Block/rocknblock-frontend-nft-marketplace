@@ -8,6 +8,7 @@ import BlockHeader from '../block-header';
 import useGoogleReCaptchaV2 from '../../hooks/useGoogleReCaptcha';
 import { RECAPTCHA_KEY } from '../../definitions';
 import {getCurrentUrl} from "preact-router";
+import SocialInput from '../input/socialInput';
 
 interface ContactUsProps {
   title: string;
@@ -20,6 +21,7 @@ const ContactUs: FunctionalComponent<ContactUsProps> = ({title, subtitle}) => {
   const [name, setName] = useState('');
   const [contact, setContact] = useState('');
   const [idea, setIdea] = useState('');
+  const [social, setSocial] = useState('E-mail');
   const [token, setToken] = useState('');
   const [isImgAvailable, setIsImgAvailable] = useState(false);
 
@@ -35,7 +37,7 @@ const ContactUs: FunctionalComponent<ContactUsProps> = ({title, subtitle}) => {
     siteKey: RECAPTCHA_KEY
   });
 
-  const formData = JSON.stringify({name, socialNetwork: contact, message: idea});
+  const formData = JSON.stringify({name, socialNetwork: contact, message: idea, social});
 
   const headers = {
     'Content-Type': 'application/json',
@@ -82,10 +84,6 @@ const ContactUs: FunctionalComponent<ContactUsProps> = ({title, subtitle}) => {
     setName(e.target.value);
   }
 
-  const onSetContact = (e: any): void => {
-    setContact(e.target.value);
-  }
-
   const onSetIdea = (e: any): void => {
     setIdea(e.target.value);
   }
@@ -108,16 +106,15 @@ const ContactUs: FunctionalComponent<ContactUsProps> = ({title, subtitle}) => {
           onInput={(): void => onSetName(event)}
         />
         <label htmlFor="" className={style['visually-hidden']}>Enter your name</label>
-        <input
-          className={style['contact-us__form__input']}
-          type="text"
-          placeholder='Your contact (telegram, email, ...)'
+        <SocialInput placeholder={'Your contact (telegram, email, ...)'}
+          customStyleBlock={style.socialsBlock}
+          customStyleInput={style['contact-us__form__input']}
+          customStyleSocials={style.socialsType}
           value={contact}
-          onInput={(): void => onSetContact(event)}
+          type={'text'}
+          onChangeInput={setContact}
+          onChangeSocial={setSocial}
         />
-        <label htmlFor="" className={style['visually-hidden']}>
-          Enter how we can contact with you, like telegram, email, etc
-        </label>
         <textarea
           className={`${style['contact-us__form__input']} ${style['contact-us__form__input-textarea']}`}
           rows={1}

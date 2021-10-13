@@ -1,0 +1,31 @@
+.button {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 49px;
+  padding: 0 31px;
+  background: #DC2C2C;
+  border-width: 0;
+  border-radius: 46px;
+  margin-top: 40px;
+  font-family: TTNorms;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: white;
+  line-height: 18px;
+
+  .textBtn {
+    cursor: pointer;
+  }
+
+  .btnIcon {
+    width: 23px;
+    height: 12px;
+    margin-left: 27px;
+  }
+
+}

@@ -1,0 +1,176 @@
+@import "../../../style/mixins/mixins";
+
+.block {
+  margin-top: 108px;
+  @include b('mobile') {
+    margin-top: 50px;
+  }
+
+  .title {
+    margin: auto;
+    width: 820px;
+    font-family: TTNorms;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 60px;
+    text-align: center;
+    text-transform: uppercase;
+
+    @include b('desktop') {
+      width: 80%;
+    }
+
+    @include b('mobile') {
+      width: auto;
+      padding: 0 23px;
+      margin-top: 0;
+      font-size: 40px;
+      line-height: 40px;
+    }
+
+    @media (max-width: 370px) {
+      font-size: 30px;
+      line-height: 30px;
+    }
+  }
+
+  .secondText {
+    margin-top: 30px;
+    margin: auto;
+    width: 808px;
+    font-family: TTCommons;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+    opacity: 0.5;
+    margin-top: 40px;
+    position: relative;
+    z-index: 1;
+
+    @include b('desktop') {
+      width: 80%;
+    }
+
+    @include b('mobile') {
+      width: auto;
+      padding: 0 15px;
+      font-size: 22px;
+      line-height: 25px;
+      margin-top: 15px;
+    }
+  }
+
+  .slider {
+    height:300px;
+    width: 100%;
+  }
+
+  .sliderContainerWrapper {
+    width: 100%;
+    overflow: hidden;
+
+    .redLine {
+      width: 100%;
+      height: 2px;
+    }
+
+    .leftShadowBlock {
+      margin-top: -40px;
+      position: absolute;
+      height: 252px;
+      width: 152px;
+      background: linear-gradient(270deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+      transform: rotate(180deg);
+
+      @include b('mobile') {
+        display: none
+      }
+    }
+
+    .rightShadowBlock {
+      margin-top: -40px;
+      position: absolute;
+      right: 0;
+      height: 252px;
+      width: 152px;
+      background: linear-gradient(270deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+      transform: matrix(1, 0, 0, -1, 0, 0);
+
+      @include b('mobile') {
+        display: none
+      }
+    }
+
+    .sliderContainer {
+      display: flex;
+      flex-wrap: nowrap;
+      margin-top: 8px;
+      align-items: center;
+      justify-content: center;
+
+      @include b('mobile'){
+        justify-content: start;
+        overflow: auto;
+      }
+  
+      .blockSlide {
+        display: inline-block;
+        height: 184px;
+        border-right: solid rgba($color: #fff, $alpha: .2) 2px;
+        min-width: 280px;
+        width: 20.1%;
+
+        padding-top: 50px;
+
+        .slideTitle {
+          margin: auto;
+          width: 190px;
+          font-family: TTNorms;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 20px;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          color: #DB2E2E;
+          border: 1px solid #000000;
+          text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+
+        .slideDescription {
+          margin: auto;
+          margin-top: 17px;
+          width: 190px;
+          font-family: TTNorms;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 22px;
+          text-transform: uppercase;
+          font-feature-settings: 'liga' off;
+          color: #FFFFFF;
+        }
+      }
+    }
+  }
+
+  .navigation{
+    display: flex;
+    justify-content: center;
+
+    @include b('mobile'){
+      display: none;
+    }
+
+    .navIcon {
+      cursor: pointer;
+      padding: 8px;
+      width: 36px;
+      height: 32px;
+    }
+  }
+
+}

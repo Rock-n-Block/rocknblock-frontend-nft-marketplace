@@ -1,0 +1,146 @@
+@import "../../../style/mixins/mixins";
+
+.block {
+  position: relative;
+  z-index: 1;
+  padding-top: 320px;
+
+  .imgGroup {
+    position: absolute;
+    z-index: -1;
+
+    @include b('mobile') {
+      margin-top: -320px;
+    }
+  }
+
+  .imgGroupRight {
+    right: 0;
+    @include b('mobile') {
+      display: none;
+    }
+  }
+
+  .title {
+    margin: auto;
+    margin-top: 115px;
+    width: 850px;
+    font-family: TTNorms;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 60px;
+    line-height: 60px;
+    text-align: center;
+    text-transform: uppercase;
+
+    @include b('desktop') {
+      width: 70%;
+      font-size: 40px;
+      line-height: 40px;
+    }
+    @include b('mobile') {
+      font-size: 30px;
+      line-height: 30px;
+    }
+    .redText {
+      color: #DC2C2C;
+      @include b('desktop') {
+        width: 100%;
+      }
+
+      @include b('mobile') {
+        font-size: 30px;
+        line-height: 30px;
+      }
+    }
+  }
+  
+  .secondText {
+    width: 600px;
+    margin: auto;
+    margin-top: 30px;
+    font-family: TTCommons;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+
+    @include b('desktop') {
+      width: 70%;
+
+    }
+
+    @include b('mobile') {
+      font-size: 22px;
+      line-height: 25px;
+      width: auto;
+      padding: 0 15px;
+    }
+
+    @media (max-width: 374px) {
+      font-size: 18px;
+      line-height: 20px;
+    }
+
+  }
+
+  .imgStatue {
+    position: absolute;
+    right: calc(50% + 371px);
+    z-index: -1;
+    margin-top: 46px;
+  }
+
+  .redParalleogram {
+    position: absolute;
+    left: calc(50% + 378px);
+    width: 85px;
+    height: 155px;
+    margin-top: 12px;
+
+    @include b('desktop') {
+      display: none;
+    }
+  }
+
+  .ellipse {
+    position: absolute;
+    z-index: 0;
+    width: 664px;
+    height: 664px;
+    border-radius: 340px;
+    background-color: #FF0000;
+    margin: auto;
+    filter: blur(400px);
+    z-index: -1;
+    left: calc(50% - 332px);
+    margin-top: 236px;
+
+
+    @include b('desktop') {
+      width: 60%;
+      height: 60%;
+      filter: blur(40%);
+      left: 20%;
+      margin-top: 126px;
+    }
+
+    @include b('mobile') {
+      width: 200px;
+      height: 200px;
+      filter: blur(60px);
+      margin-top: 56px;
+      left: calc(50% - 100px);
+    }
+  }
+
+  .imgLaptop {
+    margin: auto;
+    display: block;
+    margin-top: 196px;
+    @include b('mobile') {
+      margin-top: 36px;
+    }
+  }
+}

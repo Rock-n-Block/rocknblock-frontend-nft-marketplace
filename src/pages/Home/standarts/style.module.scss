@@ -1,0 +1,150 @@
+@import "../../../style/mixins/mixins";
+
+.block {
+  margin-top: 103px;
+  position: relative;
+  z-index: 1;
+  padding-bottom: 600px;
+
+  @include b('mobile') {
+    margin-top: 60px;
+    padding-bottom: 443px;
+  }
+
+  .title {
+    margin: auto;
+    width: auto;
+    font-family: TTNorms;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 60px;
+    text-align: center;
+    text-transform: uppercase;
+
+    @include b('mobile') {
+      width: 340px;
+      font-size: 40px;
+      line-height: 40px;
+    }
+
+    @media (max-width: 374px) {
+      width: 95%;
+    }
+  }
+  
+  .ellipse {
+    position: absolute;
+    left: calc(50% - 182px);
+    width: 364px;
+    height: 364px;
+    background: #FF0000;
+    filter: blur(200px);
+    z-index: -1;
+
+    @media (max-width: 980px) {
+      width: 50%;
+      height: 50%;
+      left: 25%;
+      filter: blur(40%);
+      margin-top: 370px;
+    }
+
+    @include b('mobile') {
+      margin-top: 0px;
+      top: 550px;
+      left: calc(50% - 92px);
+      width: 184px;
+      height: 184px;
+      filter: blur(100px);
+    }
+  }
+
+  .cardsContainers {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 33px;
+
+    @media (max-width: 980px) {
+      flex-direction: column;
+    }
+
+    .card {
+      margin: 8px;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+      border-radius: 20px;
+      width: 350px;
+      height: 100px;
+      display: flex;
+      padding-top: 15px;
+      padding-left: 100px;
+
+      @media (max-width: 374px) {
+        width: 95%;
+      }
+
+      .img {
+        position: absolute;
+        margin-left: -77px;
+        width: 46px;
+        height: 49px;
+      }
+
+      .cardTitle {
+        font-family: TTNorms;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 20px;
+        line-height: 24px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+
+        .titleRed {
+          color: #DC2C2C;
+
+          width: auto;
+          display: inline;
+        }
+      }
+
+      .cardDescription {
+        max-width: 220px;
+        font-family: TTCommons;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 23px;
+        color: #FFFFFF;
+        margin-top: 3px;
+        opacity: 0.5;
+      }
+    }
+  }
+
+
+  .cardsImg {
+    background-image: url('/assets/img/marketplacePage/cardGroup.png');
+    background-size: cover;
+    background-position: 50%;
+    width: 100%;
+    height: 700px;
+    margin: auto;
+    display: block;
+    position: absolute;
+    margin-top: 60px;
+    z-index: -1;
+
+    @media (max-width: 980px) {
+      margin-top: 300px;
+      height: 500px;
+    }
+
+    @include b('mobile') {
+      flex-direction: column;
+      height: 400px;
+      margin-top: 354px;
+      background-position: 60%;
+    }
+  }
+}

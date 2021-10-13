@@ -1,3 +1,319 @@
+@font-face {
+  font-family: "TTCommons";
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+  src: url("../../assets/fonts/TTCommons/TTCommons-Thin.eot");
+  src: local("TTCommons"), url("../../assets/fonts/TTCommons/TTCommons-Thin.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/TTCommons/TTCommons-Thin.woff") format("woff"), url("../../assets/fonts/TTCommons/TTCommons-Thin.ttf") format("truetype");
+}
+@font-face {
+  font-family: "TTCommons";
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+  src: url("../../assets/fonts/TTCommons/TTCommons-ExtraLight.eot");
+  src: local("TTCommons"), url("../../assets/fonts/TTCommons/TTCommons-ExtraLight.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/TTCommons/TTCommons-ExtraLight.woff") format("woff"), url("../../assets/fonts/TTCommons/TTCommons-ExtraLight.ttf") format("truetype");
+}
+@font-face {
+  font-family: "TTCommons";
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  src: url("../../assets/fonts/TTCommons/TTCommons-Light.eot");
+  src: local("TTCommons"), url("../../assets/fonts/TTCommons/TTCommons-Light.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/TTCommons/TTCommons-Light.woff") format("woff"), url("../../assets/fonts/TTCommons/TTCommons-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "TTCommons";
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  src: url("../../assets/fonts/TTCommons/TTCommons-Regular.eot");
+  src: local("TTCommons"), url("../../assets/fonts/TTCommons/TTCommons-Regular.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/TTCommons/TTCommons-Regular.woff") format("woff"), url("../../assets/fonts/TTCommons/TTCommons-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "TTCommons";
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url("../../assets/fonts/TTCommons/TTCommons-Medium.eot");
+  src: local("TTCommons"), url("../../assets/fonts/TTCommons/TTCommons-Medium.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/TTCommons/TTCommons-Medium.woff") format("woff"), url("../../assets/fonts/TTCommons/TTCommons-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "TTCommons";
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: url("../../assets/fonts/TTCommons/TTCommons-DemiBold.eot");
+  src: local("TTCommons"), url("../../assets/fonts/TTCommons/TTCommons-DemiBold.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/TTCommons/TTCommons-DemiBold.woff") format("woff"), url("../../assets/fonts/TTCommons/TTCommons-DemiBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "TTCommons";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url("../../assets/fonts/TTCommons/TTCommons-Bold.eot");
+  src: local("TTCommons"), url("../../assets/fonts/TTCommons/TTCommons-Bold.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/TTCommons/TTCommons-Bold.woff") format("woff"), url("../../assets/fonts/TTCommons/TTCommons-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "TTCommons";
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+  src: url("../../assets/fonts/TTCommons/TTCommons-ExtraBold.eot");
+  src: local("TTCommons"), url("../../assets/fonts/TTCommons/TTCommons-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/TTCommons/TTCommons-ExtraBold.woff") format("woff"), url("../../assets/fonts/TTCommons/TTCommons-ExtraBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "TTCommons";
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+  src: url("../../assets/fonts/TTCommons/TTCommons-Black.eot");
+  src: local("TTCommons"), url("../../assets/fonts/TTCommons/TTCommons-Black.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/TTCommons/TTCommons-Black.woff") format("woff"), url("../../assets/fonts/TTCommons/TTCommons-Black.ttf") format("truetype");
+}
+@font-face {
+  font-family: "TTNorms";
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+  src: url("../../assets/fonts/TTNorms/TTNorms-Thin.eot");
+  src: local("TTNorms"), url("../../assets/fonts/TTNorms/TTNorms-Thin.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/TTNorms/TTNorms-Thin.woff") format("woff"), url("../../assets/fonts/TTNorms/TTNorms-Thin.ttf") format("truetype");
+}
+@font-face {
+  font-family: "TTNorms";
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+  src: url("../../assets/fonts/TTNorms/TTNorms-ExtraLight.eot");
+  src: local("TTNorms"), url("../../assets/fonts/TTNorms/TTNorms-ExtraLight.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/TTNorms/TTNorms-ExtraLight.woff") format("woff"), url("../../assets/fonts/TTNorms/TTNorms-ExtraLight.ttf") format("truetype");
+}
+@font-face {
+  font-family: "TTNorms";
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  src: url("../../assets/fonts/TTNorms/TTNorms-Light.eot");
+  src: local("TTNorms"), url("../../assets/fonts/TTNorms/TTNorms-Light.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/TTNorms/TTNorms-Light.woff") format("woff"), url("../../assets/fonts/TTNorms/TTNorms-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "TTNorms";
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  src: url("../../assets/fonts/TTNorms/TTNorms-Regular.eot");
+  src: local("TTNorms"), url("../../assets/fonts/TTNorms/TTNorms-Regular.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/TTNorms/TTNorms-Regular.woff") format("woff"), url("../../assets/fonts/TTNorms/TTNorms-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "TTNorms";
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url("../../assets/fonts/TTNorms/TTNorms-Medium.eot");
+  src: local("TTNorms"), url("../../assets/fonts/TTNorms/TTNorms-Medium.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/TTNorms/TTNorms-Medium.woff") format("woff"), url("../../assets/fonts/TTNorms/TTNorms-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "TTNorms";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url("../../assets/fonts/TTNorms/TTNorms-Bold.eot");
+  src: local("TTNorms"), url("../../assets/fonts/TTNorms/TTNorms-Bold.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/TTNorms/TTNorms-Bold.woff") format("woff"), url("../../assets/fonts/TTNorms/TTNorms-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "TTNorms";
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+  src: url("../../assets/fonts/TTNorms/TTNorms-ExtraBold.eot");
+  src: local("TTNorms"), url("../../assets/fonts/TTNorms/TTNorms-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/TTNorms/TTNorms-ExtraBold.woff") format("woff"), url("../../assets/fonts/TTNorms/TTNorms-ExtraBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "TTNorms";
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+  src: url("../../assets/fonts/TTNorms/TTNorms-Black.eot");
+  src: local("TTNorms"), url("../../assets/fonts/TTNorms/TTNorms-Black.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/TTNorms/TTNorms-Black.woff") format("woff"), url("../../assets/fonts/TTNorms/TTNorms-Black.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Karla";
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+  src: url("../../assets/fonts/Karla/Karla-ExtraLight.eot");
+  src: local("Karla"), url("../../assets/fonts/Karla/Karla-ExtraLight.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/Karla/Karla-ExtraLight.woff") format("woff"), url("../../assets/fonts/Karla/Karla-ExtraLight.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Karla";
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  src: url("../../assets/fonts/Karla/Karla-Light.eot");
+  src: local("Karla"), url("../../assets/fonts/Karla/Karla-Light.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/Karla/Karla-Light.woff") format("woff"), url("../../assets/fonts/Karla/Karla-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Karla";
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  src: url("../../assets/fonts/Karla/Karla-Regular.eot");
+  src: local("Karla"), url("../../assets/fonts/Karla/Karla-Regular.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/Karla/Karla-Regular.woff") format("woff"), url("../../assets/fonts/Karla/Karla-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Karla";
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url("../../assets/fonts/Karla/Karla-Medium.eot");
+  src: local("Karla"), url("../../assets/fonts/Karla/Karla-Medium.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/Karla/Karla-Medium.woff") format("woff"), url("../../assets/fonts/Karla/Karla-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Karla";
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: url("../../assets/fonts/Karla/Karla-SemiBold.eot");
+  src: local("Karla"), url("../../assets/fonts/Karla/Karla-SemiBold.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/Karla/Karla-SemiBold.woff") format("woff"), url("../../assets/fonts/Karla/Karla-SemiBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Karla";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url("../../assets/fonts/Karla/Karla-Bold.eot");
+  src: local("Karla"), url("../../assets/fonts/Karla/Karla-Bold.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/Karla/Karla-Bold.woff") format("woff"), url("../../assets/fonts/Karla/Karla-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Karla";
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+  src: url("../../assets/fonts/Karla/Karla-ExtraBold.eot");
+  src: local("Karla"), url("../../assets/fonts/Karla/Karla-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/Karla/Karla-ExtraBold.woff") format("woff"), url("../../assets/fonts/Karla/Karla-ExtraBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Inter";
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+  src: url("../../assets/fonts/Inter/Inter-Thin.eot");
+  src: local("Inter"), url("../../assets/fonts/Inter/Inter-Thin.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/Inter/Inter-Thin.woff") format("woff"), url("../../assets/fonts/Inter/Inter-Thin.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Inter";
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+  src: url("../../assets/fonts/Inter/Inter-ExtraLight.eot");
+  src: local("Inter"), url("../../assets/fonts/Inter/Inter-ExtraLight.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/Inter/Inter-ExtraLight.woff") format("woff"), url("../../assets/fonts/Inter/Inter-ExtraLight.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Inter";
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  src: url("../../assets/fonts/Inter/Inter-Light.eot");
+  src: local("Inter"), url("../../assets/fonts/Inter/Inter-Light.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/Inter/Inter-Light.woff") format("woff"), url("../../assets/fonts/Inter/Inter-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Inter";
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  src: url("../../assets/fonts/Inter/Inter-Regular.eot");
+  src: local("Inter"), url("../../assets/fonts/Inter/Inter-Regular.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/Inter/Inter-Regular.woff") format("woff"), url("../../assets/fonts/Inter/Inter-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Inter";
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url("../../assets/fonts/Inter/Inter-Medium.eot");
+  src: local("Inter"), url("../../assets/fonts/Inter/Inter-Medium.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/Inter/Inter-Medium.woff") format("woff"), url("../../assets/fonts/Inter/Inter-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Inter";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url("../../assets/fonts/Inter/Inter-Bold.eot");
+  src: local("Inter"), url("../../assets/fonts/Inter/Inter-Bold.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/Inter/Inter-Bold.woff") format("woff"), url("../../assets/fonts/Inter/Inter-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Inter";
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+  src: url("../../assets/fonts/Inter/Inter-ExtraBold.eot");
+  src: local("Inter"), url("../../assets/fonts/Inter/Inter-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/Inter/Inter-ExtraBold.woff") format("woff"), url("../../assets/fonts/Inter/Inter-ExtraBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Inter";
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+  src: url("../../assets/fonts/Inter/Inter-Black.eot");
+  src: local("Inter"), url("../../assets/fonts/Inter/Inter-Black.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/Inter/Inter-Black.woff") format("woff"), url("../../assets/fonts/Inter/Inter-Black.ttf") format("truetype");
+}
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-sizing: border-box;
+  width: 100%;
+  position: relative;
+  transition: 0.4s ease;
+}
+.btn:active {
+  transform: scale(0.95);
+}
+.btn.progress, .btn:disabled {
+  opacity: 0.5;
+}
+.btn.progress:hover, .btn:disabled:hover {
+  opacity: 0.5;
+  transform: none !important;
+  box-shadow: none !important;
+}
+.btn.progress:active, .btn:disabled:active {
+  transform: scale(1);
+}
+.btn-circle {
+  border-radius: 60px;
+}
+.btn-rounded {
+  border-radius: 46px;
+}
+.btn-center {
+  margin: 0 auto;
+}
+.btn-border {
+  background-color: transparent;
+}
+.btn-fill {
+  border-color: transparent;
+}
+.btn-hollow {
+  border: 1px solid #DC2C2C;
+}
+.btn-orange {
+  color: var(--button-orange-color);
+  border: 2px solid #DC2C2C;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%), #DC2C2C;
+}
+.btn-orange-cl-solid {
+  background: #DC2C2C;
+}
+.btn-white {
+  color: var(--button-white-color);
+  border: 2px solid var(--button-white-border-color);
+  background-color: var(--button-white-background-color);
+}
+.btn-white.btn-border {
+  color: var(--button-white-border-text-color);
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -338,7 +654,7 @@ template {
 }
 
 :root {
-  --body-background-color: #1d1b21;
+  --body-background-color: #000000;
   --text-title-color: linear-gradient(87.05deg, #fff 54.97%, #171628 152.38%);
   --button-orange-background-color: #d23e10;
   --button-orange-border-color: #d23e10;
@@ -358,7 +674,7 @@ template {
 }
 
 body#dark {
-  --body-background-color: #1d1b21;
+  --body-background-color: #000000;
 }
 
 *,
@@ -379,15 +695,11 @@ html {
 
 body {
   margin: 0 auto;
+  padding: 0;
   background-color: var(--body-background-color);
   cursor: default;
   overflow-x: hidden;
   color: white;
-}
-@media (max-width: 768px) {
-  body {
-    padding: 0 15px;
-  }
 }
 
 img {
@@ -725,289 +1037,165 @@ ul {
   src: url("../../assets/fonts/Karla/Karla-ExtraBold.eot");
   src: local("Karla"), url("../../assets/fonts/Karla/Karla-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/Karla/Karla-ExtraBold.woff") format("woff"), url("../../assets/fonts/Karla/Karla-ExtraBold.ttf") format("truetype");
 }
-.btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  box-sizing: border-box;
-  width: 100%;
-  position: relative;
-  transition: 0.4s ease;
+@font-face {
+  font-family: "Inter";
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+  src: url("../../assets/fonts/Inter/Inter-Thin.eot");
+  src: local("Inter"), url("../../assets/fonts/Inter/Inter-Thin.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/Inter/Inter-Thin.woff") format("woff"), url("../../assets/fonts/Inter/Inter-Thin.ttf") format("truetype");
 }
-.btn:active {
-  transform: scale(0.95);
+@font-face {
+  font-family: "Inter";
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+  src: url("../../assets/fonts/Inter/Inter-ExtraLight.eot");
+  src: local("Inter"), url("../../assets/fonts/Inter/Inter-ExtraLight.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/Inter/Inter-ExtraLight.woff") format("woff"), url("../../assets/fonts/Inter/Inter-ExtraLight.ttf") format("truetype");
 }
-.btn.progress, .btn:disabled {
-  opacity: 0.5;
+@font-face {
+  font-family: "Inter";
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  src: url("../../assets/fonts/Inter/Inter-Light.eot");
+  src: local("Inter"), url("../../assets/fonts/Inter/Inter-Light.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/Inter/Inter-Light.woff") format("woff"), url("../../assets/fonts/Inter/Inter-Light.ttf") format("truetype");
 }
-.btn.progress:hover, .btn:disabled:hover {
-  opacity: 0.5;
-  transform: none !important;
-  box-shadow: none !important;
+@font-face {
+  font-family: "Inter";
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  src: url("../../assets/fonts/Inter/Inter-Regular.eot");
+  src: local("Inter"), url("../../assets/fonts/Inter/Inter-Regular.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/Inter/Inter-Regular.woff") format("woff"), url("../../assets/fonts/Inter/Inter-Regular.ttf") format("truetype");
 }
-.btn.progress:active, .btn:disabled:active {
-  transform: scale(1);
+@font-face {
+  font-family: "Inter";
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url("../../assets/fonts/Inter/Inter-Medium.eot");
+  src: local("Inter"), url("../../assets/fonts/Inter/Inter-Medium.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/Inter/Inter-Medium.woff") format("woff"), url("../../assets/fonts/Inter/Inter-Medium.ttf") format("truetype");
 }
-.btn-circle {
-  border-radius: 60px;
+@font-face {
+  font-family: "Inter";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url("../../assets/fonts/Inter/Inter-Bold.eot");
+  src: local("Inter"), url("../../assets/fonts/Inter/Inter-Bold.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/Inter/Inter-Bold.woff") format("woff"), url("../../assets/fonts/Inter/Inter-Bold.ttf") format("truetype");
 }
-.btn-rounded {
-  border-radius: 46px;
+@font-face {
+  font-family: "Inter";
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+  src: url("../../assets/fonts/Inter/Inter-ExtraBold.eot");
+  src: local("Inter"), url("../../assets/fonts/Inter/Inter-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/Inter/Inter-ExtraBold.woff") format("woff"), url("../../assets/fonts/Inter/Inter-ExtraBold.ttf") format("truetype");
 }
-.btn-center {
+@font-face {
+  font-family: "Inter";
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+  src: url("../../assets/fonts/Inter/Inter-Black.eot");
+  src: local("Inter"), url("../../assets/fonts/Inter/Inter-Black.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/Inter/Inter-Black.woff") format("woff"), url("../../assets/fonts/Inter/Inter-Black.ttf") format("truetype");
+}
+.sites {
+  display: block;
+  max-width: 1440px;
   margin: 0 auto;
+  padding-top: 60px;
 }
-.btn-border {
-  background-color: transparent;
+.sites__title {
+  font-family: TTNORMS, sans-serif;
+  font-weight: 800;
+  font-size: 34px;
+  line-height: 60px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
 }
-.btn-fill {
-  border-color: transparent;
-}
-.btn-hollow {
-  border: 1px solid #DC2C2C;
-}
-.btn-orange {
-  color: var(--button-orange-color);
-  border: 2px solid #DC2C2C;
-  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.25);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%), #DC2C2C;
-}
-.btn-orange-cl-solid {
-  background: #DC2C2C;
-}
-.btn-white {
-  color: var(--button-white-color);
-  border: 2px solid var(--button-white-border-color);
-  background-color: var(--button-white-background-color);
-}
-.btn-white.btn-border {
-  color: var(--button-white-border-text-color);
-}
-
-.contact-us {
-  position: relative;
-  margin-top: 120px;
-  scroll-margin-top: 120px;
-}
-.contact-us .background-img:nth-child(1), .contact-us .background-img:nth-child(2) {
-  width: 98px;
-}
-@media (max-width: 1015px) {
-  .contact-us .background-img:nth-child(1), .contact-us .background-img:nth-child(2) {
+@media (max-width: 768px) {
+  .sites__title {
     display: none;
   }
 }
-.contact-us .background-img:nth-child(1) {
-  left: 1100px;
+.sites__container {
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+  max-width: 100%;
+  overflow-x: auto;
 }
-.contact-us .background-img:nth-child(2) {
-  padding-top: 100px;
-  opacity: 0.4;
-}
-@media (max-width: 428px) {
-  .contact-us {
-    margin-top: 60px;
+@media (max-width: 768px) {
+  .sites__container {
+    width: 100%;
   }
 }
-.contact-us .background-img {
-  top: 383px;
-  left: 43px;
-}
-.contact-us .block-header {
+.sites__container_item {
+  min-width: 420px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: linear-gradient(30.15deg, #191111 14.13%, #272525 64.22%);
+  border-radius: 4px;
+  padding-bottom: 1em;
 }
-.contact-us .block-header .secondary-header {
-  max-width: 600px;
-  margin-top: 34px;
+.sites__container_item:not(:last-child) {
+  margin-right: 60px;
 }
-@media (max-width: 428px) {
-  .contact-us .block-header .secondary-header {
-    margin-top: 10px;
+@media (max-width: 768px) {
+  .sites__container_item {
+    min-width: 320px;
   }
 }
-.contact-us__form {
-  margin-top: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-@media (max-width: 428px) {
-  .contact-us__form {
-    margin-top: 20px;
-  }
-}
-.contact-us__form__input {
-  margin-top: 18px;
-  padding-left: 24px;
-  padding-right: 24px;
-  width: 100%;
-  max-width: 546px;
-  min-height: 68px;
-  background: #1d1b21;
-  color: #fff;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 21px;
-  font-feature-settings: "liga" off;
-  text-align: center;
-  border: 3px solid #414147;
-  border-radius: 20px;
-  transition: 0.4s ease;
-}
-.contact-us__form__input:focus {
-  border-color: #fff;
-  outline: 0 none;
-}
-.contact-us__form__input::placeholder {
-  opacity: 0.5;
-}
-.contact-us__form__input-textarea {
-  padding-top: 24px;
-  padding-bottom: 23px;
-  overflow: hidden;
-}
-@media (max-width: 428px) {
-  .contact-us__form__input-textarea {
-    height: 90px;
-  }
-}
-.contact-us__form__submit-btn {
-  margin: 30px 0;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 28px;
-  text-align: center;
-  font-feature-settings: "liga" off;
-  width: 242px;
-  height: 58px;
-  outline: 0 none;
-}
-.contact-us__form__submit-btn:hover {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 100%), #DC2C2C;
-  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.25);
-}
-.contact-us__popup-container {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  overflow: hidden;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-  display: none;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
-  z-index: 99;
-  padding: 30px 0;
-  background-color: rgba(255, 255, 255, 0.1);
-}
-.contact-us .popup {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  max-width: 550px;
-  height: 322px;
-  overflow: hidden;
-  background-color: #1d1b21;
-  border-radius: 30px;
-}
-.contact-us .popup .background-img-left {
-  top: 216px;
-  left: 0;
-}
-.contact-us .popup .background-img-right {
-  top: 134px;
-  left: 429px;
-}
-.contact-us .popup__title {
-  width: 100%;
-  max-width: 400px;
-  margin-top: 50px;
-  background: linear-gradient(87.05deg, #FFFFFF 54.97%, #171628 152.38%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.sites__container_item h3 {
+  font-family: TTNORMS, sans-serif;
   font-style: normal;
   font-weight: 800;
-  font-size: 40px;
-  line-height: 47px;
-  text-align: center;
-  font-feature-settings: "liga" off;
-}
-.contact-us .popup__button-ok {
-  outline: 0 none;
-  margin-top: 35px;
-  width: 183px;
-  height: 58px;
-  font-style: normal;
-  font-weight: bold;
   font-size: 24px;
-  line-height: 28px;
+  padding: 16px 0 35px 0;
+  line-height: 60px;
   text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
 }
-.contact-us .popup__button-ok:hover {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 100%), #DC2C2C;
-  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.25);
+@media (max-width: 768px) {
+  .sites__container_item h3 {
+    padding: 6px 0;
+  }
 }
-.contact-us .popup__button-close {
-  outline: 0 none;
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 38px;
-  height: 38px;
-  border: 1px solid #2e2e35;
-  border-radius: 50%;
-  background: #1d1b21;
-}
-.contact-us .popup__button-close:hover {
+.sites__container_item a {
+  font-family: TTNORMS, sans-serif;
+  font-weight: 700;
+  max-width: 200px;
+  color: #ffffff;
   border-color: #DC2C2C;
+  height: 52px;
+  justify-content: space-evenly;
 }
-.contact-us .show {
-  display: flex;
+.sites__container_item a:hover {
+  background-color: #2a2730;
 }
-
-.icon-close:before {
-  content: "";
+.sites__container_item picture {
+  position: absolute;
+  width: 200px;
+}
+.sites__container_item_img {
   position: relative;
-  display: block;
-  width: 14px;
-  height: 14px;
-  background-repeat: no-repeat;
-  background-size: cover;
+  margin-top: 3em;
 }
-
-.terms {
-  margin-top: 30px;
-  text-align: center;
-  font-size: 16px;
-  opacity: 0.4;
+@media (max-width: 768px) {
+  .sites__container_item_img {
+    margin-top: 1em;
+  }
 }
-.terms a {
-  text-decoration: underline;
-}
-.terms a:hover {
-  color: #DC2C2C;
-}
-
-.g-recaptcha {
-  visibility: hidden;
-}
-
-::-webkit-resizer {
-  display: none;
+.sites__container_item_img div {
+  width: 112px;
+  height: 112px;
+  border-radius: 100%;
+  background: linear-gradient(39.38deg, #ED4E39 -22.42%, #2C51D5 73.65%);
 }
 
 /*# sourceMappingURL=style.css.map */

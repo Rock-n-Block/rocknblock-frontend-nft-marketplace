@@ -1,0 +1,17 @@
+@import "../../../style/mixins/mixins";
+
+.block {
+  position: relative;
+  z-index: 1;
+
+  .imgStatue {
+    position: absolute;
+    height: 200px;
+    left: calc(100% - 250px);
+    top: calc(100% - 50px);
+
+    @include b('desktop') {
+      display: none;
+    }
+  }
+}

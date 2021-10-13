@@ -1,0 +1,64 @@
+<svg width="434" height="769" viewBox="0 0 434 769" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M-335 734.5L434 734.5" stroke="url(#paint0_diamond)"/>
+<path d="M-335 634.5L434 634.5" stroke="url(#paint1_diamond)"/>
+<path d="M-335 534.5L434 534.5" stroke="url(#paint2_diamond)"/>
+<path d="M-335 434.5L434 434.5" stroke="url(#paint3_diamond)"/>
+<path d="M99.5 0V769" stroke="url(#paint4_diamond)"/>
+<path d="M-335 334.5L434 334.5" stroke="url(#paint5_diamond)"/>
+<path d="M199.5 0V769" stroke="url(#paint6_diamond)"/>
+<path d="M-335 234.5L434 234.5" stroke="url(#paint7_diamond)"/>
+<path d="M299.5 0V769" stroke="url(#paint8_diamond)"/>
+<path d="M-335 134.5L434 134.5" stroke="url(#paint9_diamond)"/>
+<path d="M399.5 0V769" stroke="url(#paint10_diamond)"/>
+<path d="M-335 34.5L434 34.5" stroke="url(#paint11_diamond)"/>
+<defs>
+<radialGradient id="paint0_diamond" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(49.5 734) scale(384.5 0.5)">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="white" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="paint1_diamond" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(49.5 634) scale(384.5 0.5)">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="white" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="paint2_diamond" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(49.5 534) scale(384.5 0.5)">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="white" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="paint3_diamond" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(49.5 434) scale(384.5 0.5)">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="white" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="paint4_diamond" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(100 384.5) rotate(90) scale(384.5 0.5)">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="white" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="paint5_diamond" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(49.5 334) scale(384.5 0.5)">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="white" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="paint6_diamond" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(200 384.5) rotate(90) scale(384.5 0.5)">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="white" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="paint7_diamond" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(49.5 234) scale(384.5 0.5)">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="white" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="paint8_diamond" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(300 384.5) rotate(90) scale(384.5 0.5)">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="white" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="paint9_diamond" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(49.5 134) scale(384.5 0.5)">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="white" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="paint10_diamond" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(400 384.5) rotate(90) scale(384.5 0.5)">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="white" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="paint11_diamond" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(49.5 34) scale(384.5 0.5)">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="white" stop-opacity="0"/>
+</radialGradient>
+</defs>
+</svg>

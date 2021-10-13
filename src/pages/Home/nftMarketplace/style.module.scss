@@ -1,0 +1,128 @@
+@import "../../../style/mixins/mixins";
+
+.block {
+  margin-top: 103px;
+  @include b('mobile') {
+    margin-top: 40px;
+  }
+
+  .title {
+    margin: auto;
+    width: 850px;
+    font-family: TTNorms;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 60px;
+    line-height: 60px;
+    text-align: center;
+    text-transform: uppercase;
+
+    @include b('desktop') {
+      width: 90%;
+      font-size: 50px;
+      line-height: 50px;
+    }
+
+    @include b('mobile') {
+      font-size: 40px;
+      line-height: 40px;
+      width: auto;
+    }
+  }
+  
+  .secondText {
+    margin-top: 30px;
+    margin: auto;
+    width: 600px;
+    font-family: TTCommons;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+    opacity: 0.5;
+    margin-top: 40px;
+    position: relative;
+    z-index: 1;
+
+    @include b('desktop') {
+      width: 95%;
+    }
+
+    @include b('mobile') {
+      font-size: 22px;
+      line-height: 25px;
+      margin-top: 15px;
+      width: auto;
+    }
+  }
+
+  .img {
+    position: absolute;
+    top: 163px;
+    left: calc(50% + 458px);
+    z-index: 1;
+
+    @media (max-width: 1146px) {
+      display: none;
+    }
+  }
+
+  .button {
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    margin: auto;
+    margin-top: 40px;
+
+    @include b('mobile') {
+      margin-top: 20px;
+    }
+  }
+
+  .background {
+    background-image: url("/assets/img/marketplacePage/consultationBG.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    margin-top: -94px;
+
+    @include b('desktop') {
+      background-size: 130%;
+      background-position-x: center;
+      height: 40%;
+    }
+
+    @include b('mobile') {
+      background-size: 150%;
+      background-position-x: center;
+    }
+  }
+
+  .imgStatue {
+    display: block;
+    position: relative;
+    z-index: 1;
+    margin: auto;
+    width: 240px;
+    height: 320px;
+    margin-top: 340px;
+
+    background-image: url("/assets/img/marketplacePage/image450.png");
+    background-repeat: no-repeat;
+    @include b('desktop') {
+      margin-top: 25%;
+      background-size: 80%;
+      background-position-x: center;
+      height: 300px;
+    }
+
+    @include b('mobile') {
+      background-size: 55%;
+      background-position-x: center;
+      height: 200px;
+    }
+  }
+}

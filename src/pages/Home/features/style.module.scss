@@ -1,0 +1,157 @@
+@import "../../../style/mixins/mixins";
+
+.block {
+  position: relative;
+  z-index: 1;
+
+  .title {
+    margin: auto;
+    margin-top: 128px;
+    width: 850px;
+    font-family: TTNorms;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 60px;
+    text-align: center;
+    text-transform: uppercase;
+
+
+    @include b('desktop') {
+      width: auto;
+    }
+
+    @include b('mobile') {
+      font-size: 40px;
+      line-height: 40px;
+      width: auto;
+    }
+  }
+  
+  .secondText {
+    margin-top: 30px;
+    margin: auto;
+    width: 600px;
+    font-family: TTCommons;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+    opacity: 0.5;
+    margin-top: 40px;
+    position: relative;
+    z-index: 1;
+
+    @include b('desktop') {
+      width: auto;
+    }
+
+    @include b('mobile') {
+      font-size: 22px;
+      line-height: 25px;
+      width: auto;
+    }
+  }
+
+  .cardsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 434px;
+    justify-content: space-between;
+    width: 833px;
+    margin: auto;
+    margin-top: 40px;
+
+    @media (max-width: 860px) {
+      overflow-x: auto;
+      width: 100%;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      padding-left: 10px;
+      height: 330px;
+    }
+
+    .card {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%), #2C2C33;
+      border-radius: 20px;
+      padding: 30px;
+      display: flex;
+  
+      .img {
+        margin-right: 32px;
+        margin-bottom: 26px;
+        max-width: 83px;
+
+        @media (max-width: 860px) {
+          margin: 15px auto 23px 9px;
+        }
+      }
+  
+      .cardInfo {
+        display: flex;
+        flex-direction: column;
+
+        .cardTitle {
+          font-family: TTNorms;
+          font-style: normal;
+          font-weight: 800;
+          font-size: 20px;
+          line-height: 24px;
+          text-transform: uppercase;
+          color: #FFFFFF;
+        }
+
+        .cardDescription {
+          font-family: TTCommons;
+          font-style: normal;
+          font-weight: 300;
+          font-size: 18px;
+          line-height: 21px;
+          color: #FFFFFF;
+          opacity: 0.5;
+
+          @media (max-width: 860px) {
+            margin-top: 20px;
+            width: 290px;
+          }
+        }
+      }
+    }
+  
+    .cardVertical {
+      width: 313px;
+      height: 434px;
+      flex-direction: column;
+
+      @media (max-width: 860px) {
+        height: 320px;
+        padding: 15px;
+        margin-right: 8px;
+        flex-direction: column;
+      }
+
+      .cardDescription {
+        margin-top: 16px;
+      }
+    }
+  
+    .cardHorizontal {
+      width: 500px;
+      height: 208px;
+      margin-right: 20px;
+
+      @media (max-width: 860px) {
+        height: 320px;
+        padding: 15px;
+        margin-right: 8px;
+        flex-direction: column;
+      }
+
+      .cardDescription {
+        margin-top: 13px;
+      }
+    }
+  }
+}

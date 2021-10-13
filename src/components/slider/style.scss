@@ -1,0 +1,39 @@
+@import "../../style/mixins/mixins";
+
+.block {
+  display: flex;
+  flex-direction: column;
+
+  @include b('mobile') {
+    flex-direction: column-reverse;
+  }
+
+
+  .sliderContainer {
+    width: 100%;
+    overflow: hidden;
+  
+    .slider {
+      display: flex;
+      width: 100%;
+    }
+  }
+  
+  .navigation{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+
+    @include b('mobile') {
+      padding: 20px;
+    }
+  
+  
+    .navIcon {
+      cursor: pointer;
+      padding: 8px;
+      width: 36px;
+      height: 32px;
+    }
+  }
+}
