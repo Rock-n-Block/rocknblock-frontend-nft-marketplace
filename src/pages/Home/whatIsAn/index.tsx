@@ -5,7 +5,8 @@ const WhatIsAn: FunctionalComponent = () => {
 
   return (
     <div class={style.block}>
-      <img class={`${style.imgGroup} ${style.imgGroupLeft}`} src="../../assets/img/marketplacePage/groupLeft.png" alt="image450.png" />
+      <div class={style.imgGradient} />
+      <div class={`${style.imgGroup} ${style.imgGroupLeft}`} />
       <img class={`${style.imgGroup} ${style.imgGroupRight}`} src="../../assets/img/marketplacePage/groupRight.png" alt="image450.png" />
       <h1 class={style.title}>What is an<div class={style.redText}>NFT Marketplace?</div></h1>
       <p class={style.secondText} >The NFT Marketplace is an adaptive online platform that provides access to offers to sell and buy non-circulating tokens powered by NFT technology. Popular objects include various texts, digital images, and artworks, game characters, financial instruments, and domain names. 
