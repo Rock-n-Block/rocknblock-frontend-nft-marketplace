@@ -3,6 +3,17 @@
 .block {
   position: relative;
   z-index: 1;
+
+  @media (min-width: 1920px) {
+    width: 1920px;
+    margin: auto;
+  }
+
+  @media (max-width: 1919px) {
+    width: auto;
+  }
+
+
   @include b('mobile') {
     padding: 0 15px;
     padding-bottom: 541px;
@@ -117,6 +128,12 @@
       margin-top: -150px;
       position: absolute;
       right: 0;
+
+      @media (min-width: 1920px) {
+        width: 770px;
+        height: 900px;
+        margin-right: 50px;
+      }
 
       @media (max-width: 769px) {
         display: none;

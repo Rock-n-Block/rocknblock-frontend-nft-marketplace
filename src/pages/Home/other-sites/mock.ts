@@ -6,9 +6,9 @@ interface OtherSitesI {
 
 export const otherSites: OtherSitesI[] = [
     {
-        img: '../../assets/img/icon-nft.png',
-        alt: 'icon nft marketplace',
-        title: 'Nft marketplace'
+        img: '../../assets/img/icon-10k-generator.png',
+        alt: 'icon 10k nft generator',
+        title: '10K NFT GENERATOR'
     },
     {
         img: '../../assets/img/icon-farming.png',
