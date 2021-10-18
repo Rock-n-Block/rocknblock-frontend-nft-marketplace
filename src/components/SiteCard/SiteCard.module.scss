@@ -1,0 +1,53 @@
+.site {
+    background: linear-gradient(30.15deg, #191111 14.13%, #272525 64.22%);
+    border-radius: 4px;
+    height: 360px;
+}
+
+.site__imageWrapper {
+    height: 145px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.site__image {
+    display: block;
+    max-width: none;
+}
+
+.site__title {
+    text-align: center;
+    margin-top: 34px;
+    text-transform: uppercase;
+    font-family: TTNorms;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.site__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    border-radius: 25px;
+    width: 194px;
+    border: 2px solid #DC2C2C;
+    color: var(--color-white);
+    margin: 50px auto 0;
+    font-size: 18px;
+    position: relative;
+    top: 0;
+    transition: top 0.15s ease-in;
+    outline: none;
+    text-decoration: none;
+
+    &:hover {
+        top: -5px;
+        text-decoration: none;
+    }
+}
+
+.site__linkIcon {
+    margin-left: 25px;
+}

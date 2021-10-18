@@ -22,10 +22,12 @@
   },
   "dependencies": {
     "@types/smoothscroll-polyfill": "^0.3.1",
+    "clsx": "^1.1.1",
     "preact": "^10.3.1",
     "preact-render-to-string": "^5.1.4",
     "preact-router": "^3.2.1",
-    "smoothscroll-polyfill": "^0.4.4"
+    "smoothscroll-polyfill": "^0.4.4",
+    "swiper": "^6.8.4"
   },
   "devDependencies": {
     "@types/enzyme": "^3.10.5",
