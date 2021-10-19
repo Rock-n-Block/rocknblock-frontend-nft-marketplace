@@ -44,7 +44,7 @@ const ContactUs: FunctionalComponent<ContactUsProps> = ({title, subtitle}) => {
   };
 
   const fetchForm = (token: string): void => {
-    if (token) fetch(`https://rocknblock.io/api/v1/send_unblocking_feedback/`, {
+    if (token) fetch(`https://rnblading.rocknblock.io/api/v2/email`, {
       method: 'POST',
       headers,
       body: formData
