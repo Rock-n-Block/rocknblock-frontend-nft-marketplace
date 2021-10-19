@@ -1,5 +1,5 @@
 import { Fragment, FunctionalComponent, h } from "preact";
-import { useState } from "preact/hooks";
+import { useCallback, useState } from "preact/hooks";
 import style from './style.scss';
 
 interface Social {
@@ -51,30 +51,36 @@ const Socials: FunctionalComponent<SocisalsProps> = ({onChangeSocial, customStyl
   }
 
   const SocialList: FunctionalComponent = () => {
+    const action = useCallback((item: Social): void => {
+      setVisibleList(false)
+      setCurrentSocial(item);
+      onChangeSocial(item.name)
+    }, [currentSocial]);
+
     return (
       <div class={style.socList}>
-        {socials.map((item, i) => <Social key={i} social={item} 
-          action={(): void => {
-            setVisibleList(false)
-            setCurrentSocial(item);
-            onChangeSocial(item.name)
-          }}
+        {socials.map((item) => <Social key={item.name} social={item} 
+          action={ () => action(item)}
         />)}
       </div>
     )
   }
 
+  const onChangeVisible = useCallback((): void => {
+    setVisibleList(!isVisibleList)
+  }, [isVisibleList]);
+
   return (
     <div>
       <div class={style.block}>
-        <Social social={currentSocial} isCurrent={true} action={(): void => {setVisibleList(!isVisibleList)}} />
+        <Social social={currentSocial} isCurrent={true} action={onChangeVisible} />
         {isVisibleList ? <SocialList /> : null}
       </div>
     </div>
   )
 }
 
-export interface PropsSocialInput {
+interface Props {
   value: string;
   onChangeInput(contact: any): void;
   onChangeSocial(social: string): void;
@@ -85,7 +91,8 @@ export interface PropsSocialInput {
   customStyleSocials?: string;
 }
 
-const SocialInput: FunctionalComponent<PropsSocialInput> = ({value,placeholder, type, customStyleInput, customStyleBlock, customStyleSocials, onChangeInput, onChangeSocial}: PropsSocialInput) => {
+const SocialInput: FunctionalComponent<Props> = ({value,placeholder, type, customStyleInput, customStyleBlock, customStyleSocials, onChangeInput, onChangeSocial}) => {
+  const onChange = useCallback((event: any): void => onChangeInput(String(event?.target?.value)), []);
   return (
     <Fragment>
       <div class={`${style.inputBlock} ${customStyleBlock}`}>
@@ -93,7 +100,7 @@ const SocialInput: FunctionalComponent<PropsSocialInput> = ({value,placeholder, 
           placeholder={placeholder}
           type={type ?? 'text'}
           value={value}
-          onInput={(event: any): void => onChangeInput(String(event?.target?.value))}
+          onInput={onChange}
         />
       </div>
       <Socials customStyleSocials={customStyleSocials} onChangeSocial={onChangeSocial} />

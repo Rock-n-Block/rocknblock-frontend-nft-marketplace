@@ -106,7 +106,7 @@ const ContactUs: FunctionalComponent<ContactUsProps> = ({title, subtitle}) => {
           onInput={(): void => onSetName(event)}
         />
         <label htmlFor="" className={style['visually-hidden']}>Enter your name</label>
-        <SocialInput placeholder={'Your contact (telegram, email, ...)'}
+        <SocialInput placeholder={'Your contact'}
           customStyleBlock={style.socialsBlock}
           customStyleInput={style['contact-us__form__input']}
           customStyleSocials={style.socialsType}
