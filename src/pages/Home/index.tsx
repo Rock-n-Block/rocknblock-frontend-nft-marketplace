@@ -14,8 +14,8 @@ import OrderDevelopment from './orderDevelopment';
 import Working from './working';
 import Choose from './choose';
 import Portfolio from './portfolio';
-import OtherSites from './other-sites';
 import CustomeFooter from './customeFooter';
+import HomePageSites from './HomePageSites/HomePageSites';
 
 
 const HomePage: FunctionalComponent = () => {
@@ -44,7 +44,7 @@ const HomePage: FunctionalComponent = () => {
                 <OrderDevelopment />
                 <Working />
                 <Choose />
-                <OtherSites />
+                <HomePageSites />
                 <ContactUs title={'GET LIVE TECHNICAL DEMO'} />
                 <CustomeFooter />
             </div>
