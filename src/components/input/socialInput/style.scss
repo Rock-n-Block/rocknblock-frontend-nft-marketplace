@@ -14,7 +14,7 @@
   }
 
   @media (max-width: 600px) {
-    right: 10px;
+    right: 25px;
   }
 
   .socBlock {
@@ -81,7 +81,7 @@
     white-space: pre-wrap;
     text-align: center;
     font-feature-settings: 'liga' off;
-    color: white;
+    color: rgba(255, 255, 255, 0.5);
     
 
     @media (max-width: 524px) {
@@ -94,6 +94,7 @@
       top: auto;
       margin-top: 10px;
       margin-right: 90px;
+      padding-left: 6%;
     }
   }
 }
