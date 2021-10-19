@@ -7,7 +7,7 @@ import {getCurrentUrl} from "preact-router";
 const links = [
     {
         name: 'tw',
-        href: 'https://twitter.com/RocknBlock2',
+        href: 'https://twitter.com/rocknblockdev',
         fullName: 'Twitter'
     },
     {
