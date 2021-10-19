@@ -8,7 +8,7 @@ export const otherSites: SiteI[] = [
     {
         image: '../../../assets/img/farming/icon-site2.png',
         title: 'Farming',
-        link: ''
+        link: 'http://farming.rocknblock.io'
     },
     {
         image: '../../../assets/img/farming/icon-site3.png',
@@ -23,6 +23,6 @@ export const otherSites: SiteI[] = [
     {
         image: '../../../assets/img/farming/icon-site5.png',
         title: 'Vesting',
-        link: ''
+        link: 'http://vesting.rocknblock.io'
     }
 ];
