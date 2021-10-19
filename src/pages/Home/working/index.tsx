@@ -4,7 +4,7 @@ import style from './style.module.scss';
 
 const options: string[] = [
   'Mint 721 NFT-tokens',
-  'Ming 1155 NFT-tokens',
+  'Mint 1155 NFT-tokens',
   'Sell / Buy / Auction',
   'Likes',
   'Following',

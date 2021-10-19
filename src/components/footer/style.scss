@@ -53,29 +53,37 @@
       }
 
       .icon {
+        width: 100%;
+        height: 100%;
+        
+        img {
+          margin: auto;
+          display: block;
+        }
+
         &-tw {
-          padding-top: 4px;
+          padding-top: 13px;
         }
 
         &-tg {
-          padding-top: 4px;
+          padding-top: 13px;
           padding-right: 2px;
         }
 
         &-fb {
-          padding-top: 4px;
+          padding-top: 12px;
         }
 
         &-medium {
-          padding-top: 4px;
+          padding-top: 13px;
         }
 
         &-in {
-          padding-top: 4px;
+          padding-top: 13px;
         }
 
         &-mail {
-          padding-top: 4px;
+          padding-top: -4px;
         }
       }
     }
