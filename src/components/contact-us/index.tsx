@@ -37,7 +37,7 @@ const ContactUs: FunctionalComponent<ContactUsProps> = ({title, subtitle}) => {
     siteKey: RECAPTCHA_KEY
   });
 
-  const formData = JSON.stringify({name, socialNetwork: contact, message: idea, social});
+  const formData = JSON.stringify({name, contact, message: idea, social});
 
   const headers = {
     'Content-Type': 'application/json',
