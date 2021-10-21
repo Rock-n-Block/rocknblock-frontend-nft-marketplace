@@ -4,14 +4,13 @@
   margin-top: 103px;
   position: relative;
   z-index: 1;
-  padding-bottom: 900px;
 
   @media (max-width: 1200px) {
     height: 600px;
   }
 
   @media (max-width: 980px) {
-    height: 400px;
+    height: 900px;
   }
 
   @include b('mobile') {
@@ -60,11 +59,11 @@
 
     @include b('mobile') {
       margin-top: 0px;
-      top: 550px;
+      top: 600px;
       left: calc(50% - 92px);
-      width: 184px;
-      height: 184px;
-      filter: blur(100px);
+      width: 204px;
+      height: 204px;
+      filter: blur(120px);
     }
   }
 
@@ -133,41 +132,31 @@
 
   .cardsImg {
     background-image: url('/assets/img/marketplacePage/cardGroup.png');
-    background-size: cover;
-    background-position: 50% 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     width: 100%;
-    height: 850px;
-    margin: auto;
+    max-width: 1920px;
     display: block;
-    position: absolute;
-    margin-top: 60px;
-    z-index: -1;
+    margin: auto;
+    margin-top: 10px;
+    height: 650px;
+    margin-bottom: 200px;
 
-    @media (min-width: 1920px) {
-      width: 1920px;
-      margin-left: calc((100% -  1920px) /2);
-    }
 
-    @media (max-width: 1919px) {
-      width: 100%;
-      margin-left: auto;
-      height: 900px;
-      
-    }
 
-    @media (max-width: 1200) {
-      height: 700px;
-    }
+    @media (max-width: 1919px) { height: 500px; }
+
 
     @media (max-width: 980px) {
-      margin-top: 300px;
+      background-size: cover;
       height: 500px;
     }
 
     @include b('mobile') {
       flex-direction: column;
       height: 400px;
-      margin-top: 354px;
+      margin-bottom: 80px;
       background-position: 60%;
     }
   }
