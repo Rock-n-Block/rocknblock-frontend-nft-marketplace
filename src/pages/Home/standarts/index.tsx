@@ -1,4 +1,5 @@
 import { FunctionalComponent, h } from 'preact';
+import { cardData } from './mock';
 import style from './style.module.scss';
 
 interface Card {
@@ -7,28 +8,6 @@ interface Card {
   description: string;
   imgUrl: string;
 }
-
-const cardData: Card[] = [
-  {
-    title: 'ERC 721 ',
-    titleRed: 'Single',
-    description: 'if you want your collectible to be one of a kind',
-    imgUrl: '../../assets/img/marketplacePage/721.svg',
-
-  },
-  {
-    title: 'TRC 721 ',
-    titleRed: 'Single',
-    description: 'if you want your collectible to be one of a kind',
-    imgUrl: '../../assets/img/marketplacePage/721.svg',
-  },
-  {
-    title: 'ERC 1155 ',
-    titleRed: 'Multiple',
-    description: 'if you want to sell one collectible multiple times',
-    imgUrl: '../../assets/img/marketplacePage/1155.svg',
-  },
-]
 
 interface Pros {
   card: Card;
@@ -54,10 +33,10 @@ const Standarts: FunctionalComponent = () => {
     <div class={style.block}>
       <div class={style.ellipse}>ellipse</div>
       <h2 class={style.title}>NFT Standards</h2>
-      <div class={style.cardsImg} />
       <div class={style.cardsContainers}>
         {cardData.map((item, i) => <Card key={i} card={item} />)}
       </div>
+      <div class={style.cardsImg} />
     </div>
   );
 };
