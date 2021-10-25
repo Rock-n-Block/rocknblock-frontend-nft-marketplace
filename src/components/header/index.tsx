@@ -36,7 +36,7 @@ const Header: FunctionalComponent = () => {
             <div className={style.container}>
                 <nav className={style['main-nav']}>
                     <section className={`${style['main-nav__mobile']}`}>
-                        <a href="/" className={style.logo}>
+                        <a href="https://rocknblock.io/" className={style.logo}>
                             <img src="../../assets/img/icons/logo.svg" alt="Rock'n'Block logo" />
                         </a>
                         <div
